@@ -19,7 +19,7 @@ Check [ComponentScreen.js](./src/screens/ComponentScreen.js) for more details. A
 
 ## Exercise
 
-- Create a new component called `LessonComponent` that:
+1. Create a new component called `LessonComponent` that:
     - Show two Text elements
     - The first should say `Getting started with React Native!` and have a font size of `45`
     - The second should say `My name is <your name>` and have a font size of `20`
