@@ -2,6 +2,11 @@
 
 These mini projects of these lessons are based in `The Complete React Native + Hooks` course from Stephen Grider.
 
+## Summary
+
+- [Boilerplate Project](00-boilerplate-project)
+- [Overview React Components](01-overview-react-components)
+
 ## How to run the projects
 
 1. Make sure that you have `Node.js` intalled
