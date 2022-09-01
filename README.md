@@ -1,6 +1,15 @@
 # React Native Lessons
 
-These mini projects are based in `The Complete React Native + Hooks Course` from Stephen Grider
+These mini projects of these lessons are based in `The Complete React Native + Hooks` course from Stephen Grider.
+
+## How to run the projects
+
+1. Make sure that you have `Node.js` intalled
+    - Access [NODE.js](https://nodejs.org/) and download the last stable version
+2. Open your favorite terminal and navigate to some project folder
+3. Run `npm install`
+4. Run `npm run web`
+5. Enjoy!
 
 ## References
 - [NODE.js](https://nodejs.org/)
