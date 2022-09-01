@@ -17,7 +17,7 @@ These mini projects of these lessons are based in `The Complete React Native + H
 4. Run `npm run web`
 5. Enjoy!
 
-## References
+## External References
 - [Node.js](https://nodejs.org/)
 - [React Native](https://reactnative.dev/)
 - [React Native Web docs](https://necolas.github.io/react-native-web/docs/)
