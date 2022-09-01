@@ -12,3 +12,4 @@
     - The first should say `Getting started with React Native!` and have a font size of `45`
     - The second should say `My name is <your name>` and have a font size of `20`
     - For the second text element, assign your name to a variable, then print it up in the JSX element
+    - Replace `App.js` to show your component
