@@ -16,10 +16,18 @@ If we modify the list, for example, deleting one element.
 
 ![behavior without a key being provided](../assets/2022-09-01-20-16-09.png)
 
-React will update elements when we have a key for each element. 
+React will update elements when we have a key for each element. The key values must be unique in the entire array.
 
 ![behavior with key](../assets/2022-09-01-20-18-37.png)
 
 ## Solving the key issue
 
 The first way is set the key property to the original object as shown in [ListScreenKeyManually.js](./src/screens/ListScreenKeyManually.js).
+
+The second way is using the `keyExtractor` prop of `FlatList` as seen in [ListScreenKeyExtractor.js](./src/screens/ListScreenKeyExtractor.js).
+## Props around FlatList
+
+In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some properties to change the look and feel of the `FlatList` component. The first property is `horizontal` that changes the redering direction. And the second property used was `showsHorizontalScrollIndicator`, which allows to hide the horizontal scroll bar.
+## Reference
+
+- [FlatList documentation](https://reactnative.dev/docs/flatlist)

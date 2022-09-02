@@ -1,6 +1,6 @@
 import React from 'react'
 // IMPORT FlatList
-import { Text, StyleSheet, FlatList } from 'react-native'
+import { Text, StyleSheet, FlatList, View } from 'react-native'
 
 const ListScreenKeyManually = () => {
     // CREATE AN ARRAY OF OBJECTS WITH key PROPERTY
@@ -17,12 +17,16 @@ const ListScreenKeyManually = () => {
     ]
 
     return (
-        <FlatList
-            data={friends}
-            renderItem={(element) => {
-                // element === { item: { name: 'Friend #1' }, index: 0 }
-                return <Text>{element.item.name}</Text>
-            }} />
+        <View>
+            <FlatList
+                data={friends}
+                renderItem={
+                    (element) => {
+                        // element === { item: { name: 'Friend #1', key: '1' }, index: 0 }
+                        return <Text>{element.item.name}</Text>
+                    }
+                } />
+        </View>
     )
 }
 
