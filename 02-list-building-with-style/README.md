@@ -1,5 +1,15 @@
 # List Building With Style
 
+- [Introduction](#introduction)
+- [The FlatList element](#the-flatlist-element)
+- [Why set a key property?](#why-set-a-key-property)
+- [Solving the key issue](#solving-the-key-issue)
+- [Props around FlatList](#props-around-flatlist)
+- [Exercise](#exercise)
+- [Reference](#reference)
+
+## Introduction
+
 This lesson will show how to build lists using the `FlatList` element. Check [ListScreen.js](./src/screens/ListScreen.js) to more detail.
 ## The FlatList element
 
@@ -28,6 +38,18 @@ The second way is using the `keyExtractor` prop of `FlatList` as seen in [ListSc
 ## Props around FlatList
 
 In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some properties to change the look and feel of the `FlatList` component. The first property is `horizontal` that changes the redering direction. And the second property used was `showsHorizontalScrollIndicator`, which allows to hide the horizontal scroll bar.
+
+## Exercise
+
+1. Create a new `FlatList` component with these specs:
+    - Make the `FlatList` scroll vertically again
+    - Add a new `age` property to each of our `friend` objects
+    - Print out that age for each element produced by the `FlatList`
+
+Use the reference bellow:
+
+![](../assets/2022-09-01-21-34-51.png)
 ## Reference
 
 - [FlatList documentation](https://reactnative.dev/docs/flatlist)
+
