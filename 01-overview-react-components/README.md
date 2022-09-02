@@ -1,5 +1,8 @@
 # Overview of React components
 
+- [Components](#components)
+- [Rules of JSX](#rules-of-jsx)
+- [Exercise](#exercise)
 ## Components
 
 A React component could be analyzed by 4 parts:
