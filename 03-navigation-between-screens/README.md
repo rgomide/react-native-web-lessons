@@ -6,6 +6,7 @@
 - [Button in action](#button-in-action)
 - [TouchableOpacity in action](#touchableopacity-in-action)
 - [Navigating with React Navigation](#navigating-with-react-navigation)
+- [Exercise](#exercise)
 
 ## Introduction
 
@@ -13,7 +14,7 @@ In this lesson we will learn how to navigate between screens.
 
 ## Project description
 
-In this project we have the main screen called Home Screen which will have two buttons. Each button will change the navigation to different screen as shown in the image bellow:
+In this project we have the main screen called Home Screen which will have two buttons. Each button will change the navigation to different screen as shown in image bellow:
 
 ![](../assets/2022-09-16-10-50-15.png)
 
@@ -23,7 +24,7 @@ In React Native we can use two different types of button.
 
 ![](../assets/2022-09-16-10-57-13.png)
 
-`Button` is the simplier component to allows developer to configure a clickable button. But the `TouchableOpacity` allow us to configure any clickable area inside this component.
+`Button` is the simplier component that allows developers to configure a clickable button. But the `TouchableOpacity` allow us to configure any clickable area inside this component.
 
 In next sections we will use each button type to compare the complexity and how customizable are they.
 
@@ -47,6 +48,21 @@ It can be configured in [App.js](App.js) inside the `<NavigationContainer>` elem
 You can use the `initialRouteName` prop of the `Stack.Navigator` element to set up the main screen of your application.
 
 The `HomeScreen` function contains a new argument related to that `prop` received from navigation.
+
+## Exercise
+
+Create a new project with 4 screens:
+
+- Login 
+- Home
+- User Details
+- About
+
+The main screen should be the Login screen and the image bellow shows the mockup of this project with navigation details:
+
+![](../assets/2022-09-16-13-51-52.png)
+
+Styling your screens is strongly recommended to improve the user interface.
 
 ## Reference
 
