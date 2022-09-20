@@ -7,6 +7,7 @@ These mini projects of these lessons are based in `The Complete React Native + H
 - [Boilerplate Project](00-boilerplate-project)
 - [Overview React Components](01-overview-react-components)
 - [List Building With Style](02-list-building-with-style)
+- [Navigation Between Screens](03-navigation-between-screens)
 
 ## How to run the projects
 
