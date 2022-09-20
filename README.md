@@ -1,6 +1,6 @@
 # React Native Lessons
 
-These mini projects of these lessons are based in `The Complete React Native + Hooks` course from Stephen Grider.
+The mini projects of these lessons are based in `The Complete React Native + Hooks` course from Stephen Grider.
 
 ## Summary
 
