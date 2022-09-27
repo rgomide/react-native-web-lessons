@@ -1,13 +1,11 @@
 import React from 'react'
 import { View } from 'react-native'
 
-const HomeScreen = (props) => {
+const UserDetailsScreen = (props) => {
     return (
         <View>
         </View>
     )
 }
 
-
-
-export default HomeScreen
+export default UserDetailsScreen
