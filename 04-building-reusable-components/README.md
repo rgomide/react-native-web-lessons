@@ -4,6 +4,10 @@
 - [Component reuse with props](#component-reuse-with-props)
 - [Parent-Child relationships](#parent-child-relationships)
 - [Communication from Parent to Child](#communication-from-parent-to-child)
+- [Images](#images)
+- [Showing images](#showing-images)
+- [Passing images as props](#passing-images-as-props)
+
 
 ## Introduction
 
@@ -47,9 +51,42 @@ This is an example:
 - Child:
 ```js
 const ImageDetail = (props) => {
-    console.log(props)
-    return <Text>Image Detail</Text>
+    return <Text>{props.title}</Text>
 }
 ```
 
 In this case `Parent` is passing `title` as a prop and `Child` is receiving all props in `props` argument.
+
+## Images
+
+In this project we are using the images stored in [assets/img](assets/img) folder. Is a best practice keep all static files inside an `assets` folder in our projects.
+
+## Showing images
+
+To show images inside our `ImageDetail` component, we will use the React Native [Image](https://reactnative.dev/docs/image) component.
+
+This component have the `source` prop that needs a image reference. We can load a static image reference of our project using the `require` function:
+
+```js
+const localImage = require('../../assets/img/beach.jpg')
+return <Image source={localImage} style={styles.thumbImage} />
+```
+
+Also, we need to set up the image dimensions in `style` prop. It will be something like this:
+
+```js
+const styles = StyleSheet.create({
+    thumbImage: {
+        width: 50,
+        height: 50
+    }
+})
+```
+
+Now we are able to pass the images name as a prop and render inside `ImageDetail` component.
+
+## Passing images as props
+
+In [ImageScreen](src/screens/ImageScreen.js) we have the `imageSources` array which have all images references that we want to render in [ImageDetail](src/components/ImageDetail.js) component.
+
+We created the `imageSource` prop to pass to `ImageDetail` component. And finally, `ImageDetail` component use this prop as a source to React Native `Image` component.
