@@ -28,4 +28,4 @@ So we can create a shared `ImageDetail` component with `title` and `image` props
 
 ## Parent-child relationships
 
-The reusable components could be created inside [src/components](src/components/) directory.
+The reusable components could be created inside [src/components](src/components/) directory. The idea is create a single component that could reused in any screen.
