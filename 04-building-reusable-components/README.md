@@ -7,6 +7,7 @@
 - [Images](#images)
 - [Showing images](#showing-images)
 - [Passing images as props](#passing-images-as-props)
+- [Exercise](#exercise)
 
 
 ## Introduction
@@ -90,3 +91,9 @@ Now we are able to pass the images name as a prop and render inside `ImageDetail
 In [ImageScreen](src/screens/ImageScreen.js) we have the `imageSources` array which have all images references that we want to render in [ImageDetail](src/components/ImageDetail.js) component.
 
 We created the `imageSource` prop to pass to `ImageDetail` component. And finally, `ImageDetail` component use this prop as a source to React Native `Image` component.
+
+## Exercise
+
+Modify the current project to render the `score` prop in `ImageDetail` component. Also, organize the `ImageDetail` component layout to match the image bellow.
+
+![](../assets/2022-09-29-14-58-43.png)
