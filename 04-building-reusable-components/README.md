@@ -94,6 +94,6 @@ We created the `imageSource` prop to pass to `ImageDetail` component. And finall
 
 ## Exercise
 
-Modify the current project to render the `score` prop in `ImageDetail` component. Also, organize the `ImageDetail` component layout to match the image bellow.
+Modify the current project to render the `score` prop in `ImageDetail` component.
 
 ![](../assets/2022-09-29-14-58-43.png)
