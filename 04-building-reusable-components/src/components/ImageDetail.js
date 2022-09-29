@@ -1,7 +1,8 @@
 import React from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { Text, StyleSheet } from 'react-native'
 
-const ImageDetail = () => {
+const ImageDetail = (props) => {
+    console.log(props)
     return <Text>Image Detail</Text>
 }
 
