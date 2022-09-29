@@ -1,8 +1,10 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
+// Importing the new component
 import ImageDetail from '../components/ImageDetail'
 
 const ImageScreen = () => {
+    // Array with the images references
     const imageSources = [
         require('../../assets/img/beach.jpg'),
         require('../../assets/img/forest.jpg'),

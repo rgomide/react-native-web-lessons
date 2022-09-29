@@ -8,9 +8,7 @@ const HomeScreen = (props) => {
         <View>
             <Text style={styles.text}>Hi There!</Text>
             <Button
-                onPress={() => {
-                    navigation.navigate('Image')
-                }}
+                onPress={() => { navigation.navigate('Image') }}
                 title="Go to Image Screen" />
         </View>
     )

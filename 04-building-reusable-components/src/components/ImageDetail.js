@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Image } from 'react-native'
 
+// Our custom component with props. Here we will use props.imageSource and props.title values.
 const ImageDetail = (props) => {
     return (
         <View>
