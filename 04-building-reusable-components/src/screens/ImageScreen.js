@@ -9,11 +9,13 @@ const ImageScreen = () => {
         require('../../assets/img/mountain.jpg')
     ]
 
-    return (<View>
-        <ImageDetail title="Forest" imageSource={imageSources[0]} />
-        <ImageDetail title="Beach" imageSource={imageSources[1]} />
-        <ImageDetail title="Mountain" imageSource={imageSources[2]} />
-    </View>)
+    return (
+        <View>
+            <ImageDetail title="Forest" imageSource={imageSources[0]} />
+            <ImageDetail title="Beach" imageSource={imageSources[1]} />
+            <ImageDetail title="Mountain" imageSource={imageSources[2]} />
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({})
