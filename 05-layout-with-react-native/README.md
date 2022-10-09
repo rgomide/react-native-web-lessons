@@ -7,7 +7,7 @@
 - [Justify content](#justify-content)
 - [Flex values](#flex-values)
 - [Align Self on children](#align-self-on-children)
-
+- [The Position property](#the-position-property)
 ## Introduction
 
 Basically, we have three different layout approaches:
@@ -97,7 +97,6 @@ We can check this property in the `View` container with `viewStyleRow` style in 
 The `alignItems` will also change the direction reference when we use the `row` value. The image bellow show how `alignitems` is rendered for both `flexDirection` settings.
 
 ![](../assets/2022-10-08-23-07-42.png)
-
 ## Justify content
 
 The `justifyContent` layus out children along the primary axis. Primary axis is whatever `flexDirection` is set to.
@@ -116,7 +115,6 @@ The effect of each `justifyContent` value is shown in image bellow:
 ![](../assets/2022-10-08-23-26-48.png)
 
 In [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) we can check the `View` with the `viewStyleJustifyContent` style. This style have `justifyContent: 'space-evently'` property. It apply the same spaces beetween and outside the elements.
-
 ## Flex values
 
 For parent elements we saw the `alignItems`, `justifyContent` and `flexDirection` properties. In this section we will learn about the `flex` and `alignSelf` children properties.
@@ -128,5 +126,10 @@ The `flex` property makes a child in a parent to take as much space as possible.
 We can see this property in action in `View` element with `` style in  [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) screen.
 
 The two first `Text` elements have the `flexOne` style (`flex: 1 `) and the third element have the `flexTwo` style (`flex: 2`). The total value of `flex` values is 4. It means the first and two elements have 25% of space and the last element 50%.
+## Align Self on children
 
-## Align self on children
+The `alignSelf` property on children essentially overwrites the parent `alignItems` value. So we can deffine the alignment per child.
+
+Check the `View` with `viewStyleStrech` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file. In this example we applied the `alignSelf: 'center'` property in the second element. 
+
+## The Position property

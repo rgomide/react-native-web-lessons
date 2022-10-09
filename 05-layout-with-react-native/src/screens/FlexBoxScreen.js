@@ -46,6 +46,12 @@ const FlexBoxScreen = () => {
                 <Text style={[styles.textStyle, styles.flexOne]}>Child #2 screen</Text>
                 <Text style={[styles.textStyle, styles.flexTwo]}>Child #3 screen</Text>
             </View>
+            <Text style={styles.textTitle}>alignSelf: 'center' for the second element</Text>
+            <View style={styles.viewStyleStrech}>
+                <Text style={styles.textStyle}>Child #1 screen</Text>
+                <Text style={[styles.textStyle, styles.alignSelfCenter]}>Child #2 screen</Text>
+                <Text style={styles.textStyle}>Child #3 screen</Text>
+            </View>
         </ScrollView>
     )
 }
@@ -94,6 +100,9 @@ const styles = StyleSheet.create({
     },
     flexTwo: {
         flex: 2
+    },
+    alignSelfCenter: {
+        alignSelf: 'center'
     },
     textStyle: {
         borderWidth: 3,
