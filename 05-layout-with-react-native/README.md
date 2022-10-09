@@ -3,6 +3,8 @@
 - [Introduction](#introduction)
 - [Box screen](#box-screen)
 - [Align items with Flex](#alignitems-with-flex)
+- [Flex direction](#flex-direction)
+- [Justify content](#justify-content)
 
 ## Introduction
 
@@ -79,3 +81,19 @@ We can use the `center` value for `alignItem`. It will put all elements aligned 
 And finally, we use the `flex-end` property to align all children elements at the end of the container.
 
 ![](../assets/2022-10-08-22-58-03.png)
+
+## Flex direction
+
+This property give us control about the elements direction. The elements can be placed vertically (default behavior) or horizontally.
+
+![](../assets/2022-10-08-23-01-06.png)
+
+In image above we can check how to use the `flexDirection` property and the two allowed values (`column` or `row`).
+
+We can check this property in the `View` container with `viewStyleRow` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file.
+
+The `alignItems` will also change the direction reference when we use the `row` value. The image bellow show how `alignitems` is rendered for both `flexDirection` settings.
+
+![](../assets/2022-10-08-23-07-42.png)
+
+## Justify content

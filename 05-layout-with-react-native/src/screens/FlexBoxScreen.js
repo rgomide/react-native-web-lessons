@@ -1,9 +1,9 @@
 import React from 'react'
-import { Text, View, StyleSheet } from 'react-native'
+import { Text, ScrollView, View, StyleSheet } from 'react-native'
 
 const FlexBoxScreen = () => {
     return (
-        <View style={styles.mainView}>
+        <ScrollView style={styles.mainView}>
             <Text style={styles.textTitle}>alignItems: 'stretch'</Text>
             <View style={styles.viewStyleStrech}>
                 <Text style={styles.textStyle}>Child #1 screen</Text>
@@ -28,7 +28,13 @@ const FlexBoxScreen = () => {
                 <Text style={styles.textStyle}>Child #2 screen</Text>
                 <Text style={styles.textStyle}>Child #3 screen</Text>
             </View>
-        </View>
+            <Text style={styles.textTitle}>flexDirection: 'row' and alignItems: 'center'</Text>
+            <View style={styles.viewStyleRow}>
+                <Text style={styles.textStyle}>Child #1 screen</Text>
+                <Text style={styles.textStyle}>Child #2 screen</Text>
+                <Text style={styles.textStyle}>Child #3 screen</Text>
+            </View>
+        </ScrollView>
     )
 }
 
@@ -59,6 +65,12 @@ const styles = StyleSheet.create({
         borderWidth: 3,
         borderColor: 'black',
         alignItems: 'flex-end'
+    },
+    viewStyleRow: {
+        borderWidth: 3,
+        flexDirection: 'row',
+        height: 200,
+        alignItems: 'center'
     },
     textStyle: {
         borderWidth: 3,
