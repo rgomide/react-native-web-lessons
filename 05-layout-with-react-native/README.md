@@ -9,6 +9,8 @@
 - [Align Self on children](#align-self-on-children)
 - [The Position property](#the-position-property)
 - [Top, bottom, left and right](#top-bottom-left-and-right)
+- [Exercise](#exercise)
+- [References](#references)
 ## Introduction
 
 Basically, we have three different layout approaches:
@@ -155,3 +157,10 @@ The diagram bellow give us an idea about when we use each kind of layout system.
 Create a new screen with the specifications bellow:
 
 ![](../assets/2022-10-09-00-50-47.png)
+
+## References
+- [Layout with Flexbox](https://reactnative.dev/docs/flexbox)
+- [Layout props](https://reactnative.dev/docs/layout-props)
+- [Yoga Playground](https://yogalayout.com/playground)
+- [The Full React Native Layout Cheat Sheet
+](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)
