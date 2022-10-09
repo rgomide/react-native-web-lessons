@@ -9,6 +9,9 @@ const HomeScreen = (props) => {
             <Button
                 onPress={() => { navigation.navigate('Box') }}
                 title="Go to Box Screen" />
+            <Button
+                onPress={() => { navigation.navigate('FlexBox') }}
+                title="Go to FlexBox Screen" />
         </View>
     )
 }
