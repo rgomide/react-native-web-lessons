@@ -149,3 +149,9 @@ The `top`, `bottom`, `left` and `right` properties can be used in any single ele
 The diagram bellow give us an idea about when we use each kind of layout system. Note that we can combine them.
 
 ![](../assets/2022-10-09-00-35-55.png)
+
+## Exercise
+
+Create a new screen with the specifications bellow:
+
+![](../assets/2022-10-09-00-50-47.png)
