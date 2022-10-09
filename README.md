@@ -9,6 +9,7 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 - [List Building With Style](02-list-building-with-style)
 - [Navigation Between Screens](03-navigation-between-screens)
 - [Building Reusable Components](04-building-reusable-components)
+- [Layout With React Native](05-layout-with-react-native)
 
 ## How to run the projects
 
