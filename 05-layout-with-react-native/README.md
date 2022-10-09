@@ -8,6 +8,7 @@
 - [Flex values](#flex-values)
 - [Align Self on children](#align-self-on-children)
 - [The Position property](#the-position-property)
+- [Top, bottom, left and right](#top-bottom-left-and-right)
 ## Introduction
 
 Basically, we have three different layout approaches:
@@ -133,3 +134,18 @@ The `alignSelf` property on children essentially overwrites the parent `alignIte
 Check the `View` with `viewStyleStrech` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file. In this example we applied the `alignSelf: 'center'` property in the second element. 
 
 ## The Position property
+
+The `position` allows to set how a single element gets laid out inside of a parent. The default value is `position: 'relative'` and we use the `position: 'absolute'` property to override Box object Model and Flex Box.
+
+In this project we have the [PositionScreen.js](src/screens/PositionScreen.js) to show this layout approach in action.
+
+The second `Text` element inside the `View` have the `position: 'absolute'` value.
+
+## Top, bottom, left and right
+The `top`, `bottom`, `left` and `right` properties can be used in any single element to displace it by this reference (absolute or relative). In the [PositionScreen.js](src/screens/PositionScreen.js) we added the `topTen` style to second element. This element is displaced from parent top by 10 pixels.
+
+## Applying layout systems
+
+The diagram bellow give us an idea about when we use each kind of layout system. Note that we can combine them.
+
+![](../assets/2022-10-09-00-35-55.png)

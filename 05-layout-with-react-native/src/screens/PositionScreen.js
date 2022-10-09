@@ -5,6 +5,8 @@ const PositionScreen = () => {
     return (
         <View style={styles.viewStyle}>
             <Text style={styles.textStyle}>Box screen</Text>
+            <Text style={[styles.textStyle, styles.positionAbsolute, styles.topTen]}>Box screen</Text>
+            <Text style={styles.textStyle}>Box screen</Text>
         </View>
     )
 }
@@ -15,10 +17,14 @@ const styles = StyleSheet.create({
         borderColor: 'black'
     },
     textStyle: {
-        borderWidth: 10,
-        borderColor: 'red',
-        margin: 20,
-        paddingVertical: 10
+        borderWidth: 3,
+        borderColor: 'red'
+    },
+    positionAbsolute: {
+        position: 'absolute'
+    },
+    topTen: {
+        top: 10
     }
 })
 
