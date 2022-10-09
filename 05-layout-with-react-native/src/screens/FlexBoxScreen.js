@@ -34,6 +34,18 @@ const FlexBoxScreen = () => {
                 <Text style={styles.textStyle}>Child #2 screen</Text>
                 <Text style={styles.textStyle}>Child #3 screen</Text>
             </View>
+            <Text style={styles.textTitle}>flexDirection: 'column' and justifyContent: 'space-evenly'</Text>
+            <View style={styles.viewStyleJustifyContent}>
+                <Text style={styles.textStyle}>Child #1 screen</Text>
+                <Text style={styles.textStyle}>Child #2 screen</Text>
+                <Text style={styles.textStyle}>Child #3 screen</Text>
+            </View>
+            <Text style={styles.textTitle}>flexDirection: 'column' and children with flex property</Text>
+            <View style={styles.viewStyleJustifyContent}>
+                <Text style={[styles.textStyle, styles.flexOne]}>Child #1 screen</Text>
+                <Text style={[styles.textStyle, styles.flexOne]}>Child #2 screen</Text>
+                <Text style={[styles.textStyle, styles.flexTwo]}>Child #3 screen</Text>
+            </View>
         </ScrollView>
     )
 }
@@ -71,6 +83,17 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         height: 200,
         alignItems: 'center'
+    },
+    viewStyleJustifyContent: {
+        borderWidth: 3,
+        height: 200,
+        justifyContent: 'space-evenly'
+    },
+    flexOne: {
+        flex: 1
+    },
+    flexTwo: {
+        flex: 2
     },
     textStyle: {
         borderWidth: 3,
