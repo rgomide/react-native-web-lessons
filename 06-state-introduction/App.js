@@ -5,6 +5,7 @@ import HomeScreen from './src/screens/HomeScreen'
 import CounterScreenWrong from './src/screens/CounterScreenWrong'
 import CounterScreen from './src/screens/CounterScreen'
 import ColorScreen from './src/screens/ColorScreen'
+import ColorMixScreen from './src/screens/ColorMixScreen'
 
 
 const Stack = createNativeStackNavigator()
@@ -17,6 +18,7 @@ export default function App() {
         <Stack.Screen name="CounterScreenWrong" component={CounterScreenWrong} />
         <Stack.Screen name="CounterScreen" component={CounterScreen} />
         <Stack.Screen name="ColorScreen" component={ColorScreen} />
+        <Stack.Screen name="ColorMixScreen" component={ColorMixScreen} />
       </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
