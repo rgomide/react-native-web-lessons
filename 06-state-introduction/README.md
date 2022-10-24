@@ -109,11 +109,21 @@ Finally, the `FlatList` element points to `colors` as a data source. This compon
 
 ## Screen Color Mix
 
+The [ColorMixScreen](./src/screens/ColorMixScreen.js) is our third example that shows how to plan and use states in a complex point of view.
+
+In this screen we are building our color configuring the amount of `red`, `green` and `blue`. 
+
 ![](../assets/2022-10-23-23-22-46.png)
+
+Answering the three main questions, we have to update the data by each color component. So, we will have the `red`, `green` and `blue` state variables.
+
+These variables are `number` and the initial value is `255`.
 
 ![](../assets/2022-10-23-23-24-26.png)
 
-Where do we have to create the state variables?
+We have the [ColorCounter](./src/components/ColorCounter.js) component to avoid ambiguous code. This component have the callbacks for `Increase` and `Decrease` actions.
+
+Now we can start to think where should we have to create the state variables? In screen or component?
 
 ![](../assets/2022-10-23-23-35-41.png)
 
