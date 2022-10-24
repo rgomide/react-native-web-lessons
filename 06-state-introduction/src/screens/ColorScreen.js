@@ -1,12 +1,15 @@
+// Import useState function
 import React, { useState } from 'react'
 import { View, Text, StyleSheet, Button, FlatList } from 'react-native'
 
 const ColorScreen = () => {
+    // HERE WE ARE CREATING THE colors VARIABLE AND THE setColors FUNCTION TO UPDATE THIS VALUE WHEN NEEDED
     const [colors, setColors] = useState([])
 
     return (
         <View style={styles.mainView}>
-            <Button title='Add a color' onPress={() => {
+            <Button title='Add Color' onPress={() => {
+                // UPDATING colors STATE WITH setColors FUNCTION CALL
                 setColors([...colors, randomRgb()])
             }} />
             <FlatList

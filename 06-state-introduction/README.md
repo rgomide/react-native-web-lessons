@@ -3,6 +3,7 @@
 - [Introduction](#introduction)
 - [Screen Counter](#screen-counter)
     - [Planning the state variables](#planning-the-state-variables)
+    - [Few notes on state](#few-notes-on-state)
 - [Screen Color](#screen-color)
 - [Screen Color Mix](#screen-color-mix)
 - [References](#references)
@@ -70,9 +71,27 @@ The last example is a screen that reads a collection of blog posts from a data s
 
 ## Screen Color
 
+In the [ColorScreen](./src/screens/ColorScreen.js) we are creating random colors by pressing the `Add Color` button.
+
 ![](../assets/2022-10-23-22-49-16.png)
 
+Here we need the to update the `colors` value. So we will use an `array of strings` as state variable with an empty array as default value.
+
 ![](../assets/2022-10-23-22-50-46.png)
+
+In [ColorScreen](./src/screens/ColorScreen.js) we need to pay attention at some lines of code.
+
+First of all, we need to import the `useState` Hook. According to [React documentation](https://reactjs.org/docs/hooks-state.html#whats-a-hook): 
+
+> A Hook is a special function that lets you "hook into" React features. For example, `useState` is a Hook that lets you add React state to function components.
+
+The next step is declare the state variable and his setter function. In the code line below we have the `colors` variable and the `setColors` setter function. 
+
+The default value is passed as an argument of `useState` function call.
+
+```js
+const [colors, setColors] = useState([])
+```
 
 ## Screen Color Mix
 
