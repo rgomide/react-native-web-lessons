@@ -6,15 +6,21 @@ const HomeScreen = (props) => {
 
     return (
         <View style={styles.mainView}>
-            <Button
-                onPress={() => { navigation.navigate('Box') }}
-                title="Go to Box Screen" />
-            <Button
-                onPress={() => { navigation.navigate('FlexBox') }}
-                title="Go to FlexBox Screen" />
-            <Button
-                onPress={() => { navigation.navigate('Position') }}
-                title="Go to Position Screen" />
+            <View style={styles.buttonView}>
+                <Button
+                    onPress={() => { navigation.navigate('CounterScreenWrong') }}
+                    title="Go to Counter Screen Wrong" />
+            </View>
+            <View style={styles.buttonView}>
+                <Button
+                    onPress={() => { navigation.navigate('CounterScreen') }}
+                    title="Go to Counter Screen" />
+            </View>
+            <View style={styles.buttonView}>
+                <Button
+                    onPress={() => { navigation.navigate('ColorScreen') }}
+                    title="Go to Color Screen" />
+            </View>
         </View>
     )
 }
@@ -23,6 +29,9 @@ const styles = StyleSheet.create({
     mainView: {
         justifyContent: 'center',
         padding: 10
+    },
+    buttonView: {
+        marginVertical: 2
     }
 })
 
