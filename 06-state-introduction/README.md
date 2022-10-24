@@ -59,7 +59,14 @@ The last example is a screen that reads a collection of blog posts from a data s
 
 ![](../assets/2022-10-23-22-14-56.png)
 
-![](../assets/2022-10-23-22-43-40.png)
+### Few notes on state
+
+- We are using function-based state in a functional component. React also has class-based components that have access to [state](https://reactjs.org/docs/faq-state.html).
+- We *never* directly modify a state variable. React doesn't detect this change! Only use the `setter` function.
+- We can name the state variable anything we wish.
+- We can track any kind of data that changes over time - a number, string, array of ojects, etc.
+- When a component is rerendered, *all of its children get rerendered too*.
+- A state variable can be passed to a child component! At that point, the state variable is now being used as `props`.
 
 ## Screen Color
 
