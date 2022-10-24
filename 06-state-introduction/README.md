@@ -11,7 +11,7 @@
 
 In this lesson we will learn about states. States in React are used to re-render the screen content. We can bind state variables as components paramters or to part of an internal logic.
 
-As seen in image bellow, states are a system to track a piece of data that will change over time. If the data changes, our app will re-render.
+As seen in image below, states are a system to track a piece of data that will change over time. If the data changes, our app will re-render.
 
 ![](../assets/2022-10-23-22-09-14.png)
 
@@ -43,7 +43,11 @@ It is a great strategy answer these next three questions:
 
 ![](../assets/2022-10-23-22-11-42.png)
 
+For the counter screen we need to update the `current count` value. This type of data can be a `number`. Finally, this value is initiallized as `zero`.
+
 ![](../assets/2022-10-23-22-12-39.png)
+
+The image below demonstrates the three answers for this problem.
 
 ![](../assets/2022-10-23-22-13-53.png)
 

@@ -46,7 +46,7 @@ In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some pr
     - Add a new `age` property to each of our `friend` objects
     - Print out that age for each element produced by the `FlatList`
 
-Use the reference bellow:
+Use the reference below:
 
 ![](../assets/2022-09-01-21-34-51.png)
 ## Reference

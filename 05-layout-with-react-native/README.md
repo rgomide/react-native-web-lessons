@@ -19,7 +19,7 @@ Basically, we have three different layout approaches:
 - Flex box
 - Position
 
-The image bellow shows a comparison about these three kinds of layout systems:
+The image below shows a comparison about these three kinds of layout systems:
 
 ![](../assets/2022-10-08-21-17-38.png)
 
@@ -27,7 +27,7 @@ The image bellow shows a comparison about these three kinds of layout systems:
 
 In this project, we have the [BoxScreen.js](src/screens/BoxScreen.js) screen to show the basics about the `Box Object Model`.
 
-This approach is similar than HTML box model. For each object, we have the margin, border, padding and content sections as shown in image bellow:
+This approach is similar than HTML box model. For each object, we have the margin, border, padding and content sections as shown in image below:
 
 ![](../assets/2022-10-08-21-34-12.png)
 
@@ -97,7 +97,7 @@ In image above we can check how to use the `flexDirection` property and the two 
 
 We can check this property in the `View` container with `viewStyleRow` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file.
 
-The `alignItems` will also change the direction reference when we use the `row` value. The image bellow show how `alignitems` is rendered for both `flexDirection` settings.
+The `alignItems` will also change the direction reference when we use the `row` value. The image below show how `alignitems` is rendered for both `flexDirection` settings.
 
 ![](../assets/2022-10-08-23-07-42.png)
 ## Justify content
@@ -113,7 +113,7 @@ We have these possible values:
 - space-around
 - space-evenly
 
-The effect of each `justifyContent` value is shown in image bellow:
+The effect of each `justifyContent` value is shown in image below:
 
 ![](../assets/2022-10-08-23-26-48.png)
 
@@ -148,13 +148,13 @@ The `top`, `bottom`, `left` and `right` properties can be used in any single ele
 
 ## Applying layout systems
 
-The diagram bellow give us an idea about when we use each kind of layout system. Note that we can combine them.
+The diagram below give us an idea about when we use each kind of layout system. Note that we can combine them.
 
 ![](../assets/2022-10-09-00-35-55.png)
 
 ## Exercise
 
-Create a new screen with the specifications bellow:
+Create a new screen with the specifications below:
 
 ![](../assets/2022-10-09-00-50-47.png)
 

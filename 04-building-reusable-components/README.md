@@ -20,7 +20,7 @@ So we will learn how to build a component, communicate from parent to child elem
 
 We are trying to use best practices to reuse the same block of code as components. 
 
-This repo will sove the problem bellow. We have a component called that shows an image and a title.
+This repo will sove the problem below. We have a component called that shows an image and a title.
 
 ![](../assets/2022-09-29-13-44-00.png)
 

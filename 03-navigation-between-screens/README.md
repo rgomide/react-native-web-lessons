@@ -14,7 +14,7 @@ In this lesson we will learn how to navigate between screens.
 
 ## Project description
 
-In this project we have the main screen called Home Screen which will have two buttons. Each button will change the navigation to different screen as shown in image bellow:
+In this project we have the main screen called Home Screen which will have two buttons. Each button will change the navigation to different screen as shown in image below:
 
 ![](../assets/2022-09-16-10-50-15.png)
 
@@ -39,7 +39,7 @@ The `TouchableOpacity` is a component that identifies pressing actions for the i
 
 ## Navigating with React Navigation
 
-According to image bellow, we need to create a `Stack Navigator` object which can pass props to the screens.
+According to image below, we need to create a `Stack Navigator` object which can pass props to the screens.
 
 ![](../assets/2022-09-16-11-37-07.png)
 
@@ -58,7 +58,7 @@ Create a new project with 4 screens:
 - User Details
 - About
 
-The main screen should be the Login screen and the image bellow shows the mockup of this project with navigation details:
+The main screen should be the Login screen and the image below shows the mockup of this project with navigation details:
 
 ![](../assets/2022-09-16-13-51-52.png)
 
