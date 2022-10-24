@@ -1,11 +1,12 @@
 # State Introduction
 
 - [Introduction](#introduction)
-- [Screen Counter](#screen-counter)
+- [Counter Screen](#counter-screen)
     - [Planning the state variables](#planning-the-state-variables)
     - [Few notes on state](#few-notes-on-state)
-- [Screen Color](#screen-color)
-- [Screen Color Mix](#screen-color-mix)
+- [Color Screen](#color-screen)
+- [Color Mix Screen](#color-mix-screen)
+- [Exercise](#exercise)
 - [References](#references)
 
 ## Introduction
@@ -18,7 +19,7 @@ As seen in image below, states are a system to track a piece of data that will c
 
 In this project we have three projects with that use states variables.
 
-## Screen Counter
+## Counter Screen
 
 This example is relates to [CounterScreenWrong](./src/screens/CounterScreenWrong.js) and [CounterScreen](./src/screens/CounterScreen.js) screens.
 
@@ -69,7 +70,7 @@ The last example is a screen that reads a collection of blog posts from a data s
 - When a component is rerendered, *all of its children get rerendered too*.
 - A state variable can be passed to a child component! At that point, the state variable is now being used as `props`.
 
-## Screen Color
+## Color Screen
 
 In the [ColorScreen](./src/screens/ColorScreen.js) we are creating random colors by pressing the `Add Color` button.
 
@@ -107,7 +108,7 @@ The auxliary `randomRgb` function is called in `onPress` event and returns a ran
 
 Finally, the `FlatList` element points to `colors` as a data source. This component renders a `View` with the random `backgroundColor` and a `Text` showing the color value.
 
-## Screen Color Mix
+## Color Mix Screen
 
 The [ColorMixScreen](./src/screens/ColorMixScreen.js) is our third example that shows how to plan and use states in a complex point of view.
 
@@ -148,6 +149,10 @@ In [ColorMixScreen](./src/screens/ColorMixScreen.js) we passed the `onIncrease` 
 ```
 
 The `setColor` function validates the color adjustment because the range of the each color component should be between `0` and `255`. When the new color component value is allowed, we update the color component state with the new value.
+
+## Exercise
+
+...
 
 ## References
 - [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
