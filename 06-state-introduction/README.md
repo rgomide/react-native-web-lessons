@@ -26,6 +26,19 @@ It is a simple counter that can be increased or decreased by pressing the relate
 
 The `CounterScreenWrong` implements this feature declaring the `counter` variable and updating this value in `onPress` events.
 
+If you test this screen, you will check it doesn't works. It happens because the screen contet are not binded to variables. React will re-render the screen only for state variables.
+
+So we need to use state variables to reach our goal.
+
+### Planning state variables
+
+Before start using the state variables, we need to think about the required ones. It is more about strategy and organization, because complex screens may use a lot of state variables and we don't want more complexity to maintain our codebase.
+
+It is a great strategy answer these next three questions:
+
+1. What piece of data is changing in our app?
+2. What type of data is it?
+3. What is the data's starting (default) value?
 
 ![](../assets/2022-10-23-22-11-42.png)
 
