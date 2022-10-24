@@ -93,6 +93,14 @@ The default value is passed as an argument of `useState` function call.
 const [colors, setColors] = useState([])
 ```
 
+We have to call the `setColors` function to update the `colors` state variable. Here is an example to put elements into `colors` state variable:
+
+```js
+setColors(['red', 'green', '#0a03ff'])
+```
+
+After call this function, the screen will rerender assuming the `['red', 'green', '#0a03ff']` is assigned to `colors` value.
+
 ## Screen Color Mix
 
 ![](../assets/2022-10-23-23-22-46.png)
