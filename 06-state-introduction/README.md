@@ -101,6 +101,12 @@ setColors(['red', 'green', '#0a03ff'])
 
 After call this function, the screen will rerender assuming the `['red', 'green', '#0a03ff']` is assigned to `colors` value.
 
+So in [ColorScreen](./src/screens/ColorScreen.js) we are adding a new `rgb` color into `colors` by pressing the `Add Color` button.
+
+The auxliary `randomRgb` function is called in `onPress` event and returns a random color.
+
+Finally, the `FlatList` element points to `colors` as a data source. This component renders a `View` with the random `backgroundColor` and a `Text` showing the color value.
+
 ## Screen Color Mix
 
 ![](../assets/2022-10-23-23-22-46.png)
