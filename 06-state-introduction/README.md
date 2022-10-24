@@ -129,11 +129,25 @@ Now we can start to think where should we have to create the state variables? In
 
 ![](../assets/2022-10-23-23-36-13.png)
 
+Generally, we create state variables in the most parent component that needs to read or change a state value.
+
 ![](../assets/2022-10-23-23-37-40.png)
+
+In this example, we are passing a callback function as a `prop` to change the color component state.
 
 ![](../assets/2022-10-23-23-39-37.png)
 
-Callbacks
+In [ColorMixScreen](./src/screens/ColorMixScreen.js) we passed the `onIncrease` and `onDedrease` callbacks to update the current color component. Also, we passed the color component in the `color` props just to show the color label to user.
+
+```js
+<ColorCounter
+    onIncrease={() => setColor(blue, COLOR_INCREMENT, setBlue)}
+    onDecrease={() => setColor(blue, -1 * COLOR_INCREMENT, setBlue)}
+    color='Blue'
+/>
+```
+
+The `setColor` function validates the color adjustment because the range of the each color component should be between `0` and `255`. When the new color component value is allowed, we update the color component state with the new value.
 
 ## References
 - [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
