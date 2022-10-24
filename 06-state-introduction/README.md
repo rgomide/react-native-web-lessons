@@ -45,11 +45,17 @@ It is a great strategy answer these next three questions:
 
 For the counter screen we need to update the `current count` value. This type of data can be a `number`. Finally, this value is initiallized as `zero`.
 
-![](../assets/2022-10-23-22-12-39.png)
-
 The image below demonstrates the three answers for this problem.
 
+![](../assets/2022-10-23-22-12-39.png)
+
+The next example is a screen that shows a name typed in a `TextInput` component and shows this value in a `Text` element.
+
+In this case we need to keep updating the name value. So the state variable is the `name`, this type is a `string` and the initial value is an empty string `''`.
+
 ![](../assets/2022-10-23-22-13-53.png)
+
+The last example is a screen that reads a collection of blog posts from a data source. Since it is a dynamic data, we need to update the `blogPosts` as an `array` type. Also we can initialize as an empty array `[]`.
 
 ![](../assets/2022-10-23-22-14-56.png)
 
