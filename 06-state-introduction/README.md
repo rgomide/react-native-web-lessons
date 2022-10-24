@@ -2,6 +2,7 @@
 
 - [Introduction](#introduction)
 - [Screen Counter](#screen-counter)
+    - [Planning the state variables](#planning-the-state-variables)
 - [Screen Color](#screen-color)
 - [Screen Color Mix](#screen-color-mix)
 - [References](#references)
@@ -30,7 +31,7 @@ If you test this screen, you will check it doesn't works. It happens because the
 
 So we need to use state variables to reach our goal.
 
-### Planning state variables
+### Planning the state variables
 
 Before start using the state variables, we need to think about the required ones. It is more about strategy and organization, because complex screens may use a lot of state variables and we don't want more complexity to maintain our codebase.
 
