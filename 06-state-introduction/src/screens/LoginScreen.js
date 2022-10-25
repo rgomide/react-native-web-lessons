@@ -3,7 +3,7 @@ import { Text, View, TextInput, Button, StyleSheet } from 'react-native'
 
 const LoginScreen = () => {
     return (
-        <View>
+        <View style={styles.mainView}>
             <Text>User</Text>
             <TextInput />
             <Text>Password</Text>
@@ -14,6 +14,11 @@ const LoginScreen = () => {
     )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    mainView: {
+        padding: 5,
+        backgroundColor: 'rgb(200, 200, 200)'
+    }
+})
 
 export default LoginScreen
