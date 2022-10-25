@@ -13,7 +13,11 @@ const LoginScreen = () => {
                 onChangeText={(text) => setUser(text)}
                 style={styles.input} />
             <Text style={styles.authText}>Password</Text>
-            <TextInput style={styles.input} secureTextEntry={true} />
+            <TextInput
+                value={password}
+                onChangeText={(text) => setPassword(text)}
+                style={styles.input}
+                secureTextEntry={true} />
             <Button
                 title="Sign in"
                 onPress={() => {
