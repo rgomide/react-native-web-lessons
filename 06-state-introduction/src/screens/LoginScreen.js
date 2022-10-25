@@ -4,6 +4,7 @@ import { Text, View, TextInput, Button, StyleSheet } from 'react-native'
 const LoginScreen = () => {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
+    const [statusMessage, setStatusMessage] = useState('')
 
     return (
         <View style={styles.mainView}>
@@ -21,11 +22,15 @@ const LoginScreen = () => {
             <Button
                 title="Sign in"
                 onPress={() => {
-                    console.log(user)
-                    console.log(password)
+                    if (user.toLowerCase() == 'denecley' &&
+                        password == '123') {
+                        setStatusMessage('SUCCESS')
+                    } else {
+                        setStatusMessage('ERROR')
+                    }
                 }}
             />
-            <Text style={styles.statusText}>mensagem de status...</Text>
+            <Text style={styles.statusText}>{statusMessage}</Text>
         </View>
     )
 }
