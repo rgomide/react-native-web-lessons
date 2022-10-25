@@ -9,7 +9,7 @@ const LoginScreen = () => {
             <Text style={styles.authText}>Password</Text>
             <TextInput style={styles.input} secureTextEntry={true} />
             <Button title="Sign in" />
-            <Text>mensagem de status...</Text>
+            <Text style={styles.statusText}>mensagem de status...</Text>
         </View>
     )
 }
@@ -17,10 +17,17 @@ const LoginScreen = () => {
 const styles = StyleSheet.create({
     mainView: {
         padding: 15,
-        backgroundColor: 'rgb(220, 220, 220)'
+        backgroundColor: 'rgb(220, 220, 220)',
+        height: '100%'
     },
     authText: {
         fontSize: 20
+    },
+    statusText: {
+        fontSize: 25,
+        marginTop: 50,
+        fontWeight: 'bold',
+        alignSelf: 'center'
     },
     input: {
         borderWidth: 1,
