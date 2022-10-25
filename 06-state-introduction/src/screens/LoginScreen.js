@@ -4,11 +4,14 @@ import { Text, View, TextInput, Button, StyleSheet } from 'react-native'
 const LoginScreen = () => {
     const [user, setUser] = useState('')
     const [password, setPassword] = useState('')
-    
+
     return (
         <View style={styles.mainView}>
             <Text style={styles.authText}>User</Text>
-            <TextInput style={styles.input} />
+            <TextInput
+                value={user}
+                onChange={(element) => setUser(element.text)}
+                style={styles.input} />
             <Text style={styles.authText}>Password</Text>
             <TextInput style={styles.input} secureTextEntry={true} />
             <Button title="Sign in" />
