@@ -1,7 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import { Text, View, TextInput, Button, StyleSheet } from 'react-native'
 
 const LoginScreen = () => {
+    const [user, setUser] = useState('')
+    const [password, setPassword] = useState('')
+    
     return (
         <View style={styles.mainView}>
             <Text style={styles.authText}>User</Text>
