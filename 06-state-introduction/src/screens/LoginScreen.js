@@ -4,9 +4,9 @@ import { Text, View, TextInput, Button, StyleSheet } from 'react-native'
 const LoginScreen = () => {
     return (
         <View style={styles.mainView}>
-            <Text>User</Text>
+            <Text style={styles.authText}>User</Text>
             <TextInput style={styles.input} />
-            <Text>Password</Text>
+            <Text style={styles.authText}>Password</Text>
             <TextInput style={styles.input} secureTextEntry={true} />
             <Button title="Sign in" />
             <Text>mensagem de status...</Text>
@@ -16,14 +16,19 @@ const LoginScreen = () => {
 
 const styles = StyleSheet.create({
     mainView: {
-        padding: 5,
-        backgroundColor: 'rgb(200, 200, 200)'
+        padding: 15,
+        backgroundColor: 'rgb(220, 220, 220)'
+    },
+    authText: {
+        fontSize: 20
     },
     input: {
         borderWidth: 1,
+        borderRadius: 3,
+        backgroundColor: 'white',
         height: 35,
         paddingHorizontal: 15,
-        backgroundColor: 'white'
+        marginVertical: 10
     }
 })
 
