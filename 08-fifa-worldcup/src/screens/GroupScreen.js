@@ -32,8 +32,8 @@ const grupos = [
 			{
 				"time1": "EUA",
 				"time2": "Gales",
-				"bandeira1": "https://countryflagsapi.com/png/wales",
-				"bandeira2": "https://countryflagsapi.com/png/us",
+				"bandeira1": "https://countryflagsapi.com/png/us",
+				"bandeira2": "https://countryflagsapi.com/png/wales",
 				"golsTime1": 1,
 				"golsTime2": 1,
 				"horario": "21/11/2022 - 16:00"
@@ -53,11 +53,11 @@ const GroupScreen = (props) => {
 					return <GroupCard group={element.item}
 						onTime1Press={(time) => {
 							console.log(time)
-							navigation.navigate('TeamDetail')
+							navigation.navigate('TeamDetail', { team: time })
 						}}
 						onTime2Press={(time) => {
 							console.log(time)
-							navigation.navigate('TeamDetail')
+							navigation.navigate('TeamDetail', { team: time })
 						}}
 					/>
 				}}
@@ -69,7 +69,8 @@ const GroupScreen = (props) => {
 const styles = StyleSheet.create({
 	mainView: {
 		paddingHorizontal: 30,
-		backgroundColor: '#fafafa'
+		backgroundColor: '#fafafa',
+		height: '100%'
 	}
 })
 

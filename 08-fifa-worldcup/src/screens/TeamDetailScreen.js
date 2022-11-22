@@ -24,7 +24,9 @@ const team = {
 }
 
 const TeamDetailScreen = (props) => {
+	const selectedTeam = props.route.params.team
 	const navigation = props.navigation
+	navigation.setOptions({ title: selectedTeam })
 	return (
 		<View>
 			<Text>{team.name}</Text>
