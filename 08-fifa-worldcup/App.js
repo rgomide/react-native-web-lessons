@@ -9,14 +9,14 @@ import { NavigationContainer } from '@react-navigation/native'
 const Stack = createNativeStackNavigator()
 
 export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Menu">
-        <Stack.Screen name="Menu" component={MenuScreen} />
-        <Stack.Screen name="Group" component={GroupScreen} />
-        <Stack.Screen name="TeamDetail" component={TeamDetailScreen} />
-      </Stack.Navigator>
-      <StatusBar style="auto" />
-    </NavigationContainer>
-  )
+	return (
+		<NavigationContainer>
+			<Stack.Navigator initialRouteName="Menu">
+				<Stack.Screen name="Menu" component={MenuScreen} />
+				<Stack.Screen name="Group" component={GroupScreen} />
+				<Stack.Screen name="TeamDetail" component={TeamDetailScreen} />
+			</Stack.Navigator>
+			<StatusBar style="auto" />
+		</NavigationContainer>
+	)
 }
