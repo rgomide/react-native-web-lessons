@@ -1,0 +1,17 @@
+{
+  "name": "axios-examples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index-async": "node src/index-async.js",
+    "index-sync": "node src/index-sync.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.2.0"
+  }
+}

@@ -47,7 +47,7 @@ const GroupCard = (props) => {
 
 const styles = StyleSheet.create({
 	card: {
-		borderColor: '#cccccc',
+		borderColor: '#ddd',
 		borderWidth: 1,
 		borderRadius: 10,
 		marginVertical: 10,
