@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import styles from './styles'
 
-const SimpleStyleScreen = (props) => {
+const SimpleStyleScreen = () => {
   return (
     <View style={styles.mainView}>
       <Text style={styles.paragraph}>

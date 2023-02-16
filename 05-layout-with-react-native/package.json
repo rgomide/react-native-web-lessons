@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@types/react-native": "0.71.3",
+    "@types/react-navigation": "3.4.0",
     "@babel/core": "7.12.9"
   },
   "private": true

@@ -7,6 +7,12 @@
 
 Empty content
 
+## Project Structure
+
+### Separeted stylesheet from component design
+
+### Global stylesheet
+
 ## Exercise
 
 Empty content
