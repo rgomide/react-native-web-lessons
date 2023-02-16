@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "07-consuming-a-rest-api",
-    "slug": "07-consuming-a-rest-api",
+    "name": "08-consuming-a-rest-api",
+    "slug": "08-consuming-a-rest-api",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

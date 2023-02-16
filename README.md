@@ -10,7 +10,8 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 - [Navigation Between Screens](03-navigation-between-screens)
 - [Building Reusable Components](04-building-reusable-components)
 - [Layout With React Native](05-layout-with-react-native)
-- [State Introduction](06-state-introduction)
+- [Styling Best Practices](06-styling-best-practices)
+- [State Introduction](07-state-introduction)
 
 ## How to run the projects
 
