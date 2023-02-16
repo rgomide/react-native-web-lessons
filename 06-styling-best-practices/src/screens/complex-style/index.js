@@ -15,7 +15,7 @@ const ComplexStyleScreen = () => {
       </View>
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>Second Section</Text>
-        <Text style={styles.paragraph}>
+        <Text style={[styles.paragraph, styles.warning]}>
           Harum cupiditate recusandae omnis non.
         </Text>
       </View>

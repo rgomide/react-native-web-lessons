@@ -12,6 +12,7 @@ const metrics = {
   navBarHeight: (Platform.OS === 'ios') ? 64 : 54,
   statusBarHeight: (Platform.OS === 'ios') ? 20 : 0,
   baseRadius: 3,
+  gap: 5
 }
 
 export default metrics

@@ -4,7 +4,9 @@ import { general, colors } from "../../styles"
 
 const styles = StyleSheet.create({
   ...general,
-  colors: colors
+  warning: {
+    color: colors.warning
+  }
 })
 
 export default styles
