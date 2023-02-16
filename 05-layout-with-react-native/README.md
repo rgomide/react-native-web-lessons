@@ -164,3 +164,4 @@ Create a new screen with the specifications below:
 - [Yoga Playground](https://yogalayout.com/playground)
 - [The Full React Native Layout Cheat Sheet
 ](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)
+- [React Native Styling: Structure for Style Organization](https://thoughtbot.com/blog/structure-for-styling-in-react-native)
