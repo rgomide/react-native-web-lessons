@@ -70,9 +70,62 @@ export default SimpleStyleScreen
 
 ## Global stylesheet
 
+For complex projects you can create a styleguide to be shared in screens and component. The [/src/styles](./src/styles/) folder contains this setup. In this structure we have the `index.js` file as main file that aggregates the styles files.
+
+Each style file correponds to a speciffic context such as colors, typography, containers...
+
+Let's check the [ComplexStyle](./src/screens/complex-style/) screen. This screen's style inherits the general style and add a new `warning` style:
+
+```js
+import { StyleSheet } from "react-native"
+import { general, colors } from "../../styles"
+
+const styles = StyleSheet.create({
+  ...general,
+  warning: {
+    color: colors.warning
+  }
+})
+
+export default styles
+```
+
+The `general` content was cloned using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
+
+As shown in the previous session, the styles were imported in `index.js` and applied to screen's components.
+
+```js
+import React from 'react'
+import { View, Text } from 'react-native'
+import styles from './styles'
+
+const ComplexStyleScreen = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Title</Text>
+        <Text style={styles.paragraph}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Harum cupiditate recusandae omnis non, praesentium sint obcaecati consectetur ipsa,
+          necessitatibus enim a quaerat magnam quam assumenda maxime ducimus nobis ut quisquam.
+        </Text>
+      </View>
+      <View style={styles.section}>
+        <Text style={styles.sectionTitle}>Second Section</Text>
+        <Text style={[styles.paragraph, styles.warning]}>
+          Harum cupiditate recusandae omnis non.
+        </Text>
+      </View>
+    </View>
+  )
+}
+
+export default ComplexStyleScreen
+```
+
 ## Exercise
 
-Empty content
+Refactor the exercise developed in [Navigation between screens - Exercise](../03-navigation-between-screens#exercise) section.
 
 ## References
 - [Styling in React: 5 ways to style React apps](https://blog.logrocket.com/styling-react-5-ways-style-react-apps/#sass-css-stylesheets-react)
