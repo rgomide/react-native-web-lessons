@@ -25,7 +25,26 @@ Each screen have a pair of files: `index.js` and `styles.js`. The component stru
 
 ## Separeted stylesheet from component design
 
+Each screen has it own style file. The `styles.js` file exports a style variable created with `StyleSheet.create()` function.
 
+This example is from [src/screens/simple-style/styles.js](./src/screens/simple-style/styles.js):
+
+```js
+import { StyleSheet } from "react-native"
+
+const styles = StyleSheet.create({
+  mainView: {
+    justifyContent: 'center',
+    padding: 10
+  },
+  paragraph: {
+    fontStyle: "italic",
+    fontWeight: "600"
+  }
+})
+
+export default styles
+```
 
 ## Global stylesheet
 
