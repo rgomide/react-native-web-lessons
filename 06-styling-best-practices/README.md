@@ -1,6 +1,10 @@
 # Styling Best Practices
 
 - [Introduction](#introduction)
+- [Project Structure](#project-structure)
+- [Separated stylesheet from component design](#separeted-stylesheet-from-component-design)
+- [Global stylesheet](#global-stylesheet)
+- [Exercise](#exercise)
 - [References](#references)
 
 ## Introduction
