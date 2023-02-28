@@ -19,11 +19,11 @@ The `src/screens` folder contains a folder for each screen in our project. So we
 
 Each screen have a pair of files: `index.js` and `styles.js`. The component structure is separated from styles objects.
 
-### Separeted stylesheet from component design
+## Separeted stylesheet from component design
 
 
 
-### Global stylesheet
+## Global stylesheet
 
 ## Exercise
 
