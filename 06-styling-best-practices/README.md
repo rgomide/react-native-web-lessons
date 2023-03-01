@@ -125,7 +125,7 @@ export default ComplexStyleScreen
 
 ## Exercise
 
-Refactor the exercise developed in [Navigation between screens - Exercise](../03-navigation-between-screens#exercise) section with new folders and styles structure.
+Refactor the exercise developed in [Navigation between screens - Exercise](../03-navigation-between-screens#exercise) section with new folders and styling strategy.
 
 ## References
 - [Styling in React: 5 ways to style React apps](https://blog.logrocket.com/styling-react-5-ways-style-react-apps/#sass-css-stylesheets-react)
