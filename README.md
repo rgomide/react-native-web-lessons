@@ -29,6 +29,8 @@ Use `--openssl-legacy-provider` flag for initializing scripts in `package.json`.
 - macOS: `"web": "NODE_OPTIONS=--openssl-legacy-provider expo start --web"`
 - Windows: `"web": "SET NODE_OPTIONS=--openssl-legacy-provider && expo start --web"`
 
+[Reference](https://stackoverflow.com/questions/69719601/getting-error-digital-envelope-routines-reason-unsupported-code-err-oss)
+
 ## External References
 - [Node.js](https://nodejs.org/)
 - [React Native](https://reactnative.dev/)
