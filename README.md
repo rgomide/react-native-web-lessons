@@ -26,8 +26,14 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 
 ### `ERR_0SSL_EVP_UNSUPPORTED` error
 Use `--openssl-legacy-provider` flag to initialize scripts in `package.json`. Replace `web` script with:
-- macOS: `"web": "NODE_OPTIONS=--openssl-legacy-provider expo start --web"`
-- Windows: `"web": "SET NODE_OPTIONS=--openssl-legacy-provider && expo start --web"`
+- macOS: 
+```json
+"web": "NODE_OPTIONS=--openssl-legacy-provider expo start --web"
+```
+- Windows: 
+```json
+"web": "SET NODE_OPTIONS=--openssl-legacy-provider && expo start --web"
+```
 
 [Reference](https://stackoverflow.com/questions/69719601/getting-error-digital-envelope-routines-reason-unsupported-code-err-oss)
 
