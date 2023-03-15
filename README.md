@@ -22,6 +22,13 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 4. Run `npm run web`
 5. Enjoy!
 
+## Troubleshooting
+
+### `ERR_0SSL_EVP_UNSUPPORTED`
+Use `--openssl-legacy-provider` flag for initializing scripts in `package.json`. Replace `web` script with:
+- macOS: `"web": "NODE_OPTIONS=--openssl-legacy-provider expo start --web"`
+- Windows: `"web": "SET NODE_OPTIONS=--openssl-legacy-provider && expo start --web"`
+
 ## External References
 - [Node.js](https://nodejs.org/)
 - [React Native](https://reactnative.dev/)
