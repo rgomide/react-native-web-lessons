@@ -212,7 +212,7 @@ const reducer = (state, action) => {
 
 ## Exercise
 
-...
+1. Refactor `CounterScreen` replacing `useState` to `useReducer` hook.
 
 ## References
 - [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
