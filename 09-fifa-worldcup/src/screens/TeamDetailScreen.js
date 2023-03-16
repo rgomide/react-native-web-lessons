@@ -23,6 +23,7 @@ const team = {
 	]
 }
 
+
 const TeamDetailScreen = (props) => {
 	const selectedTeam = props.route.params.team
 	const navigation = props.navigation
