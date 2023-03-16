@@ -188,13 +188,13 @@ const [state, dispatch] = useReducer(reducer, { red: 255, green: 255, blue: 255 
 ```js
 const reducer = (state, action) => {
   // state === { red: number, green: number, blue: number }
-  // action === { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
-  const { colorToChange, amount } = action
-  const currentColorValue = state[colorToChange]
+  // action === { type: 'red' || 'green' || 'blue', payload: 15 || -15 }
+  const { type, payload } = action
+  const currentColorValue = state[type]
 
-  if (currentColorValue + amount <= 255 && currentColorValue + amount >= 0) {
+  if (currentColorValue + payload <= 255 && currentColorValue + payload >= 0) {
     const newState = { ...state }
-    newState[colorToChange] = currentColorValue + amount
+    newState[type] = currentColorValue + payload
     return newState
   } else {
     return state
@@ -204,8 +204,8 @@ const reducer = (state, action) => {
 - Update `ColorCounter` increase/decrease actions
 ```js
 <ColorCounter
-  onIncrease={() => dispatch({ colorToChange: 'red', amount: COLOR_INCREMENT })}
-  onDecrease={() => dispatch({ colorToChange: 'red', amount: -1 * COLOR_INCREMENT })}
+  onIncrease={() => dispatch({ type: 'red', payload: COLOR_INCREMENT })}
+  onDecrease={() => dispatch({ type: 'red', payload: -1 * COLOR_INCREMENT })}
   color='Red'
 />
 ```
