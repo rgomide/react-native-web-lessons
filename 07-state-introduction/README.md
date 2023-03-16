@@ -6,6 +6,7 @@
     - [Few notes on state](#few-notes-on-state)
 - [Color Screen](#color-screen)
 - [Color Mix Screen](#color-mix-screen)
+- [Using Reducer to manage state](#using-reducer-to-manage-state)
 - [Exercise](#exercise)
 - [References](#references)
 
@@ -150,9 +151,70 @@ In [ColorMixScreen](./src/screens/ColorMixScreen.js) we passed the `onIncrease` 
 
 The `setColor` function validates the color adjustment because the range of the each color component should be between `0` and `255`. When the new color component value is allowed, we update the color component state with the new value.
 
+## Using Reducer to manage state
+
+Reducer is a hook that allow us to manage a state in a function. The [ColorMixReducerScreen](./src/screens/ColorMixReducerScreen.js) is a refactored version of the previous example.
+
+### Quick Thoughts
+1. App workgs right now - we could leave it as is! But we could make it slightly better...
+2. We have three separate pieces of state
+3. For this app, these three pieces of state are extremely related*
+4. There is a precise set of well-known ways in which we update these values*
+
+`*`: This makes our state a great candidate for being managed by a `reducer`.
+
+### Reducer - function that manages changes to an object!?!?
+- Real fancy name
+- Function that gets called with two objects
+- Argument 1 - Object that has all of our state in it
+- Argument 2 - Object that describes the update we want to make
+- We look at ARgument 2 and use it to decide how to change Argument 1
+- Two technicalities
+    1. We never change Argument 1 directly.
+    2. We must always return a value to be used as Argument 1
+
+Refactoring `ColorMixScreen`:
+- Remove state references
+- Delete `setColor` function
+- Import `useReducer`
+```js
+import React, { useReducer } from 'react'
+```
+- Declare a new reducer
+```js
+const [state, dispatch] = useReducer(reducer, { red: 255, green: 255, blue: 255 })
+```
+- Implement the `reducer` function
+```js
+const reducer = (state, action) => {
+  // state === { red: number, green: number, blue: number }
+  // action === { colorToChange: 'red' || 'green' || 'blue', amount: 15 || -15 }
+  const { colorToChange, amount } = action
+  const currentColorValue = state[colorToChange]
+
+  if (currentColorValue + amount <= 255 && currentColorValue + amount >= 0) {
+    const newState = { ...state }
+    newState[colorToChange] = currentColorValue + amount
+    return newState
+  } else {
+    return state
+  }
+}
+```
+- Update `ColorCounter` increase/decrease actions
+```js
+<ColorCounter
+  onIncrease={() => dispatch({ colorToChange: 'red', amount: COLOR_INCREMENT })}
+  onDecrease={() => dispatch({ colorToChange: 'red', amount: -1 * COLOR_INCREMENT })}
+  color='Red'
+/>
+```
+
 ## Exercise
 
 ...
 
 ## References
 - [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+- [useState Hook](https://beta.reactjs.org/reference/react/useState)
+- [useReducer Hook](https://beta.reactjs.org/reference/react/useReducer)

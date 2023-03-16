@@ -31,6 +31,11 @@ const HomeScreen = (props) => {
           onPress={() => { navigation.navigate('LoginScreen') }}
           title="Go to Login Screen" />
       </View>
+      <View style={styles.buttonView}>
+        <Button
+          onPress={() => { navigation.navigate('ColorMixReducerScreen') }}
+          title="Go to Color Mix Screen With Reducer" />
+      </View>
     </View>
   )
 }
