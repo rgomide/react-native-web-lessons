@@ -3,4 +3,5 @@
 ...
 
 ## References
-- [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
+- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [Rick and Morty API - Documentation](https://rickandmortyapi.com/documentation)
