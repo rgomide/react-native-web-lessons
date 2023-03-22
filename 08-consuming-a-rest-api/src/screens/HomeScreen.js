@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { StyleSheet, Button, View, Image, Text, FlatList, TextInput } from 'react-native'
-import { getCharacter, getNextCharacterPage } from '../component/api/RickAndMortyApi'
+import { getCharacter, getNextCharacterPage } from '../component/api/rick-and-morty'
 
 const HomeScreen = (props) => {
   const [characters, setCharacters] = useState([])
