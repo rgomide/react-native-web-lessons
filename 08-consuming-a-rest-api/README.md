@@ -1,6 +1,6 @@
 # Consuming a REST API
 
-...
+Check [rick-and-morty](./src/component/api/rick-and-morty/index.js) API client for an example.
 
 ## References
 - [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
