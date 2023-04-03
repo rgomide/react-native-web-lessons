@@ -215,6 +215,6 @@ const reducer = (state, action) => {
 1. Refactor `CounterScreen` replacing `useState` to `useReducer` hook.
 
 ## References
-- [Using the State Hook](https://reactjs.org/docs/hooks-state.html)
-- [useState Hook](https://beta.reactjs.org/reference/react/useState)
-- [useReducer Hook](https://beta.reactjs.org/reference/react/useReducer)
+- [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
+- [useState Hook](https://react.dev/reference/react/useState)
+- [useReducer Hook](https://react.dev/reference/react/useReducer)
