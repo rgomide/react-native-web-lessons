@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { StyleSheet, Button, View, Image, Text, FlatList, TextInput } from 'react-native'
-import { getCharacter, getNextCharacterPage } from '../component/api/rick-and-morty'
+import { getCharacter, getNextCharacterPage } from '../../component/api/rick-and-morty'
 
-const HomeScreen = (props) => {
+const MainCharsScreen = (props) => {
   const [characters, setCharacters] = useState([])
   const [pageInfo, setPageInfo] = useState({})
   const [nameSearch, setNameSearch] = useState('')
@@ -89,4 +89,4 @@ const styles = StyleSheet.create({
   }
 })
 
-export default HomeScreen
+export default MainCharsScreen
