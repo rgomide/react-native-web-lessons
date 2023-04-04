@@ -1,5 +1,11 @@
 # Consuming a REST API
 
+
+## useState's Seconde Argument
+- `useState(() => {})`: Run the arrow function **every time** the component is rendered
+- `useState(() => {}, [])`: Run the arrow function **only** when the component is **first** rendered
+- `useState(() => {}, [value])`: Run the arrow function **only** the component is **first** rendered, **and** when the `value` **changes**.
+
 Check [rick-and-morty](./src/component/api/rick-and-morty/index.js) API client for an example.
 
 ## References
@@ -16,3 +22,4 @@ Check [rick-and-morty](./src/component/api/rick-and-morty/index.js) API client f
 
 ### API
 - [Rick and Morty API - Documentation](https://rickandmortyapi.com/documentation)
+- [API Rank](https://apirank.dev/)
