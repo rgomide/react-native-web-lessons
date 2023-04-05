@@ -8,6 +8,12 @@
 
 Check [rick-and-morty](./src/component/api/rick-and-morty/index.js) API client for an example.
 
+## Exercise
+
+Improve the project of this codebase with additional features and screens according to mock bellow:
+
+![Exercise](../assets/exerciseMock.drawio.png)
+
 ## References
 ### HTTP calls
 - [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
