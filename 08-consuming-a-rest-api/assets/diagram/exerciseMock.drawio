@@ -1,10 +1,10 @@
-<mxfile host="Electron" modified="2023-04-05T17:37:01.186Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="Lo2EjLLZeeL_KPfPhs2I" version="21.1.2" type="device">
+<mxfile host="Electron" modified="2023-04-05T18:00:45.072Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.1.2 Chrome/106.0.5249.199 Electron/21.4.3 Safari/537.36" etag="X4UoXFwp_bGMD4q8AeFn" version="21.1.2" type="device">
   <diagram name="Page-1" id="yWVIyu8cc8XqeAMlqS7R">
     <mxGraphModel dx="1114" dy="999" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="-h-4fbo_lbcxWKLIKk_v-1" value="CHARACTERS SCREEN" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+        <mxCell id="-h-4fbo_lbcxWKLIKk_v-1" value="CHARACTERS SCREEN&lt;br&gt;(MAIN SCREEN)" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
           <mxGeometry x="70" y="140" width="200" height="390" as="geometry" />
         </mxCell>
         <mxCell id="-h-4fbo_lbcxWKLIKk_v-2" value="CHARACTER DETAIL" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
