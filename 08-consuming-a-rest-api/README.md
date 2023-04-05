@@ -1,7 +1,7 @@
 # Consuming a REST API
 
 
-## useState's Seconde Argument
+## useState's Second Argument
 - `useState(() => {})`: Run the arrow function **every time** the component is rendered
 - `useState(() => {}, [])`: Run the arrow function **only** when the component is **first** rendered
 - `useState(() => {}, [value])`: Run the arrow function **only** the component is **first** rendered, **and** when the `value` **changes**.
