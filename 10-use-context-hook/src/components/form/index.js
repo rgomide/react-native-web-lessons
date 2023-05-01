@@ -3,6 +3,7 @@ import { styles } from "../../styles"
 import { ThemeContext } from "../../screens/theme";
 import { View, Text, Button } from "react-native";
 
+// Form component is above ThemeContext.Provider
 const Form = () => {
   const theme = useContext(ThemeContext)
   const componentStyle = styles[theme]

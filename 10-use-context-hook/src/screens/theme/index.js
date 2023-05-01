@@ -12,6 +12,7 @@ const ThemeScreen = () => {
   const componentStyle = styles[theme]
 
   return (
+    // ThemeContext.Provider is in top level from Form component
     <ThemeContext.Provider value={theme}>
       <View style={componentStyle.theme.mainView}>
         <Form />
