@@ -1,6 +1,7 @@
 # useContext Hook
 
 - [Introduction](#introduction)
+- [useContext](#useContext)
 - [References](#references)
 
 ## Introduction
@@ -18,6 +19,8 @@ const MyComponent = () => {
 
 We need to create a context above the component using the [createContext](https://react.dev/reference/react/createContext) function.
 
+## useContext
+Lorem
 ### Caveats
 From [React documentation](https://react.dev/reference/react/useContext#caveats):
 > - The `Context.Provider` needs to be **above** the component doing `useContext` call.
