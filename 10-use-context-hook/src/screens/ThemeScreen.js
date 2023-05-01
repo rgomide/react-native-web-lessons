@@ -1,7 +1,7 @@
 import { createContext, useState } from "react"
 import { View, Button } from "react-native"
-import { styles } from "../../styles"
-import Form from "../../components/form"
+import { styles } from "../styles"
+import Form from "../components/Form"
 
 // Creating the ThemeContext context
 export const ThemeContext = createContext('dark')

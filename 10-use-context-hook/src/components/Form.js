@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { styles } from "../../styles"
-import { ThemeContext } from "../../screens/theme";
+import { styles } from "../styles"
+import { ThemeContext } from "../screens/ThemeScreen";
 import { View, Text, Button } from "react-native";
 
 // Form component is above ThemeContext.Provider

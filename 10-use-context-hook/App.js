@@ -1,8 +1,8 @@
 import { StatusBar } from 'react-native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
-import MenuScreen from './src/screens/menu'
-import ThemeScreen from './src/screens/theme'
+import MenuScreen from './src/screens/MenuScreen'
+import ThemeScreen from './src/screens/ThemeScreen'
 
 const Stack = createNativeStackNavigator()
 
