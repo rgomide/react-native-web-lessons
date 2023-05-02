@@ -43,3 +43,4 @@ Dont't forget to update the styles for both themes.
 ## References
 - [useContext documentation](https://react.dev/reference/react/useContext)
 - [createContext documentation](https://react.dev/reference/react/createContext)
+- [CheckBox component](https://reactnative.dev/docs/checkbox.html)
