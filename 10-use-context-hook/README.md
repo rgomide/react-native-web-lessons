@@ -36,7 +36,7 @@ Update your [Rick and Morty App](../08-consuming-a-rest-api/README.md#exercise) 
 
 You should implement two contexts. First context is to store user name. The second is used to control the applied theme.
 
-We can toggle the theme to dark or light in any screen and we should show the user name in next screens after logon.
+We can toggle the theme to dark or light in any screen and we should show the user name in next screens after logon. Use the [CheckBox](https://reactnative.dev/docs/checkbox.html) component to toggle the theme.
 
 Dont't forget to update the styles for both themes.
 
