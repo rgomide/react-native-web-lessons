@@ -21,7 +21,18 @@ const MyComponent = () => {
 We need to create a context above the component using the [createContext](https://react.dev/reference/react/createContext) function.
 
 ## useContext
-Lorem
+
+In this project we can check how Context is applied checking these files:
+
+- [ThemeScreen](./src/screens/ThemeScreen.js): here we are creating the context with `createContext` function and declaring a `ThemeContext.Provider`.
+- [Form](./src/components/Form.js): this component consumes the `ThemeContext` by using the `useContext` hook.
+
+So to use a context remember to:
+
+1. Create a context with `createContext` function.
+2. Add a provider above the components that will use the context.
+3. Call the `useContext` hook at component level to retrieve the context value.
+
 ### Caveats
 From [React documentation](https://react.dev/reference/react/useContext#caveats):
 > - The `Context.Provider` needs to be **above** the component doing `useContext` call.
