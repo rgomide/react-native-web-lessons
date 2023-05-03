@@ -34,7 +34,7 @@ So to use a context remember to:
 3. Call the `useContext` hook at component level to retrieve the context value.
 
 ### Caveats
-From [React documentation](https://react.dev/reference/react/useContext#caveats):
+From the [React documentation](https://react.dev/reference/react/useContext#caveats):
 > - The `Context.Provider` needs to be **above** the component doing `useContext` call.
 > - React automatically re-renders all the children that use a particular context starting from the provider that receives a different value.
 > - Passing something via context only works if `SomeContext` that you use to provide context and `SomeContext` that you use to read it are exactly the same object, as determined by a `===` comparison.
