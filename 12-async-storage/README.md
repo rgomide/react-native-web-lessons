@@ -35,19 +35,19 @@ According to the [API documentation](https://react-native-async-storage.github.i
 
 ## Exercise
 
-In this homework, you will be implementing a React Native project with at least 5 screens that consume data from an open API. Additionally, you will explore the use of useState, useEffect, and useContext hooks to manage state and data flow within your application.
+In this exercise, you will be implementing a React Native project with at least 5 screens that consume data from an open API. Additionally, you will explore the use of useState, useEffect, and useContext hooks to manage state and data flow within your application.
 
 ### Requirements:
 
-- Create a React Native project that includes at least 5 screens.
+- Create a React Native project that includes the 5 screens desbribed in next topic.
 - The screens should be connected through a navigation stack using React Navigation.
-- Your application should consume data from an open API. You can choose any API that provides data relevant to your application.
+- Your application should consume data from an open API. You can choose any API ([public-apis](https://github.com/public-apis/public-apis)) that provides data relevant to your application.
 - You should use Axios to make API requests and handle responses.
-- Use useState hook to manage state within your components. You should use this hook to store data retrieved from the API and any other stateful data required by your application.
-- Use useEffect hook to manage side effects within your components. You should use this hook to fetch data from the API and perform any other side effects required by your application.
-- Use useContext hook to manage global state within your application. You should use this hook to share state and data between components that are not directly related in the component tree.
+- Use `useState` hook to manage state within your components. You should use this hook to store data retrieved from the API and any other stateful data required by your application.
+- Use `useEffect` hook to manage side effects within your components. You should use this hook to fetch data from the API and perform any other side effects required by your application.
+- Use `useContext` hook to manage global state within your application. You should use this hook to share state and data between components that are not directly related in the component tree.
 
-### Suggestions for Screens:
+### Required Screens:
 
 1. `Home screen`: Display a list of items retrieved from the API. This screen should demonstrate the use of useState, useEffect, and useContext hooks.
 2. `Detail screen`: Display the details of an item selected from the Home screen. This screen should demonstrate the use of props to pass data between screens.
@@ -59,3 +59,4 @@ In this homework, you will be implementing a React Native project with at least 
 
 - [AsyncStorage Github repo](https://github.com/react-native-async-storage/async-storage)
 - [Usage Documentation](https://react-native-async-storage.github.io/async-storage/docs/usage)
+- [public-apis](https://github.com/public-apis/public-apis)
