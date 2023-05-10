@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "12-async-storage",
-    "slug": "12-async-storage",
+    "name": "11-async-storage",
+    "slug": "11-async-storage",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
