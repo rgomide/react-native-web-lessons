@@ -8,7 +8,24 @@ This library uses the same mechanism.
 
 ## Usage
 
-The values are stored by `key -> value` pairs.
+The values are stored by `key -> value` pairs. Basically we store and read data with `setItem` and `getItem` functions.
+
+Check [App.js](./App.js) for a basic usage example.
+
+## Functions
+
+According to the [API documentation](https://react-native-async-storage.github.io/async-storage/docs/api), we have these public functions:
+- getItem
+- setItem
+- mergeItem
+- removeItem
+- getAllKeys
+- multiGet
+- multiSet
+- multiMerge
+- multiRemove
+- clear
+- useAsyncStorage
 
 ## Reference
 
