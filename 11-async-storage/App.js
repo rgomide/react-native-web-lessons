@@ -6,6 +6,18 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 export default function App() {
   const [value, setValue] = useState('')
 
+  const clear = async () => {
+    await AsyncStorage.clear()
+  }
+
+  const save = async (key, value) => {
+    await AsyncStorage.setItem(key, value)
+  }
+
+  const load = async (key) => {
+    return AsyncStorage.getItem(key)
+  }
+
   // useEffect to clear storage when load and close App
   useEffect(() => {
     clear()
@@ -16,40 +28,35 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>Let's test AsyncStorage</Text>
-      <Button
-        title="Save"
-        onPress={async () => {
-          await save('key', 'some value!')
-        }}>Save</Button>
-      <Button
-        title="Load"
-        onPress={async () => {
-          setValue(await load('key'))
-        }}>Load</Button>
-      <Text>{value}</Text>
+      <View style={styles.innerContainer}>
+        <Text>Let's test AsyncStorage</Text>
+        <Button
+          title="Save"
+          onPress={() => {
+            save('key', 'some value!')
+          }} />
+        <Button
+          title="Load"
+          onPress={async () => {
+            const valueFromStorage = await load('key')
+            setValue(valueFromStorage)
+          }} />
+        <Text>{value}</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
-}
-
-async function clear() {
-  await AsyncStorage.clear()
-}
-
-async function save(key, value) {
-  await AsyncStorage.setItem(key, value)
-}
-
-async function load(key) {
-  return AsyncStorage.getItem(key)
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    padding: 10
   },
+  innerContainer: {
+    width: '100%',
+    gap: 5
+  }
 });
