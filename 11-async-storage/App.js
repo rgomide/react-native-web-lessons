@@ -45,7 +45,7 @@ export default function App() {
       </View>
       <StatusBar style="auto" />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
@@ -59,4 +59,4 @@ const styles = StyleSheet.create({
     width: '100%',
     gap: 5
   }
-});
+})
