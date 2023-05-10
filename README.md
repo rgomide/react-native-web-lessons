@@ -12,6 +12,10 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 - [Layout With React Native](05-layout-with-react-native)
 - [Styling Best Practices](06-styling-best-practices)
 - [State Introduction](07-state-introduction)
+- [Consuming a REST API](08-consuming-a-rest-api)
+- [Exploring devices features](09-expo-device)
+- [useContext Hook](10-use-context-hook)
+- [AsyncStorage](11-async-storage)
 
 ## How to run the projects
 
