@@ -15,7 +15,7 @@ export default function App() {
   }
 
   const load = async (key) => {
-    return AsyncStorage.getItem(key)
+    return await AsyncStorage.getItem(key)
   }
 
   // useEffect to clear storage when load and close App
