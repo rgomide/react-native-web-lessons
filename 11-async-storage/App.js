@@ -41,6 +41,13 @@ export default function App() {
             const valueFromStorage = await load('key')
             setValue(valueFromStorage)
           }} />
+        <Button
+          title="Clear"
+          onPress={async () => {
+            await clear()
+            const valueFromStorage = await load('key')
+            setValue(valueFromStorage)
+          }} />
         <Text>{value}</Text>
       </View>
       <StatusBar style="auto" />
