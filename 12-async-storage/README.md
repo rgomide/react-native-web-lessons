@@ -49,11 +49,11 @@ In this homework, you will be implementing a React Native project with at least 
 
 ### Suggestions for Screens:
 
-1. Home screen: Display a list of items retrieved from the API. This screen should demonstrate the use of useState, useEffect, and useContext hooks.
-2. Detail screen: Display the details of an item selected from the Home screen. This screen should demonstrate the use of props to pass data between screens.
-3. Search screen: Allow users to search for items based on a keyword. This screen should demonstrate the use of TextInput and search functionality.
-4. Favorites screen: Display a list of items that have been marked as favorites by the user. This screen should demonstrate the use of AsyncStorage to persist data between sessions.
-5. Settings screen: Allow users to configure settings for the application. This screen should demonstrate the use of checkboxes, switches, and other input components.
+1. `Home screen`: Display a list of items retrieved from the API. This screen should demonstrate the use of useState, useEffect, and useContext hooks.
+2. `Detail screen`: Display the details of an item selected from the Home screen. This screen should demonstrate the use of props to pass data between screens.
+3. `Search screen`: Allow users to search for items based on a keyword. This screen should demonstrate the use of TextInput and search functionality.
+4. `Favorites screen`: Display a list of items that have been marked as favorites by the user. This screen should demonstrate the use of `AsyncStorage` to persist data between sessions.
+5. `Settings screen`: Allow users to configure settings for the application. This screen should demonstrate the use of checkboxes, switches, and other input components. Save these settings using `AsyncStorage`.
 
 ## References
 
