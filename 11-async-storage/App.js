@@ -33,19 +33,19 @@ export default function App() {
         <Button
           title="Save"
           onPress={() => {
-            save('key', 'some value!')
+            save('someKey', 'some value!')
           }} />
         <Button
           title="Load"
           onPress={async () => {
-            const valueFromStorage = await load('key')
+            const valueFromStorage = await load('someKey')
             setValue(valueFromStorage)
           }} />
         <Button
           title="Clear"
           onPress={async () => {
             await clear()
-            const valueFromStorage = await load('key')
+            const valueFromStorage = await load('someKey')
             setValue(valueFromStorage)
           }} />
         <Text>{value}</Text>
