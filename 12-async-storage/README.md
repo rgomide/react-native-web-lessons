@@ -15,17 +15,17 @@ Check [App.js](./App.js) for a basic usage example.
 ## Functions
 
 According to the [API documentation](https://react-native-async-storage.github.io/async-storage/docs/api), we have these public functions:
-- getItem
-- setItem
-- mergeItem
-- removeItem
-- getAllKeys
-- multiGet
-- multiSet
-- multiMerge
-- multiRemove
-- clear
-- useAsyncStorage
+- `getItem`
+- `setItem`
+- `mergeItem`
+- `removeItem`
+- `getAllKeys`
+- `multiGet`
+- `multiSet`
+- `multiMerge`
+- `multiRemove`
+- `clear`
+- `useAsyncStorage`
 
 ## Reference
 
