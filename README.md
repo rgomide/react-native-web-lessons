@@ -1,35 +1,37 @@
 # React Native Lessons
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
-The mini projects of these lessons are based in `The Complete React Native + Hooks` course from Stephen Grider.
+Os projetos contidos neste repositório foram baseados no curso `The Complete React Native + Hooks` de Stephen Grider.
 
 ## Summary
 
-- [Boilerplate Project](00-boilerplate-project)
-- [Overview React Components](01-overview-react-components)
-- [List Building With Style](02-list-building-with-style)
-- [Navigation Between Screens](03-navigation-between-screens)
-- [Building Reusable Components](04-building-reusable-components)
-- [Layout With React Native](05-layout-with-react-native)
-- [Styling Best Practices](06-styling-best-practices)
-- [State Introduction](07-state-introduction)
-- [Consuming a REST API](08-consuming-a-rest-api)
-- [Exploring devices features](09-expo-device)
-- [useContext Hook](10-use-context-hook)
+- [Novo projeto](00-boilerplate-project)
+- [Visão geral sobre componentes React](01-overview-react-components)
+- [Criando listas com estilo](02-list-building-with-style)
+- [Navegação entre telas](03-navigation-between-screens)
+- [Criando componentes reutilizáveis](04-building-reusable-components)
+- [Layout com React Native](05-layout-with-react-native)
+- [Boas práticas para definição de estilos](06-styling-best-practices)
+- [Introdução a estado](07-state-introduction)
+- [Consumindo uma API REST](08-consuming-a-rest-api)
+- [Explorando os recursos do dispositivo](09-expo-device)
+- [Hook useContext](10-use-context-hook)
 - [AsyncStorage](11-async-storage)
 
-## How to run the projects
+## Como executar os projetos
 
-1. Make sure that you have `Node.js` intalled
-    - Access [Node.js](https://nodejs.org/) and download the last stable version
-2. Open your favorite terminal and navigate to some project folder
-3. Run `npm install`
-4. Run `npm run web`
-5. Enjoy!
+1. Verifique se você tem o `Node.js` instalado
+    - Acesse [Node.js](https://nodejs.org/) e faça o download da última versão estável
+2. Abra o seu terminal e navegue até a pasta raiz do seu projeto
+3. Execute `npm install`
+4. Execute `npm run web`
+5. Divirta-se!
 
-## Troubleshooting
+## Erros mais comuns
 
-### `ERR_0SSL_EVP_UNSUPPORTED` error
-Use `--openssl-legacy-provider` flag to initialize scripts in `package.json`. Replace `web` script with:
+### Error `ERR_0SSL_EVP_UNSUPPORTED`
+Utilize a flag `--openssl-legacy-provider` para inicializar os scripts em `package.json`. Substitua o script `web` por:
 - macOS: 
 ```json
 "web": "NODE_OPTIONS=--openssl-legacy-provider expo start --web"
@@ -39,9 +41,9 @@ Use `--openssl-legacy-provider` flag to initialize scripts in `package.json`. Re
 "web": "SET NODE_OPTIONS=--openssl-legacy-provider && expo start --web"
 ```
 
-[Reference](https://stackoverflow.com/questions/69719601/getting-error-digital-envelope-routines-reason-unsupported-code-err-oss)
+[Referência](https://stackoverflow.com/questions/69719601/getting-error-digital-envelope-routines-reason-unsupported-code-err-oss)
 
-## External References
+## Referências externas
 - [Node.js](https://nodejs.org/)
 - [React Native](https://reactnative.dev/)
 - [React Native Web docs](https://necolas.github.io/react-native-web/docs/)
