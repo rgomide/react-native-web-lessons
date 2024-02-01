@@ -6,7 +6,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 
 ## Sumário
 
-- [Novo projeto](00-boilerplate-project)
+- [Modelo de projeto](00-boilerplate-project)
 - [Visão geral sobre componentes React](01-overview-react-components)
 - [Criando listas com estilo](02-list-building-with-style)
 - [Navegação entre telas](03-navigation-between-screens)
