@@ -1,34 +1,39 @@
-# Overview of React components
+# Visão geral sobre componentes React
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
-- [Components](#components)
-- [Rules of JSX](#rules-of-jsx)
-- [Exercise](#exercise)
-## Components
+- [Componentes](#componentes)
+- [Regras para JSX](#regras-para-jsx)
+- [Exercício](#exercício)
+- [Referência](#referência)
 
-A React component could be analyzed by 4 parts:
+## Componentes
 
-1. Import libraries
-2. Create a component. A component is a function that returns some JSX
-3. Create a stylesheet to style our component
-4. Export the component so we can use it elsewhere in our project
+Um componente React pode ser analizado em 4 partes:
 
-Check [ComponentScreen.js](./src/screens/ComponentScreen.js) for more details. Also, [App.js](./App.js) is using the custom component.
-## Rules of JSX
+1. Importação de bibliotecas
+2. Criação do componente. Um componente é uma função que retorna um código JSX.
+3. Criação da folha de estilo do seu componente.
+4. Exportar o componente para ser utilizado em outras partes do seu projeto.
 
-- We can assemble different JSX elements like normal HTML
-- We configure different JSX elements using `props`
-- We can refeer to JS variables inside of a JSX block by using curly braces
-- We can assign JSX elements to a variable, then show that variable inside of a JSX block
+Verifique o arquivo [ComponentScreen.js](./src/screens/ComponentScreen.js) para mais detalhes. Além disso, o arquivo [App.js](./App.js) faz o uso desse componente.
 
-## Exercise
+## Regras para JSX
 
-1. Create a new component called `LessonComponent` that:
-    - Show two Text elements
-    - The first should say `Getting started with React Native!` and have a font size of `45`
-    - The second should say `My name is <your name>` and have a font size of `20`
-    - For the second text element, assign your name to a variable, then print it up in the JSX element
-    - Replace `App.js` to show your component
+- Nós podemos utilizar diferentes elementos JSX como se fosse um conteúdo HTML
+- Nós podemos configurar diferentes elementos JSX utilizando as suas `props`
+- Podemos utilizar expressões JS dentro de blocos JSX a partir do uso de chaves `{}`
+- Os elementos JSX podem ser atribuídos em variáveis. O valor dessa variável pode ser utilziada para compor o bloco JSX
 
-## Reference
+## Exercício
+
+1. Crie um novo componente chamado `LessonComponent` que:
+    - Mostre dois elementos `Text`
+    - O primeiro deve conter o texto `Iniciando os estudos de React Native!` e ter o tamanho de fonte igual a `45`
+    - O segundo elemento deve conter o texto `O meu nome é <seu nome>` e ter o tamanho de fonte igual a `20`
+    - Para o segundo elemento `Text`, atribua o seu nome a uma variável e então mostre o valor dessa variável dentro do elemento JSX
+    - Manipule o arquivo `App.js` para mostrar o seu componente
+
+## Referência
 
 - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
