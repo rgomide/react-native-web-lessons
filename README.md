@@ -4,7 +4,7 @@
 
 Os projetos contidos neste repositório foram baseados no curso `The Complete React Native + Hooks` de Stephen Grider.
 
-## Summary
+## Sumário
 
 - [Novo projeto](00-boilerplate-project)
 - [Visão geral sobre componentes React](01-overview-react-components)
