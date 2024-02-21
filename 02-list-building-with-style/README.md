@@ -29,7 +29,7 @@ Se nós modificarmos a lsita, como por exemplo, excluindo um elemento:
 
 ![behavior without a key being provided](../assets/2022-09-01-20-16-09.png)
 
-React will update elements when we have a key for each element. The key values must be unique in the entire array.
+Raect atualizará os elementos apenas quando nós temos um `key` para cada elemento. Os valores do atributo `key` devem ser únicos entre os elementos do array.
 
 ![behavior with key](../assets/2022-09-01-20-18-37.png)
 
