@@ -21,38 +21,40 @@ Neste projeto veremos como construir listas utilizando o elemento `FlatList`. Ve
 - Também é necessário informar o `prop` `renderItem` - é uma função que transforma cada elemento do array em um elemento do `FlatItem`
 - Se você é acostumado a trabalhar com React para web, o procedimento mais comum é realizar uma operação `map` para transformar umas lista de objetos em uma lista de componentes. Em React Native, é mais aconselhado utilizar o elemento `FlatList` para esse propósito
 
-![Array to List of Friends](../assets/2022-09-01-19-59-40.png)
+<img src="../assets/2022-09-01-19-59-40.png" width="500"/>
 
 ## Por que atribuir a propriedade key?
 
 Se nós modificarmos a lsita, como por exemplo, excluindo um elemento: 
 
-![behavior without a key being provided](../assets/2022-09-01-20-16-09.png)
+<img src="../assets/2022-09-01-20-16-09.png" width="800"/>
 
 Raect atualizará os elementos apenas quando nós temos um `key` para cada elemento. Os valores do atributo `key` devem ser únicos entre os elementos do array.
 
-![behavior with key](../assets/2022-09-01-20-18-37.png)
+<img src="../assets/2022-09-01-20-18-37.png" width="480"/>
 
 ## Resolvendo o problema da propriedade key
 
-The first way is set the key property to the original object as shown in [ListScreenKeyManually.js](./src/screens/ListScreenKeyManually.js).
+A primeira forma é definir a propriedade `key` para o objeto original, como mostrado em  [ListScreenKeyManually.js](./src/screens/ListScreenKeyManually.js).
 
-The second way is using the `keyExtractor` prop of `FlatList` as seen in [ListScreenKeyExtractor.js](./src/screens/ListScreenKeyExtractor.js).
+A segunda maneira é utilizando o prop `keyExtractor` do `FlatList`. Esse exemplo é demonstrado em [ListScreenKeyExtractor.js](./src/screens/ListScreenKeyExtractor.js).
+
 ## Props importantes para o FlatList
 
 In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some properties to change the look and feel of the `FlatList` component. The first property is `horizontal` that changes the redering direction. And the second property used was `showsHorizontalScrollIndicator`, which allows to hide the horizontal scroll bar.
 
 ## Exercício
 
-1. Create a new `FlatList` component with these specs:
-    - Make the `FlatList` scroll vertically again
-    - Add a new `age` property to each of our `friend` objects
-    - Print out that age for each element produced by the `FlatList`
+1. Crie um novo componente que utilize o `FlatList` com as seguintes especificações:
+    - Faça o `FlatList` rolar na vertical novamente
+    - Adicione uma nova propriedade chamada `age` em cada objeto da lista `friends`
+    - Mostre o valor da idade nos elementos renderizados na `FlatList`
 
-Use the Referência below:
+Utilize a referência a seguir:
 
-![](../assets/2022-09-01-21-34-51.png)
+<img src="../assets/2022-09-01-21-34-51.png" width="300"/>
+
 ## Referência
 
-- [FlatList documentation](https://reactnative.dev/docs/flatlist)
+- [Documentação do componente FlatList](https://reactnative.dev/docs/flatlist)
 
