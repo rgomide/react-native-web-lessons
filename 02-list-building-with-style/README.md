@@ -13,18 +13,19 @@
 ## Introdução
 
 Neste projeto veremos como construir listas utilizando o elemento `FlatList`. Verifique o arquivo [ListScreen.js](./src/screens/ListScreen.js) para mais detalhes.
+
 ## O elemento FlatList
 
-- Turns an array into a list of elements
-- We are required to pass in a `prop` of `data` - the array of dta that we are going to create a bunch of elements out of
-- Also required to pass in a `renderItem` prop - function that will turn each individual item into an element
-- If you are coming from React on the web, you might be used to `mapping` an array of data to build a list. FlatList is better with React Native
+- Transforma um array em uma lista de elementos
+- Nós precisamos passar o atributo `data` como um `prop` - o array `data` será utilizado para criar o conjunto de elementos
+- Também é necessário informar o `prop` `renderItem` - é uma função que transforma cada elemento do array em um elemento do `FlatItem`
+- Se você é acostumado a trabalhar com React para web, o procedimento mais comum é realizar uma operação `map` para transformar umas lista de objetos em uma lista de componentes. Em React Native, é mais aconselhado utilizar o elemento `FlatList` para esse propósito
 
 ![Array to List of Friends](../assets/2022-09-01-19-59-40.png)
 
 ## Por que atribuir a propriedade key?
 
-If we modify the list, for example, deleting one element. 
+Se nós modificarmos a lsita, como por exemplo, excluindo um elemento: 
 
 ![behavior without a key being provided](../assets/2022-09-01-20-16-09.png)
 
