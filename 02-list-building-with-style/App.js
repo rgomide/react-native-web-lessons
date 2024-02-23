@@ -7,7 +7,6 @@ import ListScreenStyled from './src/screens/ListScreenStyled';
 export default function App() {
   return (
     <View>
-      <Button title='Gosta' onPress={() => { Alert.alert('Título', 'Mensagem') }} />
       <Text style={styles.textStyle}>A simple FlatList</Text>
       <ListScreen />
       <Text style={styles.textStyle}>List screen key manually</Text>
