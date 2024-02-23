@@ -45,14 +45,25 @@ In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some pr
 
 ## Exercício
 
-1. Crie um novo componente que utilize o `FlatList` com as seguintes especificações:
-    - Faça o `FlatList` rolar na vertical novamente
-    - Adicione uma nova propriedade chamada `age` em cada objeto da lista `friends`
-    - Mostre o valor da idade nos elementos renderizados na `FlatList`
+### 1. Crie um novo componente que utilize o `FlatList` com as seguintes especificações:
+- Faça o `FlatList` rolar na vertical novamente
+- Adicione uma nova propriedade chamada `age` em cada objeto da lista `friends`
+- Mostre o valor da idade nos elementos renderizados na `FlatList`
 
 Utilize a referência a seguir:
 
 <img src="../assets/2022-09-01-21-34-51.png" width="300"/>
+
+### 2. Você deve criar um aplicativo uma lista de números de `1` a `10`. Cada número na lista deve ser clicável. Quando um número é clicado, o aplicativo deve exibir um alerta mostrando o dobro do número clicado.
+
+Etapas:
+
+- Configure um novo projeto React Native.
+- Implemente uma tela que contenha uma `FlatList`.
+- Configure a FlatList para exibir números de 1 a 10.
+- Torne cada item da lista clicável.
+- Quando um item da lista for clicado, exiba um alerta mostrando o dobro do número clicado.
+- Utilize a função [window.alert](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert) do JavaScript (para a versão web) ou [Alert.alert](https://reactnative.dev/docs/alert) (Android/iOS) para exibir o resultado da operação.
 
 ## Referência
 

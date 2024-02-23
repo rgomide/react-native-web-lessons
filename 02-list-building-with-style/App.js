@@ -1,4 +1,4 @@
-import { View, Text, StatusBar, StyleSheet } from 'react-native'
+import { View, Alert, Button, Text, StatusBar, StyleSheet } from 'react-native'
 import ListScreen from './src/screens/ListScreen';
 import ListScreenKeyManually from './src/screens/ListScreenKeyManually';
 import ListScreenKeyExtractor from './src/screens/ListScreenKeyExtractor';
@@ -7,6 +7,7 @@ import ListScreenStyled from './src/screens/ListScreenStyled';
 export default function App() {
   return (
     <View>
+      <Button title='Gosta' onPress={() => { Alert.alert('Título', 'Mensagem') }} />
       <Text style={styles.textStyle}>A simple FlatList</Text>
       <ListScreen />
       <Text style={styles.textStyle}>List screen key manually</Text>

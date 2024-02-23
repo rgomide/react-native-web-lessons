@@ -4,7 +4,7 @@ import { Text, StyleSheet, View } from 'react-native'; // importing some piees o
 
 // PART 2 - CREATE A COMPONENT 
 // A FUNCTION THAT RETURNS SOME JSX
-const ComponentsScreen = () => {
+const ComponentScreen = () => {
     const greeting = 'Hi there!'
     const componentAsVariable = <Text>Hello to you!</Text>
 
@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
 })
 
 // PART 4 - EXPORT THE COMPONENT SO WE CAN USE IT ELSEWHERE IN OUR PROJECT
-export default ComponentsScreen
+export default ComponentScreen
 
 
 
