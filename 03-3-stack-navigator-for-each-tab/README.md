@@ -31,7 +31,7 @@ graph LR;
 
 Desenvolva um projeto de acordo com o esquema de navegação mostrado na figura a seguir:
 
-![](2024-03-01-19-01-56.png)
+<img src="../assets/2024-03-01-19-01-56.png" width="500" />
 
 ## Referências
 
