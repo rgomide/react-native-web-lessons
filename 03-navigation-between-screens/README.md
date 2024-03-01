@@ -10,6 +10,7 @@
 - [Navegando com React Navigation](#navegando-com-react-navigation)
 - [Passagem de parâmetros durante a navegação](#passagem-de-parâmetros-durante-a-navegação)
 - [Exercício](#exercício)
+- [Referências](#referências)
 
 ## Introdução
 
@@ -71,21 +72,22 @@ console.log(props.route.params)
 
 ## Exercício
 
-Create a new project with 4 screens:
+Crie um novo projeto com 4 telas:
 
 - Login 
 - Home
 - User Details
 - About
 
-The main screen should be the Login screen and the image below shows the mockup of this project with navigation details:
+A tela principal deve ser a `LoginScreen` e a image a seguir mostra a estrutura dos componentes com os detalhes de navegação:
 
-![](../assets/2022-09-16-13-51-52.png)
+<img src="../assets/2022-09-16-13-51-52.png" width="600"/>
 
-Styling your screens is strongly recommended to improve the user interface.
+Pesquise sobre a definição de estilos para melhorarmos a experiência do usuário.
 
-## Reference
+## Referências
 
-- [Button documentation](https://reactnative.dev/docs/button)
-- [TouchableOpacity documentation](https://reactnative.dev/docs/touchableopacity)
-- [React Navigation component](https://reactnavigation.org/docs/getting-started)
+- [Documentação do componente Button](https://reactnative.dev/docs/button)
+- [Documentação do componente TouchableOpacity](https://reactnative.dev/docs/touchableopacity)
+- [Componente React Navigation](https://reactnavigation.org/docs/getting-started)
+- [Passagem de parâmetros para as rotas](https://reactnavigation.org/docs/params)
