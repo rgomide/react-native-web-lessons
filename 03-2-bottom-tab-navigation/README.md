@@ -1,6 +1,8 @@
 # Navegação por abas
 
 - [Introdução](#introdução)
+- [Abas inferiores](#abas-inferiores)
+- [Customização](#customização)
 - [Exercício](#exercício)
 - [Referências](#referências)
 
