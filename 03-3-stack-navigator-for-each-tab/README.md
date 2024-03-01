@@ -31,7 +31,7 @@ graph LR;
 
 Desenvolva um projeto de acordo com o esquema de navegação mostrado na figura a seguir:
 
-![Exercise](../assets/exerciceNavigationHybrid.drawio.png)
+![](2024-03-01-19-01-56.png)
 
 ## Referências
 
