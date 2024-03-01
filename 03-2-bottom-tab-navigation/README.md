@@ -48,8 +48,15 @@ Essas opções foram definidas da seguinte maneira:
 }
 ```
 
+**Obs.:**: Foi utilizada a biblioteca `@expo/vector-icons` para acessar os ícones disponíveis no acervo [FontAwesome](https://fontawesome.com/v6/search?o=r&m=free). Caso não tenha essa biblioteca em seu projeto, instale a partir do comando:
+
+```bash
+npm install @expo/vector-icons
+```
+
 ## Exercício
 
 ## Referências
 
 - [Navegação por abas](https://reactnavigation.org/docs/tab-based-navigation)
+- [Ícones da biblioteca FontAwesome](https://fontawesome.com/v6/search?o=r&m=free)
