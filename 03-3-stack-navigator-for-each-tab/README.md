@@ -11,14 +11,20 @@ Neste projeto analisaremos o uso de vários componentes de navegação de forma 
 
 ## Uma pilha de navegação para cada aba
 
+Nós podemos configurar esquemas de navegação mais complexos. Neste projeto temos um esquema de navegação por abas definido na função principal do arquivo [App.js](./App.js#L10) que aponta para dois componentes. Esses componentes possuem o mapeamento em forma de pilha para outros dois componentes: [HomeStackScreen](./src/screens/HomeStackScreen.js) e [SettingsStackScreen](./src/screens/SettingsStackScreen.js).
+
+Finalmente, esses componentes de mapeamento apontam para as suas respectivas telas. Note que a tela [DetailsScreen](./src/screens/DetailsScreen.js) é referenciada por ambos componentes de mapeamento. Durante a execução, eles são instanciados de forma independente como objetos distintos.
+
+A estrutura de navegação deste projeto é ilustrado no diagrama a seguir:
+
 ```mermaid
 graph LR;
-    A(App.js)-- Tab -->B(HomeStack);
-    B-- Stack -->D(Home)
-    D<-- Stack -->E(Details)
-    A-- Tab -->C(SettingStack);
-    C-- Stack -->F(Settings)
-    F<-- Stack -->G(Details)
+    A(App.js<br/>TabNavigator)-->B(HomeStack<br/>StackNavigator);
+    B-->D(Home)
+    D<-->E(Details)
+    A-->C(SettingStack<br/>StackNavigator);
+    C-->F(Settings)
+    F<-->G(Details)
     
 ```
 
