@@ -8,6 +8,7 @@
 - [Button em ação](#button-em-ação)
 - [TouchableOpacity em ação](#touchableopacity-em-ação)
 - [Navegando com React Navigation](#navegando-com-react-navigation)
+- [Passagem de parâmetros durante a navegação](#passagem-de-parâmetros-durante-a-navegação)
 - [Exercício](#exercício)
 
 ## Introdução
@@ -51,6 +52,22 @@ Ele pode ser configurado no [App.js](App.js) dentro do elemento `<NavigationCont
 Você pode utilizar a prop `initialRouteName` do elemento `Stack.Navigator` para configurar a tela principal da sua aplicação.
 
 O componente `HomeScreen` contém um novo atributo na sua `prop` referente aos elementos de navegação.
+
+## Passagem de parâmetros durante a navegação
+
+Para enviar parâmetros durante a navegação, podemos informar um segundo parâmetro para a função `navigate`. Esse parâmetro é um objeto que será acessado pelo componente destinatário.
+
+A ação de enviar o parâmetro é feita no componente [HomeScreen](./src/screens/HomeScreen.js#L20):
+
+```js
+navigation.navigate('List', { name: 'Denecley' })
+```
+
+Nós conseguimos acessar o parâmetro enviado durante a navegação no componente destinatário a partir da prop `route` conforme mostrado em [ListScreen](./src/screens/ListScreen.js#L6).
+
+```js
+console.log(props.route.params)
+```
 
 ## Exercício
 
