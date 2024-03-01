@@ -18,22 +18,23 @@ Neste tópico aprenderemos como navegar entre telas.
 
 Neste projeto nós temos a tela principal chamada `Home Screen` no qual possui dois botões. Cada botão direcionará a navegação para telas diferentes conforme mostrado na Figura abaixo:
 
-![](../assets/2022-09-16-10-50-15.png)
+<img src="../assets/2022-09-16-10-50-15.png" width="600"/>
 
 ## Tipos de botão
 
-In React Native we can use two different types of button.
+No `React Native` nós podemos utilizar dois tipos de botões.
 
-![](../assets/2022-09-16-10-57-13.png)
+<img src="../assets/2022-09-16-10-57-13.png" width="600"/>
 
-`Button` is the simplier component that allows developers to configure a clickable button. But the `TouchableOpacity` allow us to configure any clickable area inside this component.
+`Button` é um componente mais simples que permite que os desenvolvedores configure uma ação de um botão. Porém, o componente `TouchableOpacity` permite a configuração de uma área clicável dentro do componente.
 
-In next sections we will use each button type to compare the complexity and how customizable are they.
+Nas próximas seções nós utilizaremos cada tipo de butão para compararmos a complexidade e o grau de customização de cada um deles.
 
-## Button em ação
+## `Button` em ação
 
-We will use a `Button` component representing the first element in the [Home](src/screens/HomeScreen.js) screen.
-Remember the `Button` component is a self closing element and the button text could be assigned by the `title` prop. Also, the press action could be handled by `onPress` prop.
+Nós utilizaremos o componente `Button` para representar o primeiro elemento da tela [Home](src/screens/HomeScreen.js).
+
+Lembre-se de que o componente `Button` é uma `tag` com auto fechamento e o texto do botão é definido pela prop `title`. Além disso, a ação de pressionamento é tratada pela prop `onPress`.
 
 ## TouchableOpacity em ação
 
