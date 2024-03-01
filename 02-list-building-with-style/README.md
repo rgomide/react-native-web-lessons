@@ -14,7 +14,7 @@
 
 Neste projeto veremos como construir listas utilizando o elemento `FlatList`. Verifique o arquivo [ListScreen.js](./src/screens/ListScreen.js) para mais detalhes.
 
-## O elemento FlatList
+## O elemento `FlatList`
 
 - Transforma um array em uma lista de elementos
 - Nós precisamos passar o atributo `data` como um `prop` - o array `data` será utilizado para criar o conjunto de elementos
@@ -23,7 +23,7 @@ Neste projeto veremos como construir listas utilizando o elemento `FlatList`. Ve
 
 <img src="../assets/2022-09-01-19-59-40.png" width="500"/>
 
-## Por que atribuir a propriedade key?
+## Por que atribuir a propriedade `key`?
 
 Se nós modificarmos a lsita, como por exemplo, excluindo um elemento: 
 
@@ -33,13 +33,13 @@ Raect atualizará os elementos apenas quando nós temos um `key` para cada eleme
 
 <img src="../assets/2022-09-01-20-18-37.png" width="480"/>
 
-## Resolvendo o problema da propriedade key
+## Resolvendo o problema da propriedade `key`
 
 A primeira forma é definir a propriedade `key` para o objeto original, como mostrado em  [ListScreenKeyManually.js](./src/screens/ListScreenKeyManually.js).
 
 A segunda maneira é utilizando o prop `keyExtractor` do `FlatList`. Esse exemplo é demonstrado em [ListScreenKeyExtractor.js](./src/screens/ListScreenKeyExtractor.js).
 
-## Props importantes para o FlatList
+## Props importantes para o `FlatList`
 
 In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some properties to change the look and feel of the `FlatList` component. The first property is `horizontal` that changes the redering direction. And the second property used was `showsHorizontalScrollIndicator`, which allows to hide the horizontal scroll bar.
 
@@ -60,7 +60,7 @@ Etapas:
 
 - Configure um novo projeto React Native.
 - Implemente uma tela que contenha uma `FlatList`.
-- Configure a FlatList para exibir números de 1 a 10.
+- Configure a `FlatList` para exibir números de 1 a 10.
 - Torne cada item da lista clicável.
 - Quando um item da lista for clicado, exiba um alerta mostrando o dobro do número clicado.
 - Utilize a função [window.alert](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert) do JavaScript (para a versão web) ou [Alert.alert](https://reactnative.dev/docs/alert) (Android/iOS) para exibir o resultado da operação.
