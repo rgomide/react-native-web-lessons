@@ -29,6 +29,8 @@ graph LR;
 
 ## Exercício
 
+Desenvolva um projeto de acordo com o esquema de navegação mostrado na figura a seguir:
+
 ![Exercise](../assets/exerciceNavigationHybrid.drawio.png)
 
 ## Referências
