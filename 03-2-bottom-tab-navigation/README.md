@@ -48,13 +48,19 @@ Essas opções foram definidas da seguinte maneira:
 }
 ```
 
-**Obs.:**: Foi utilizada a biblioteca `@expo/vector-icons` para acessar os ícones disponíveis no acervo [FontAwesome](https://fontawesome.com/v6/search?o=r&m=free). Caso não tenha essa biblioteca em seu projeto, instale a partir do comando:
+**Obs.:** Foi utilizada a biblioteca `@expo/vector-icons` para acessar os ícones disponíveis no acervo [FontAwesome](https://fontawesome.com/v6/search?o=r&m=free). Caso não tenha essa biblioteca em seu projeto, instale a partir do comando:
 
 ```bash
 npm install @expo/vector-icons
 ```
 
 ## Exercício
+
+Adapte o exercício desenvolvido no material sobre [Navegação entre telas](../03-1-navigation-between-screens/README.md#exercício) para utilizar a navegação por abas.
+
+Nesse caso, utilize apenas as telas `Home`, `User Details` e `About`.
+
+Configure as propriedades `tabBarIcon`, `tabBarActiveTintColor` e `tabBarInactiveTintColor` para configurar o aspecto visual dos botões de acesso das abas.
 
 ## Referências
 
