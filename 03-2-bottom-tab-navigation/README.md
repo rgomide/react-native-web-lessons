@@ -1,6 +1,4 @@
-# Navegação pela barra inferior
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
-[![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
+# Navegação por abas
 
 - [Introdução](#introdução)
 - [Exercício](#exercício)
@@ -8,26 +6,48 @@
 
 ## Introdução
 
-Neste tópico aprenderemos como navegar entre telas utilizando a navegação na barra inferior.
+Neste tópico analizaremos como navegar entre telas utilizando a navegação por abas.
+
+Primeiramente, verifique se o seu arquivo `package.json` possui a dependência `@react-navigation/bottom-tabs`. Caso não tenha, instale a partir do comando:
+
+```bash
+npm install @react-navigation/bottom-tabs
+```
+
+## Abas inferiores
+
+A primeira diferença em relação ao método de navegação por referência é de que temos que importar a função `createBottomTabNavigator` do pacote `@react-navigation/bottom-tabs`.
+
+Assim, iniciamos o nosso objeto de navegação no arquivo [App.js](./App.js#L9):
+
+```js
+const Tab = createBottomTabNavigator()
+```
+
+## Customização
+
+Cada elemento de navegação pode ser configurado a partir da prop `options`, o mapeamento para a tela `Home` utiliza as seguintes props:
+
+- `tabBarIcon`: função que retorna o elemento para ser renderizado como o ícone da aba
+- `tabBarActiveTintColor`: cor do título da aba quando ela estiver ativa
+- `tabBarInactiveTintColor`: cor do título da aba quando ela estiver inativa
+- `tabBarBadge`: ícone que sobrepõe a aba
+
+Essas opções foram definidas da seguinte maneira:
+
+```js
+{
+  tabBarIcon: () => {
+    return <FontAwesome name='house' size={20} />
+  },
+  tabBarActiveTintColor: 'tomato',
+  tabBarInactiveTintColor: 'gray',
+  tabBarBadge: 2
+}
+```
 
 ## Exercício
 
-Crie um novo projeto com 4 telas:
-
-- Login 
-- Home
-- User Details
-- About
-
-A tela principal deve ser a `LoginScreen` e a image a seguir mostra a estrutura dos componentes com os detalhes de navegação:
-
-<img src="../assets/2022-09-16-13-51-52.png" width="600"/>
-
-Pesquise sobre a definição de estilos para melhorarmos a experiência do usuário.
-
 ## Referências
 
-- [Documentação do componente Button](https://reactnative.dev/docs/button)
-- [Documentação do componente TouchableOpacity](https://reactnative.dev/docs/touchableopacity)
-- [Componente React Navigation](https://reactnavigation.org/docs/getting-started)
-- [Passagem de parâmetros para as rotas](https://reactnavigation.org/docs/params)
+- [Navegação por abas](https://reactnavigation.org/docs/tab-based-navigation)
