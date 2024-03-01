@@ -26,7 +26,7 @@ const Tab = createBottomTabNavigator()
 
 ## Customização
 
-Cada elemento de navegação pode ser configurado a partir da prop `options`, o mapeamento para a tela `Home` utiliza as seguintes props:
+Cada elemento de navegação pode ser configurado a partir da prop `options`, o mapeamento para a tela [Home](./App.js#L15) utiliza as seguintes props:
 
 - `tabBarIcon`: função que retorna o elemento para ser renderizado como o ícone da aba
 - `tabBarActiveTintColor`: cor do título da aba quando ela estiver ativa
