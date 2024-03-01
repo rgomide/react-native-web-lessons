@@ -9,7 +9,7 @@ The mini projects of these lessons are based in `The Complete React Native + Hoo
 - [Boilerplate Project](00-boilerplate-project)
 - [Overview React Components](01-overview-react-components)
 - [List Building With Style](02-list-building-with-style)
-- [Navigation Between Screens](03-navigation-between-screens)
+- [Navigation Between Screens](03-1-navigation-between-screens)
 - [Building Reusable Components](04-building-reusable-components)
 - [Layout With React Native](05-layout-with-react-native)
 - [Styling Best Practices](06-styling-best-practices)

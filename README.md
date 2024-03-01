@@ -9,7 +9,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 - [Modelo de projeto](00-boilerplate-project)
 - [Visão geral sobre componentes React](01-overview-react-components)
 - [Criando listas com estilo](02-list-building-with-style)
-- [Navegação entre telas](03-navigation-between-screens)
+- [Navegação entre telas](03-1-navigation-between-screens)
 - [Criando componentes reutilizáveis](04-building-reusable-components)
 - [Layout com React Native](05-layout-with-react-native)
 - [Boas práticas para definição de estilos](06-styling-best-practices)
