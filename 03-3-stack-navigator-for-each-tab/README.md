@@ -30,6 +30,9 @@ graph LR;
 
 ## Exercício
 
+<img src="../assets/exerciceNavigationHybrid.drawio.png"/>
+![Exercise](../assets/exerciseMock.drawio.png)
+
 ## Referências
 
 - [Navegação por pilha em cada aba](https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab)
