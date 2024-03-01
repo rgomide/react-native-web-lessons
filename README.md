@@ -10,6 +10,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 - [Visão geral sobre componentes React](01-overview-react-components)
 - [Criando listas com estilo](02-list-building-with-style)
 - [Navegação entre telas](03-1-navigation-between-screens)
+- [Navegação pela barra inferior](03-2-bottom-tab-navigation/)
 - [Criando componentes reutilizáveis](04-building-reusable-components)
 - [Layout com React Native](05-layout-with-react-native)
 - [Boas práticas para definição de estilos](06-styling-best-practices)
