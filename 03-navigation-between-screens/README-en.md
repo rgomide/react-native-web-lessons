@@ -1,26 +1,26 @@
-# Navegação entre telas
+# Navigation Between Screens
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
-- [Introdução](#introdução)
-- [Descrição do projeto](#descrição-do-projeto)
-- [Tipos de botão](#tipos-de-botão)
-- [Button em ação](#button-em-ação)
-- [TouchableOpacity em ação](#touchableopacity-em-ação)
-- [Navegando com React Navigation](#navegando-com-react-navigation)
-- [Exercício](#exercício)
+- [Introduction](#introduction)
+- [Project description](#project-description)
+- [Button types](#button-types)
+- [Button in action](#button-in-action)
+- [TouchableOpacity in action](#touchableopacity-in-action)
+- [Navigating with React Navigation](#navigating-with-react-navigation)
+- [Exercise](#exercise)
 
-## Introdução
+## Introduction
 
-Neste tópico aprenderemos como navegar entre telas.
+In this lesson we will learn how to navigate between screens.
 
-## Descrição do projeto
+## Project description
 
-Neste projeto nós temos a tela principal chamada `Home Screen` no qual possui dois botões. Cada botão direcionará a navegação para telas diferentes conforme mostrado na Figura abaixo:
+In this project we have the main screen called Home Screen which will have two buttons. Each button will change the navigation to different screen as shown in image below:
 
 ![](../assets/2022-09-16-10-50-15.png)
 
-## Tipos de botão
+## Button types
 
 In React Native we can use two different types of button.
 
@@ -30,16 +30,16 @@ In React Native we can use two different types of button.
 
 In next sections we will use each button type to compare the complexity and how customizable are they.
 
-## Button em ação
+## Button in action
 
 We will use a `Button` component representing the first element in the [Home](src/screens/HomeScreen.js) screen.
 Remember the `Button` component is a self closing element and the button text could be assigned by the `title` prop. Also, the press action could be handled by `onPress` prop.
 
-## TouchableOpacity em ação
+## TouchableOpacity in action
 
 The `TouchableOpacity` is a component that identifies pressing actions for the inner elements. So it's not a self closing element. That's the reason we defined it as a highly customizable component, we can use our creativity to create custom pressable components. 
 
-## Navegando com React Navigation
+## Navigating with React Navigation
 
 According to image below, we need to create a `Stack Navigator` object which can pass props to the screens.
 
@@ -51,7 +51,7 @@ You can use the `initialRouteName` prop of the `Stack.Navigator` element to set 
 
 The `HomeScreen` function contains a new argument related to that `prop` received from navigation.
 
-## Exercício
+## Exercise
 
 Create a new project with 4 screens:
 
