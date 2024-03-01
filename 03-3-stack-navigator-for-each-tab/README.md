@@ -12,11 +12,14 @@ Neste projeto analisaremos o uso de vários componentes de navegação de forma 
 ## Uma pilha de navegação para cada aba
 
 ```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
+flowchart LR;
+    A(App.js)-- Tab -->B(HomeStack);
+    B-- Stack -->D(Home)
+    D<-- Stack -->E(Details)
+    A-- Tab -->C(SettingStack);
+    C-- Stack -->F(Settings)
+    F<-- Stack -->G(Details)
+    
 ```
 
 ## Exercício
