@@ -38,19 +38,19 @@ Lembre-se de que o componente `Button` é uma `tag` com auto fechamento e o text
 
 ## TouchableOpacity em ação
 
-The `TouchableOpacity` is a component that identifies pressing actions for the inner elements. So it's not a self closing element. That's the reason we defined it as a highly customizable component, we can use our creativity to create custom pressable components. 
+O componente `TouchableOpacity` é um componente que identifica ações de clique em elementos internos. Logo, esse componente não é uma tag de auto fechamento. Esse é o motivo no qual caracterizamos esse componente sendo de alto grau de customização, Nós podemos utilizar a nossa criatividade para criar componentes clicáveis. 
 
 ## Navegando com React Navigation
 
-According to image below, we need to create a `Stack Navigator` object which can pass props to the screens.
+De acordo com a imagem a seguir, nós precisamos criar um objeto `Stack Navigator` no qual enviamos `props` para as telas.
 
-![](../assets/2022-09-16-11-37-07.png)
+<img src="../assets/2022-09-16-11-37-07.png" width="600"/>
 
-It can be configured in [App.js](App.js) inside the `<NavigationContainer>` element. We created the `Stack` const and inside `<NavigationContainer>`, we added each screen reference using the `<Stack.Screen>` element.
+Ele pode ser configurado no [App.js](App.js) dentro do elemento `<NavigationContainer>`. Primeiramente nós definimos o objeto `Stack` e dentro do elemento `<NavigationContainer>`, adicionamos as referências de cada tela a partir do elemento `<Stack.Screen>`.
 
-You can use the `initialRouteName` prop of the `Stack.Navigator` element to set up the main screen of your application.
+Você pode utilizar a prop `initialRouteName` do elemento `Stack.Navigator` para configurar a tela principal da sua aplicação.
 
-The `HomeScreen` function contains a new argument related to that `prop` received from navigation.
+O componente `HomeScreen` contém um novo atributo na sua `prop` referente aos elementos de navegação.
 
 ## Exercício
 

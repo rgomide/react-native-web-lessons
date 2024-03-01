@@ -2,7 +2,8 @@ import React from 'react'
 // IMPORT FlatList
 import { Text, StyleSheet, FlatList } from 'react-native'
 
-const ListScreen = () => {
+const ListScreen = (props) => {
+  console.log(props.route)
   // CREATE AN ARRAY OF OBJECTS
   const friends = [
     { name: 'Friend #1' },

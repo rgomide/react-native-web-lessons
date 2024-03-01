@@ -17,7 +17,7 @@ const HomeScreen = (props) => {
       <TouchableOpacity
         onPress={() => {
           console.log('touchable opacity pressed')
-          navigation.navigate('List')
+          navigation.navigate('List', { name: 'Denecley' })
         }}>
         <Text>Go to List Demo</Text>
       </TouchableOpacity>
