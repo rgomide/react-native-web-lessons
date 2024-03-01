@@ -1,4 +1,4 @@
-# List Building With Style
+# Criando listas com estilo
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
@@ -61,7 +61,7 @@ Etapas:
 - Configure um novo projeto React Native.
 - Implemente uma tela que contenha uma `FlatList`.
 - Configure a `FlatList` para exibir números de 1 a 10.
-- Torne cada item da lista clicável.
+- Torne cada item da lista clicável. Utilize o component [Button](https://reactnative.dev/docs/button) para esse propósito.
 - Quando um item da lista for clicado, exiba um alerta mostrando o dobro do número clicado.
 - Utilize a função [window.alert](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/alert) do JavaScript (para a versão web) ou [Alert.alert](https://reactnative.dev/docs/alert) (Android/iOS) para exibir o resultado da operação.
 
