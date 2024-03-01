@@ -25,13 +25,11 @@ graph LR;
     A-->C(SettingStack<br/>StackNavigator);
     C-->F(Settings)
     F<-->G(Details)
-    
 ```
 
 ## Exercício
 
-<img src="../assets/exerciceNavigationHybrid.drawio.png"/>
-![Exercise](../assets/exerciseMock.drawio.png)
+![Exercise](../assets/exerciceNavigationHybrid.drawio.png)
 
 ## Referências
 
