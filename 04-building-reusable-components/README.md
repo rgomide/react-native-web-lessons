@@ -21,8 +21,8 @@ Sendo assim, nós aprenderemos como construir um componente, comunicar do elemen
 
 Nós utilizaremos as melhores práticas para reutilizar o mesmo bloco de código como componentes.
 
-Neste projeto nós resolveremos o problema ilustrado na figura abaixo. Nós temos um componente que mostra uma imagem e um título
-.
+Neste projeto nós resolveremos o problema ilustrado na figura abaixo. Nós temos um componente que mostra uma imagem e um título.
+
 <p align="center">
   <img src="../assets/2022-09-29-13-44-00.png" width="250"/>
 </p>
