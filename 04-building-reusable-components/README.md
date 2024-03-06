@@ -13,27 +13,28 @@
 
 ## Introdução
 
-In this lesson we will learn how to create reusable components. Sometimes we want to use the same component in different places of our project. In this case we can repeat a lot of code or create a single reusable component.
+Neste projeto nós aprenderemos a como criar componentes reutilizáveis. Às vezes nós queremos utilizar o mesmo componente em diferentes partes de um projeto. Neste caso, nós repetir vários blocos de código ou criar um único componente reutilizável.
 
-So we will learn how to build a component, communicate from parent to child element and pass parameters as props.
+Sendo assim, nós aprenderemos como construir um componente, comunicar do elemento pai para o elemento filho e passar parâmetros por meio de `props`.
 
 ## Reuso de componentes com `props`
 
-We are trying to use best practices to reuse the same block of code as components. 
+Nós utilizaremos as melhores práticas para reutilizar o mesmo bloco de código como componentes.
 
-This repo will sove the problem below. We have a component called that shows an image and a title.
+Neste projeto nós resolveremos o problema ilustrado na figura abaixo. Nós temos um componente que mostra uma imagem e um título
+.
 <p align="center">
-    <img src="../assets/2022-09-29-13-44-00.png" width="250"/>
+  <img src="../assets/2022-09-29-13-44-00.png" width="250"/>
 </p>
 
-We can solve this scenario working on two different approaches:
-- Same group of elements, repeating the same JSX three times over
-- Create a separated component
+Nós podemos solucionar esse cenário a partir de duas abordagens:
+- O mesmo grupo de elementos sendo repetido 3 vezes
+- Criar um componente separado
 
-So we will create a shared `ImageDetail` component with `title` and `image` props.
+Nós criaremos um componente compartilhado chamado `ImageDetail` com duas props: `title` e `image`.
 
 <p align="center">
-    <img src="../assets/2022-09-29-13-47-44.png" width="700"/>
+  <img src="../assets/2022-09-29-13-47-44.png" width="700"/>
 </p>
 
 ## Relação entre Pai e Filho
@@ -44,62 +45,62 @@ Now we are able to use it in any place of our project. The first thing to do is 
 
 ## Comunicação do Pai para o Filho
 
-Now we can start passing parameters from Parent to Child using props. In `Parent` component, we can declare the props as a tag attribute. In `Child` component we can get all props on the first component argument function. 
+Nós podemos passar parâmetros do componente Pai para o componente Filho a partir de `props`. No componente `Pai`, nós declaramos as propos como um atributo de tag. E, no componente `Filho`, nós obtemos as props como o primeiro argumento da função que define o componente.
 
-This is an example:
+Por exemplo:
 
-- Parent:
+- `Pai`:
 ```js
 <ImageDetail title="Mountain"/>
 ```
 
-- Child:
+- `Filho`:
 ```js
 const ImageDetail = (props) => {
-    return <Text>{props.title}</Text>
+  return <Text>{props.title}</Text>
 }
 ```
 
-In this case `Parent` is passing `title` as a prop and `Child` is receiving all props in `props` argument.
+Neste caso, o componente `Pai` está passando o `title` como uma prop e o `Filho` está recebendo todas as props no argumento `props`.
 
 ## Imagens
 
-In this project we are using the images stored in [assets/img](assets/img) folder. Is a best practice keep all static files inside an `assets` folder in our projects.
+Neste projeto nós estamos utilizando imagens armazenadas na pasta [assets/img](assets/img). É uma boa prática manter todos os arquivos estáticos dentro da pasta `assets`.
 
 ## Mostrando imagens
 
-To show images inside our `ImageDetail` component, we will use the React Native [Image](https://reactnative.dev/docs/image) component.
+Nós utilizaremos o componente [Image](https://reactnative.dev/docs/image) do React Native para mostrar as imagens dentro do componente `ImageDetail`.
 
-This component have the `source` prop that needs a image reference. We can load a static image reference of our project using the `require` function:
+Esse componente tem a prop `source` que consiste em uma referência de uma imagem. Nós podemos carregar um recurso estático do nosso projeto utilizando a função `require`:
 
 ```js
 const localImage = require('../../assets/img/beach.jpg')
 return <Image source={localImage} style={styles.thumbImage} />
 ```
 
-Also, we need to set up the image dimensions in `style` prop. It will be something like this:
+Além disso, nós precisamos definir as dimensões da imagem a partir da prop `style`:
 
 ```js
 const styles = StyleSheet.create({
-    thumbImage: {
-        width: 50,
-        height: 50
-    }
+  thumbImage: {
+    width: 50,
+    height: 50
+  }
 })
 ```
 
-Now we are able to pass the images name as a prop and render inside `ImageDetail` component.
+Agora nós podemos passar o nome das imagens como uma prop e renderizá-la dentro do componente `ImageDetail`.
 
 ## Passando imagens como props
 
-In [ImageScreen](src/screens/ImageScreen.js) we have the `imageSources` array which have all images references that we want to render in [ImageDetail](src/components/ImageDetail.js) component.
+No componente [ImageScreen](src/screens/ImageScreen.js) nós temos a varia'vel `imageSources` que contém todas as referências das imagens que nós queremos renderizar a partir do componente [ImageDetail](src/components/ImageDetail.js).
 
-We created the `imageSource` prop to pass to `ImageDetail` component. And finally, `ImageDetail` component use this prop as a source to React Native `Image` component.
+Nós criamos a prop `imageSource` como ponto de comunicação com o componente `ImageDetail`. Finalmente, o componente `ImageDetail` utiliza essa prop como fonte do componente `Image` do React Native.
 
 ## Exercício
 
-Modify the current project to render the `score` prop in `ImageDetail` component.
+Modifique o projeto atual para renderizar a prop `score` no componente `ImageDetail`.
 
 <p align="center">
-    <img src="../assets/2022-09-29-14-58-43.png" width="700"/>
+  <img src="../assets/2022-09-29-14-58-43.png" width="700"/>
 </p>
