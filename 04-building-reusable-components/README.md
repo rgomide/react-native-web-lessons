@@ -23,7 +23,7 @@ We are trying to use best practices to reuse the same block of code as component
 
 This repo will sove the problem below. We have a component called that shows an image and a title.
 
-![](../assets/2022-09-29-13-44-00.png)
+<img src="../assets/2022-09-29-13-44-00.png" width="250"/>
 
 We can solve this scenario working on two different approaches:
 - Same group of elements, repeating the same JSX three times over
@@ -31,7 +31,7 @@ We can solve this scenario working on two different approaches:
 
 So we will create a shared `ImageDetail` component with `title` and `image` props.
 
-![](../assets/2022-09-29-13-47-44.png)
+<img src="../assets/2022-09-29-13-47-44.png" width="700"/>
 
 ## Relação entre Pai e Filho
 
@@ -97,4 +97,4 @@ We created the `imageSource` prop to pass to `ImageDetail` component. And finall
 
 Modify the current project to render the `score` prop in `ImageDetail` component.
 
-![](../assets/2022-09-29-14-58-43.png)
+<img src="../assets/2022-09-29-14-58-43.png" width="700"/>
