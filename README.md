@@ -13,6 +13,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
   - [Navegação entre telas](03-1-navigation-between-screens)
   - [Navegação por abas](03-2-bottom-tab-navigation/)
   - [Navegação por pilha em cada aba](03-3-stack-navigator-for-each-tab/)
+  - [Navegação por gaveta](03-4-drawer-navigation/)
 - [Criando componentes reutilizáveis](04-building-reusable-components)
 - [Layout com React Native](05-layout-with-react-native)
 - [Boas práticas para definição de estilos](06-styling-best-practices)
