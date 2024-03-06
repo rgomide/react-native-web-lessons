@@ -1,6 +1,9 @@
 # Navegação por gaveta
 
 - [Introdução](#introdução)
+- [Definindo o esquema de navegação](#definindo-o-esquema-de-navegação)
+- [Navegação em cascata](#navegação-em-cascata)
+- [Expandindo o menu programaticamente](#expandindo-o-menu-programaticamente)
 - [Exercício](#exercício)
 - [Referências](#referências)
 
