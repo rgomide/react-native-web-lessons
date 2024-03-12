@@ -89,5 +89,6 @@ Pesquise sobre a definição de estilos para melhorarmos a experiência do usuá
 
 - [Documentação do componente Button](https://reactnative.dev/docs/button)
 - [Documentação do componente TouchableOpacity](https://reactnative.dev/docs/touchableopacity)
+- [Objeto options](https://reactnavigation.org/docs/native-stack-navigator/#options)
 - [Componente React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Passagem de parâmetros para as rotas](https://reactnavigation.org/docs/params)
