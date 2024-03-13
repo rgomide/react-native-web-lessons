@@ -51,4 +51,5 @@ Consulte a seção [Helpers](https://reactnavigation.org/docs/drawer-navigator#h
 ## Referências
 
 - [Navegação por gaveta](https://reactnavigation.org/docs/drawer-navigator)
+- [Objeto options do Drawer Navigator](https://reactnavigation.org/docs/drawer-navigator#options)
 - [Navigators em cascata](https://reactnavigation.org/docs/nesting-navigators/)
