@@ -65,4 +65,5 @@ Configure as propriedades `tabBarIcon`, `tabBarActiveTintColor` e `tabBarInactiv
 ## Referências
 
 - [Navegação por abas](https://reactnavigation.org/docs/tab-based-navigation)
-- [Ícones da biblioteca FontAwesome](https://fontawesome.com/v6/search?o=r&m=free)
+- [Objeto options do Drawer Navigator](https://reactnavigation.org/docs/bottom-tab-navigator#options)
+- [Ícones da biblioteca FontAwesome](https://fontawesome.com/v5/search?o=r&m=free)

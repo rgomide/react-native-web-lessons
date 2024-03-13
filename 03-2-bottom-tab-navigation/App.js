@@ -4,7 +4,7 @@ import ComponentsScreen from './src/screens/ComponentScreen'
 import ListScreen from './src/screens/ListScreen'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import FontAwesome from '@expo/vector-icons/FontAwesome6'
+import FontAwesome from '@expo/vector-icons/FontAwesome5'
 
 const Tab = createBottomTabNavigator()
 
@@ -14,7 +14,7 @@ export default function App() {
       <Tab.Navigator initialRouteName="Home">
         <Tab.Screen name="Home" component={HomeScreen} options={{
           tabBarIcon: () => {
-            return <FontAwesome name='house' size={20} />
+            return <FontAwesome name='home' size={20} />
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',

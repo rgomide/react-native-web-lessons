@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@expo/vector-icons": "14.0.0",
+    "@expo/vector-icons": "13.0.0",
     "@expo/webpack-config": "19.0.1",
     "@react-navigation/bottom-tabs": "6.5.16",
     "@react-navigation/native": "6.1.10",
