@@ -126,21 +126,21 @@ Em [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) podemos verificar a `View` c
 
 ## Flex values
 
-For parent elements we saw the `alignItems`, `justifyContent` and `flexDirection` properties. In this section we will learn about the `flex` and `alignSelf` children properties.
+Para elementos pais, vimos as propriedades `alignItems`, `justifyContent` e `flexDirection`. Nesta seção aprenderemos sobre as propriedades filhas `flex` e `alignSelf`.
 
 ![](../assets/2022-10-08-23-36-11.png)
 
-The `flex` property makes a child in a parent to take as much space as possible. This property is also used to set the proportion of each children calculating the sum of `flex` values and giving the relative percentage for each element.
+A propriedade `flex` faz com que um filho de um pai ocupe o máximo de espaço possível. Esta propriedade também é usada para definir a proporção de cada filho calculando a soma dos valores `flex` e fornecendo a porcentagem relativa para cada elemento.
 
-We can see this property in action in `View` element with `` style in  [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) screen.
+Podemos ver esta propriedade em ação no elemento `View` na tela [FlexBoxScreen.js](src/screens/FlexBoxScreen.js#44).
 
-The two first `Text` elements have the `flexOne` style (`flex: 1 `) and the third element have the `flexTwo` style (`flex: 2`). The total value of `flex` values is 4. It means the first and two elements have 25% of space and the last element 50%.
+Os dois primeiros elementos `Text` possuem o estilo `flexOne` (`flex: 1`) e o terceiro elemento possui o estilo `flexTwo` (`flex: 2`). O valor total dos valores `flex` é 4. Isso significa que o primeiro e os dois elementos têm 25% de espaço e o último elemento 50%.
 
 ## Align Self nos filhos
 
-The `alignSelf` property on children essentially overwrites the parent `alignItems` value. So we can deffine the alignment per child.
+A propriedade `align Self` em filhos essencialmente substitui o valor pai `alignItems`. Assim podemos definir o alinhamento a nível do filho.
 
-Check the `View` with `viewStyleStrech` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file. In this example we applied the `alignSelf: 'center'` property in the second element. 
+Verifique o `View` com o estilo `viewStyleStrech` no arquivo [FlexBoxScreen.js](src/screens/FlexBoxScreen.js). Neste exemplo aplicamos a propriedade `alignSelf: 'center'` no segundo elemento.
 
 ## A propriedade Position
 
