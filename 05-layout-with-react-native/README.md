@@ -107,22 +107,22 @@ O `alignItems` também mudará a referência de direção quando usarmos o valor
 
 ## Justify content
 
-The `justifyContent` layus out children along the primary axis. Primary axis is whatever `flexDirection` is set to.
+A propriedade `justifyContent` distribui os filhos ao longo do eixo primário. O eixo primário é qualquer que seja o `flexDirection` definido.
 
-We have these possible values:
+Temos estes valores possíveis:
 
-- flex-start
-- flex-end
-- center
-- space-between
-- space-around
-- space-evenly
+- `flex-start`
+- `flex-end`
+- `center`
+- `space-between`
+- `space-around`
+- `space-evenly`
 
-The effect of each `justifyContent` value is shown in image below:
+O efeito de cada valor da propriedade `justifyContent` é mostrado na imagem abaixo:
 
 ![](../assets/2022-10-08-23-26-48.png)
 
-In [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) we can check the `View` with the `viewStyleJustifyContent` style. This style have `justifyContent: 'space-evently'` property. It apply the same spaces beetween and outside the elements.
+Em [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) podemos verificar a `View` com o estilo `viewStyleJustifyContent`. Este estilo possui a propriedade `justifyContent: 'space-evently'`. Esse valor aplica os mesmos espaços entre e fora dos elementos.
 
 ## Flex values
 
