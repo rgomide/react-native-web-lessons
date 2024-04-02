@@ -144,31 +144,30 @@ Verifique o `View` com o estilo `viewStyleStrech` no arquivo [FlexBoxScreen.js](
 
 ## A propriedade Position
 
-The `position` allows to set how a single element gets laid out inside of a parent. The default value is `position: 'relative'` and we use the `position: 'absolute'` property to override Box object Model and Flex Box.
+A propriedade `posição` permite definir como um único elemento é disposto dentro de um pai. O valor padrão é `position: 'relative'` e usamos a propriedade `position: 'absolute'` para substituir o objeto Box Model e Flex Box.
 
-In this project we have the [PositionScreen.js](src/screens/PositionScreen.js) to show this layout approach in action.
+Neste projeto temos o [PositionScreen.js](src/screens/PositionScreen.js) para mostrar essa abordagem de layout em ação.
 
-The second `Text` element inside the `View` have the `position: 'absolute'` value.
+O segundo elemento `Text` dentro de `View` tem o valor `position: 'absolute'`.
 
 ## Top, bottom, left e right
-The `top`, `bottom`, `left` and `right` properties can be used in any single element to displace it by this reference (absolute or relative). In the [PositionScreen.js](src/screens/PositionScreen.js) we added the `topTen` style to second element. This element is displaced from parent top by 10 pixels.
+As propriedades `top`, `bottom`, `left` e `right` podem ser usadas em qualquer elemento para deslocá-lo por esta referência (absoluta ou relativa). No [PositionScreen.js](src/screens/PositionScreen.js) adicionamos o estilo `topTen` ao segundo elemento. Este elemento está deslocado do topo pai em 10 pixels.
 
 ## Aplicando sistemas de layout
 
-The diagram below give us an idea about when we use each kind of layout system. Note that we can combine them.
+O diagrama abaixo nos dá uma ideia de quando usamos cada tipo de sistema de layout. Observe que podemos combiná-los.
 
 ![](../assets/2022-10-09-00-35-55.png)
 
 ## Exercício
 
-Create a new screen with the specifications below:
+Crie uma nova tela com as especificações a seguir:
 
 ![](../assets/2022-10-09-00-50-47.png)
 
 ## Referências
-- [Layout with Flexbox](https://reactnative.dev/docs/flexbox)
+- [Layout com Flexbox](https://reactnative.dev/docs/flexbox)
 - [Layout props](https://reactnative.dev/docs/layout-props)
 - [Yoga Playground](https://yogalayout.com/playground)
-- [The Full React Native Layout Cheat Sheet
-](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)
+- [The Full React Native Layout Cheat Sheet](https://medium.com/wix-engineering/the-full-react-native-layout-cheat-sheet-a4147802405c)
 - [React Native Styling: Structure for Style Organization](https://thoughtbot.com/blog/structure-for-styling-in-react-native)
