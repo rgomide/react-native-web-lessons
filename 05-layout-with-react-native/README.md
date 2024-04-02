@@ -17,13 +17,13 @@
 
 ## Introdução
 
-Basically, we have three different layout approaches:
+Basicamente, nós temos três abordagens para a definição de layout:
 
-- Box object model
+- Modelo box object
 - Flex box
 - Position
 
-The image below shows a comparison about these three kinds of layout systems:
+A imagem abaixo mostra uma comparação entre esses três tipos de sistemas de layout:
 
 ![](../assets/2022-10-08-21-17-38.png)
 
