@@ -93,15 +93,15 @@ E, finalmente, nós utilizamos o valor `flex-end` para alinhar todos os elemento
 
 ## Flex direction
 
-This property give us control about the elements direction. The elements can be placed vertically (default behavior) or horizontally.
+Esta propriedade nos dá o controle sobre a direção dos elementos. Os elementos podem ser colocados verticalmente (comportamento padrão) ou horizontalmente.
 
 ![](../assets/2022-10-08-23-01-06.png)
 
-In image above we can check how to use the `flexDirection` property and the two allowed values (`column` or `row`).
+Na imagem acima podemos verificar como utilizar a propriedade `flexDirection` e os dois valores permitidos (`column` ou `row`).
 
-We can check this property in the `View` container with `viewStyleRow` style in [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) file.
+Podemos verificar esta propriedade no contêiner `View` com o estilo `viewStyleRow` no arquivo [FlexBoxScreen.js](src/screens/FlexBoxScreen.js).
 
-The `alignItems` will also change the direction reference when we use the `row` value. The image below show how `alignitems` is rendered for both `flexDirection` settings.
+O `alignItems` também mudará a referência de direção quando usarmos o valor `row`. A imagem abaixo mostra como `alignitems` é renderizado para ambas as configurações de `flexDirection`.
 
 ![](../assets/2022-10-08-23-07-42.png)
 
