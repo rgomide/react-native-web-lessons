@@ -25,7 +25,9 @@ Basicamente, nós temos três abordagens para a definição de layout:
 
 A imagem abaixo mostra uma comparação entre esses três tipos de sistemas de layout:
 
-![](../assets/2022-10-08-21-17-38.png)
+<p align="center">
+  <img src="../assets/2022-10-08-21-17-38.png" width="950"/>
+</p>
 
 ## Box screen
 
@@ -33,19 +35,27 @@ Neste projeto, nós temos a tela [BoxScreen.js](src/screens/BoxScreen.js) que mo
 
 Esta abordagem é similar ao HTML box model. Para cada objeto, nós temos margin, border, padding e o conteúdo. A imagem a seguir ilustra essa estrutura:
 
-![](../assets/2022-10-08-21-34-12.png)
+<p align="center">
+  <img src="../assets/2022-10-08-21-34-12.png" width="950"/>
+</p>
 
 Por padrão, todos os elementos nativos possuem margin, border e padding iguais a zero.
 
 Nós podemos ajustar qualquer valor dessas configurações para cada lado (`top`, `bottom`, `right` ou `left`):
 
-![](../assets/2022-10-08-21-41-38.png)
+<p align="center">
+  <img src="../assets/2022-10-08-21-41-38.png" width="750"/>
+</p>
 
-![](../assets/2022-10-08-21-44-04.png)
+<p align="center">
+  <img src="../assets/2022-10-08-21-44-04.png" width="650"/>
+</p>
 
 Além disso, nós podemos utilizar alguns atalhos que representam `todos os lados`, `horizontal` ou `vertical`.
 
-![](../assets/2022-10-08-21-46-34.png)
+<p align="center">
+  <img src="../assets/2022-10-08-21-46-34.png" width="850"/>
+</p>
 
 No arquivo [BoxScreen.js](src/screens/BoxScreen.js) nós temos essas propriedades aplicadas em dois componentes. O primeiro componente é uma `View` com as seguintes propriedades:
 
@@ -73,29 +83,41 @@ A tela [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) utiliza Flex Box para a 
 
 Neste arquivo, cada `View` possui três componentes `Text`:
 
-![](../assets/2022-10-08-22-33-09.png)
+<p align="center">
+  <img src="../assets/2022-10-08-22-33-09.png" width="750"/>
+</p>
 
 A primeira `View` (elemento pai) possui o valor padrão para a propriedade `alignItems`. O valor padrão é `'stretch'`.
 
-![](../assets/2022-10-08-22-44-03.png)
+<p align="center">
+  <img src="../assets/2022-10-08-22-44-03.png" width="450"/>
+</p>
 
 A próxima `View` possui `alignItems` igual a `flex-start`. Isso significa que cada componente manterá no início do container e o `width` é apenas o espaço necessário para renderizar o conteúdo do componente.
 
-![](../assets/2022-10-08-22-52-16.png)
+<p align="center">
+  <img src="../assets/2022-10-08-22-52-16.png" width="450"/>
+</p>
 
 Nós podemos utilizar o valor `center` para `alignitems`. Os elementos ficarão posicionados no centro.
 
-![](../assets/2022-10-08-22-54-49.png)
+<p align="center">
+  <img src="../assets/2022-10-08-22-54-49.png" width="450"/>
+</p>
 
 E, finalmente, nós utilizamos o valor `flex-end` para alinhar todos os elementos filhos no final do container.
 
-![](../assets/2022-10-08-22-58-03.png)
+<p align="center">
+  <img src="../assets/2022-10-08-22-58-03.png" width="450"/>
+</p>
 
 ## Flex direction
 
 Esta propriedade nos dá o controle sobre a direção dos elementos. Os elementos podem ser colocados verticalmente (comportamento padrão) ou horizontalmente.
 
-![](../assets/2022-10-08-23-01-06.png)
+<p align="center">
+  <img src="../assets/2022-10-08-23-01-06.png" width="950"/>
+</p>
 
 Na imagem acima podemos verificar como utilizar a propriedade `flexDirection` e os dois valores permitidos (`column` ou `row`).
 
@@ -103,7 +125,9 @@ Podemos verificar esta propriedade no contêiner `View` com o estilo `viewStyleR
 
 O `alignItems` também mudará a referência de direção quando usarmos o valor `row`. A imagem abaixo mostra como `alignitems` é renderizado para ambas as configurações de `flexDirection`.
 
-![](../assets/2022-10-08-23-07-42.png)
+<p align="center">
+  <img src="../assets/2022-10-08-23-07-42.png" width="950"/>
+</p>
 
 ## Justify content
 
@@ -120,7 +144,9 @@ Temos estes valores possíveis:
 
 O efeito de cada valor da propriedade `justifyContent` é mostrado na imagem abaixo:
 
-![](../assets/2022-10-08-23-26-48.png)
+<p align="center">
+  <img src="../assets/2022-10-08-23-26-48.png"/>
+</p>
 
 Em [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) podemos verificar a `View` com o estilo `viewStyleJustifyContent`. Este estilo possui a propriedade `justifyContent: 'space-evently'`. Esse valor aplica os mesmos espaços entre e fora dos elementos.
 
@@ -128,7 +154,9 @@ Em [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) podemos verificar a `View` c
 
 Para elementos pais, vimos as propriedades `alignItems`, `justifyContent` e `flexDirection`. Nesta seção aprenderemos sobre as propriedades filhas `flex` e `alignSelf`.
 
-![](../assets/2022-10-08-23-36-11.png)
+<p align="center">
+  <img src="../assets/2022-10-08-23-36-11.png" width="950"/>
+</p>
 
 A propriedade `flex` faz com que um filho de um pai ocupe o máximo de espaço possível. Esta propriedade também é usada para definir a proporção de cada filho calculando a soma dos valores `flex` e fornecendo a porcentagem relativa para cada elemento.
 
@@ -157,13 +185,17 @@ As propriedades `top`, `bottom`, `left` e `right` podem ser usadas em qualquer e
 
 O diagrama abaixo nos dá uma ideia de quando usamos cada tipo de sistema de layout. Observe que podemos combiná-los.
 
-![](../assets/2022-10-09-00-35-55.png)
+<p align="center">
+  <img src="../assets/2022-10-09-00-35-55.png" width="950"/>
+</p>
 
 ## Exercício
 
 Crie uma nova tela com as especificações a seguir:
 
-![](../assets/2022-10-09-00-50-47.png)
+<p align="center">
+  <img src="../assets/2022-10-09-00-50-47.png" width="950"/>
+</p>
 
 ## Referências
 - [Layout com Flexbox](https://reactnative.dev/docs/flexbox)
