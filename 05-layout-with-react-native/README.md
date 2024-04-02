@@ -47,14 +47,14 @@ Além disso, nós podemos utilizar alguns atalhos que representam `todos os lado
 
 ![](../assets/2022-10-08-21-46-34.png)
 
-In [BoxScreen.js](src/screens/BoxScreen.js) file we have these properties applied in two components. The first component is a `View` with this properties:
+No arquivo [BoxScreen.js](src/screens/BoxScreen.js) nós temos essas propriedades aplicadas em dois componentes. O primeiro componente é uma `View` com as seguintes propriedades:
 
 ```js
 borderWidth: 3,
 borderColor: 'black'
 ```
 
-Also, we have a `Text` object with:
+Também, nós temos um objeto `Text` com:
 
 ```js
 borderWidth: 10,
@@ -63,7 +63,7 @@ margin: 20,
 paddingVertical: 10
 ```
 
-Running this example we can check the spaces mainy in `Text` component. There are different settings for border, margin and padding.
+Executando esse exemplo, nós podemos verificar os espaçamentos no componente `Text`. Existem configurações diferentes para `border`, `margin` e `padding`.
 
 ## Alinhando itens com Flex
 
