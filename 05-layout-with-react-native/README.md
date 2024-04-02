@@ -29,21 +29,21 @@ A imagem abaixo mostra uma comparação entre esses três tipos de sistemas de l
 
 ## Box screen
 
-In this project, we have the [BoxScreen.js](src/screens/BoxScreen.js) screen to show the basics about the `Box Object Model`.
+Neste projeto, nós temos a tela [BoxScreen.js](src/screens/BoxScreen.js) que mostra o conteúdo básico sobre o `Box Object Model`.
 
-This approach is similar than HTML box model. For each object, we have the margin, border, padding and content sections as shown in image below:
+Esta abordagem é similar ao HTML box model. Para cada objeto, nós temos margin, border, padding e o conteúdo. A imagem a seguir ilustra essa estrutura:
 
 ![](../assets/2022-10-08-21-34-12.png)
 
-By default, all native elements have margin, borden and padding equals to zero.
+Por padrão, todos os elementos nativos possuem margin, border e padding iguais a zero.
 
-We can adjust any part of these settings per sides (`top`, `bottom`, `right` or `left`).
+Nós podemos ajustar qualquer valor dessas configurações para cada lado (`top`, `bottom`, `right` ou `left`):
 
 ![](../assets/2022-10-08-21-41-38.png)
 
 ![](../assets/2022-10-08-21-44-04.png)
 
-Also, we can use shorcut properties giving the `all sides`, `horizontal` or `vertical` settings.
+Além disso, nós podemos utilizar alguns atalhos que representam `todos os lados`, `horizontal` ou `vertical`.
 
 ![](../assets/2022-10-08-21-46-34.png)
 
