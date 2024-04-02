@@ -67,27 +67,27 @@ Executando esse exemplo, nós podemos verificar os espaçamentos no componente `
 
 ## Alinhando itens com Flex
 
-We use the Flex Box approach to position multiple elements with a common parent.
+Nós utilizamos a abordagem do Flex Box para posicionar múltiplos elementos com um componente pai em comum.
 
-The [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) screen is using Flex Box to build de layout of views.
+A tela [FlexBoxScreen.js](src/screens/FlexBoxScreen.js) utiliza Flex Box para a definição dos layouts dos componentes `View`.
 
-In this file, each `View` have three `Text` components:
+Neste arquivo, cada `View` possui três componentes `Text`:
 
 ![](../assets/2022-10-08-22-33-09.png)
 
-The first `View` (parent view) have the default value for the `alignItems` property. The default value is `'stretch'`.
+A primeira `View` (elemento pai) possui o valor padrão para a propriedade `alignItems`. O valor padrão é `'stretch'`.
 
 ![](../assets/2022-10-08-22-44-03.png)
 
-The next `View` have the `alignItems` equals to `flex-start`. It means that each component will keep at the start of container and the `width` is only the required space to render the component content.
+A próxima `View` possui `alignItems` igual a `flex-start`. Isso significa que cada componente manterá no início do container e o `width` é apenas o espaço necessário para renderizar o conteúdo do componente.
 
 ![](../assets/2022-10-08-22-52-16.png)
 
-We can use the `center` value for `alignItem`. It will put all elements aligned to the center.
+Nós podemos utilizar o valor `center` para `alignitems`. Os elementos ficarão posicionados no centro.
 
 ![](../assets/2022-10-08-22-54-49.png)
 
-And finally, we use the `flex-end` property to align all children elements at the end of the container.
+E, finalmente, nós utilizamos o valor `flex-end` para alinhar todos os elementos filhos no final do container.
 
 ![](../assets/2022-10-08-22-58-03.png)
 
