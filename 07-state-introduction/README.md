@@ -31,7 +31,7 @@ Este exemplo está relacionado às telas [CounterScreenWrong](./src/screens/Coun
 É um contador simples que pode ser aumentado ou diminuído pressionando os botões relacionados.
 
 <p align="center">
-  <image src="../assets/2022-10-23-22-10-32.png" width="700"/>
+  <image src="../assets/2022-10-23-22-10-32.png" width="450"/>
 </p>
 
 O `CounterScreenWrong` implementa este recurso declarando a variável `counter` e atualizando este valor em eventos `onPress`.
@@ -90,7 +90,7 @@ O último exemplo é uma tela que lê uma coleção de postagens de blog de uma 
 No [ColorScreen](./src/screens/ColorScreen.js) estamos criando cores aleatórias pressionando o botão `Add Color`.
 
 <p align="center">
-  <image src="../assets/2022-10-23-22-49-16.png" width="700"/>
+  <image src="../assets/2022-10-23-22-49-16.png" width="450"/>
 </p>
 
 Aqui precisamos atualizar o valor `colors`. Portanto, usaremos um `array de strings` como variável de estado com um array vazio como valor padrão.
@@ -134,7 +134,7 @@ O [ColorMixScreen](./src/screens/ColorMixScreen.js) é nosso terceiro exemplo qu
 Nesta tela estamos construindo nossa cor configurando a quantidade de `red`, `green` e `blue`.
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-22-46.png" width="700"/>
+  <image src="../assets/2022-10-23-23-22-46.png" width="450"/>
 </p>
 
 Respondendo às três questões principais, temos que atualizar os dados por cada componente de cor. Assim, teremos as variáveis de estado `red`, `green` e `blue`.
@@ -142,7 +142,7 @@ Respondendo às três questões principais, temos que atualizar os dados por cad
 Essas variáveis ​​são `number` e o valor inicial é `255`.
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-24-26.png" width="700"/>
+  <image src="../assets/2022-10-23-23-24-26.png" width="800"/>
 </p>
 
 Temos o componente [ColorCounter](./src/components/ColorCounter.js) para evitar código ambíguo. Este componente possui retornos de chamada para ações `Increase` e `Decrease`.
@@ -150,23 +150,23 @@ Temos o componente [ColorCounter](./src/components/ColorCounter.js) para evitar 
 Agora podemos começar a pensar onde devemos criar as variáveis de estado? Em tela ou componente?
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-35-41.png" width="700"/>
+  <image src="../assets/2022-10-23-23-35-41.png" width="800"/>
 </p>
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-36-13.png" width="700"/>
+  <image src="../assets/2022-10-23-23-36-13.png" width="800"/>
 </p>
 
 Geralmente, criamos variáveis de estado no componente pai que precisa ler ou alterar um valor de estado.
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-37-40.png" width="700"/>
+  <image src="../assets/2022-10-23-23-37-40.png" width="800"/>
 </p>
 
 Neste exemplo, estamos passando uma função de retorno de chamada como `prop` para alterar o estado do componente de cor.
 
 <p align="center">
-  <image src="../assets/2022-10-23-23-39-37.png" width="700"/>
+  <image src="../assets/2022-10-23-23-39-37.png" width="800"/>
 </p>
 
 Em [ColorMixScreen](./src/screens/ColorMixScreen.js) passamos os retornos de chamada `onIncrease` e `onDedrease` para atualizar o componente de cor atual. Além disso, passamos o componente color nos adereços `color` apenas para mostrar o rótulo da cor ao usuário.
