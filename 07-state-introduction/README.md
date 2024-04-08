@@ -1,145 +1,147 @@
-# State Introduction
+# Introdução a estado
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
-- [Introduction](#introduction)
+- [Introdução](#introdução)
 - [Counter Screen](#counter-screen)
-    - [Planning the state variables](#planning-the-state-variables)
-    - [Few notes on state](#few-notes-on-state)
+    - [Planejando as variáveis de estado](#planejando-as-variáveis-de-estado)
+    - [Algumas observações sobre estado](#algumas-observações-sobre-estado)
 - [Color Screen](#color-screen)
 - [Color Mix Screen](#color-mix-screen)
-- [Using Reducer to manage state](#using-reducer-to-manage-state)
-- [Exercise](#exercise)
-- [References](#references)
+- [Utilizando Reducer para gerenciar o estado](#using-reducer-to-manage-state)
+- [Exercício](#exercício)
+- [Referências](#referências)
 
-## Introduction
+## Introdução
 
-In this lesson we will learn about states. States in React are used to re-render the screen content. We can bind state variables as components paramters or to part of an internal logic.
+Nesta lição aprenderemos sobre estados. Os estados no React são usados para renderizar novamente o conteúdo da tela. Podemos vincular variáveis de estado como parâmetros de componentes ou como parte de uma lógica interna.
 
-As seen in image below, states are a system to track a piece of data that will change over time. If the data changes, our app will re-render.
+Como pode ser visto na imagem abaixo, os estados são um sistema para rastrear dados que mudam com o tempo. Se os dados mudarem, nosso aplicativo será renderizado novamente.
 
 ![](../assets/2022-10-23-22-09-14.png)
 
-In this project we have three projects with that use states variables.
+Neste projeto temos três projetos que utilizam variáveis de estados.
 
 ## Counter Screen
 
-This example is relates to [CounterScreenWrong](./src/screens/CounterScreenWrong.js) and [CounterScreen](./src/screens/CounterScreen.js) screens.
+Este exemplo está relacionado às telas [CounterScreenWrong](./src/screens/CounterScreenWrong.js) e [CounterScreen](./src/screens/CounterScreen.js).
 
-It is a simple counter that can be increased or decreased by pressing the related buttons.
+É um contador simples que pode ser aumentado ou diminuído pressionando os botões relacionados.
 
 ![](../assets/2022-10-23-22-10-32.png)
 
-The `CounterScreenWrong` implements this feature declaring the `counter` variable and updating this value in `onPress` events.
+O `CounterScreenWrong` implementa este recurso declarando a variável `counter` e atualizando este valor em eventos `onPress`.
 
-If you test this screen, you will check it doesn't works. It happens because the screen contet are not binded to variables. React will re-render the screen only for state variables.
+Se você testar esta tela, verificará que não funciona. Isso acontece porque o conteúdo da tela não está vinculado a variáveis. O React renderizará novamente a tela apenas para variáveis de estado.
 
-So we need to use state variables to reach our goal.
+Portanto, precisamos usar variáveis de estado para atingir nosso objetivo.
 
-### Planning the state variables
+### Planejando as variáveis de estado
 
-Before start using the state variables, we need to think about the required ones. It is more about strategy and organization, because complex screens may use a lot of state variables and we don't want more complexity to maintain our codebase.
+Antes de começar a usar as variáveis de estado, precisamos pensar nas necessárias. É mais uma questão de estratégia e organização, porque telas complexas podem usar muitas variáveis de estado e não queremos mais complexidade para manter nossa base de código.
 
-It is a great strategy answer these next three questions:
+É uma ótima estratégia responder às próximas três perguntas:
 
-1. What piece of data is changing in our app?
-2. What type of data is it?
-3. What is the data's starting (default) value?
+1. Que dados estão mudando em nosso aplicativo?
+2. Que tipo de dados são?
+3. Qual é o valor inicial (padrão) dos dados?
 
 ![](../assets/2022-10-23-22-11-42.png)
 
-For the counter screen we need to update the `current count` value. This type of data can be a `number`. Finally, this value is initiallized as `zero`.
+Para a tela do contador, precisamos atualizar o valor da `current count`. Este tipo de dado pode ser um `number`. Finalmente, este valor é inicializado como `zero`.
 
-The image below demonstrates the three answers for this problem.
+A imagem abaixo demonstra as três respostas para este problema.
 
 ![](../assets/2022-10-23-22-12-39.png)
 
-The next example is a screen that shows a name typed in a `TextInput` component and shows this value in a `Text` element.
+O próximo exemplo é uma tela que mostra um nome digitado em um componente `TextInput` e mostra esse valor em um elemento `Text`.
 
-In this case we need to keep updating the name value. So the state variable is the `name`, this type is a `string` and the initial value is an empty string `''`.
+Neste caso, precisamos continuar atualizando o valor do nome. Portanto a variável de estado é o `name`, este tipo é uma `string` e o valor inicial é uma string vazia `''`.
 
 ![](../assets/2022-10-23-22-13-53.png)
 
-The last example is a screen that reads a collection of blog posts from a data source. Since it is a dynamic data, we need to update the `blogPosts` as an `array` type. Also we can initialize as an empty array `[]`.
+O último exemplo é uma tela que lê uma coleção de postagens de blog de uma fonte de dados. Por se tratar de dados dinâmicos, precisamos atualizar o `blogPosts` como um tipo `array`. Também podemos inicializar como um array vazio `[]`.
 
 ![](../assets/2022-10-23-22-14-56.png)
 
-### Few notes on state
+### Algumas observações sobre estado
 
-- We are using function-based state in a functional component. React also has class-based components that have access to [state](https://reactjs.org/docs/faq-state.html).
-- We *never* directly modify a state variable. React doesn't detect this change! Only use the `setter` function.
-- We can name the state variable anything we wish.
-- We can track any kind of data that changes over time - a number, string, array of ojects, etc.
-- When a component is rerendered, *all of its children get rerendered too*.
-- A state variable can be passed to a child component! At that point, the state variable is now being used as `props`.
+- Estamos usando estado baseado em função em um componente funcional. O React também possui componentes baseados em classes que têm acesso ao [estado](https://reactjs.org/docs/faq-state.html).
+- Nós *nunca* modificamos diretamente uma variável de estado. O React não detecta essa mudança! Use apenas a função `setter`.
+- Podemos nomear a variável de estado como quisermos.
+- Podemos rastrear qualquer tipo de dado que mude ao longo do tempo - um número, string, array de objetos, etc.
+- Quando um componente é renderizado novamente, *todos os seus filhos também são renderizados novamente*.
+- Uma variável de estado pode ser passada para um componente filho! Nesse ponto, a variável state agora está sendo usada como `props`.
 
 ## Color Screen
 
-In the [ColorScreen](./src/screens/ColorScreen.js) we are creating random colors by pressing the `Add Color` button.
+No [ColorScreen](./src/screens/ColorScreen.js) estamos criando cores aleatórias pressionando o botão `Add Color`.
 
 ![](../assets/2022-10-23-22-49-16.png)
 
-Here we need the to update the `colors` value. So we will use an `array of strings` as state variable with an empty array as default value.
+Aqui precisamos atualizar o valor `colors`. Portanto, usaremos um `array de strings` como variável de estado com um array vazio como valor padrão.
 
 ![](../assets/2022-10-23-22-50-46.png)
 
-In [ColorScreen](./src/screens/ColorScreen.js) we need to pay attention at some lines of code.
+Em [ColorScreen](./src/screens/ColorScreen.js) precisamos prestar atenção em algumas linhas de código.
 
-First of all, we need to import the `useState` Hook. According to [React documentation](https://reactjs.org/docs/hooks-state.html#whats-a-hook): 
+Primeiro de tudo, precisamos importar o hook `useState`. De acordo com a [documentação do React](https://reactjs.org/docs/hooks-state.html#whats-a-hook):
 
-> A Hook is a special function that lets you "hook into" React features. For example, `useState` is a Hook that lets you add React state to function components.
+> Um Hook é uma função especial que permite "conectar-se" aos recursos do React. Por exemplo, `useState` é um gancho que permite adicionar o estado React aos componentes da função.
 
-The next step is declare the state variable and his setter function. In the code line below we have the `colors` variable and the `setColors` setter function. 
+O próximo passo é declarar a variável de estado e sua função setter. Na linha de código abaixo temos a variável `colors` e a função setter `setColors`.
 
-The default value is passed as an argument of `useState` function call.
+O valor padrão é passado como um argumento da chamada da função `useState`.
 
 ```js
 const [colors, setColors] = useState([])
 ```
 
-We have to call the `setColors` function to update the `colors` state variable. Here is an example to put elements into `colors` state variable:
+Temos que chamar a função `setColors` para atualizar a variável de estado `colors`. Aqui está um exemplo para colocar elementos na variável de estado `colors`:
 
 ```js
 setColors(['red', 'green', '#0a03ff'])
 ```
 
-After call this function, the screen will rerender assuming the `['red', 'green', '#0a03ff']` is assigned to `colors` value.
+Após chamar esta função, a tela será renderizada novamente assumindo que `['red', 'green', '#0a03ff']` seja atribuído ao valor `colors`.
 
-So in [ColorScreen](./src/screens/ColorScreen.js) we are adding a new `rgb` color into `colors` by pressing the `Add Color` button.
+Portanto, em [ColorScreen](./src/screens/ColorScreen.js) estamos adicionando uma nova cor `rgb` em `colors` pressionando o botão `Add Color`.
 
-The auxliary `randomRgb` function is called in `onPress` event and returns a random color.
+A função auxiliar `randomRgb` é chamada no evento `onPress` e retorna uma cor aleatória.
 
-Finally, the `FlatList` element points to `colors` as a data source. This component renders a `View` with the random `backgroundColor` and a `Text` showing the color value.
+Finalmente, o elemento `FlatList` aponta para `colors` como fonte de dados. Este componente renderiza um `View` com o `backgroundColor` aleatório e um `Text` mostrando o valor da cor.
 
 ## Color Mix Screen
 
-The [ColorMixScreen](./src/screens/ColorMixScreen.js) is our third example that shows how to plan and use states in a complex point of view.
+O [ColorMixScreen](./src/screens/ColorMixScreen.js) é nosso terceiro exemplo que mostra como planejar e usar estados em um ponto de vista complexo.
 
-In this screen we are building our color configuring the amount of `red`, `green` and `blue`. 
+Nesta tela estamos construindo nossa cor configurando a quantidade de `red`, `green` e `blue`.
 
 ![](../assets/2022-10-23-23-22-46.png)
 
-Answering the three main questions, we have to update the data by each color component. So, we will have the `red`, `green` and `blue` state variables.
+Respondendo às três questões principais, temos que atualizar os dados por cada componente de cor. Assim, teremos as variáveis de estado `red`, `green` e `blue`.
 
-These variables are `number` and the initial value is `255`.
+Essas variáveis ​​são `number` e o valor inicial é `255`.
 
 ![](../assets/2022-10-23-23-24-26.png)
 
-We have the [ColorCounter](./src/components/ColorCounter.js) component to avoid ambiguous code. This component have the callbacks for `Increase` and `Decrease` actions.
+Temos o componente [ColorCounter](./src/components/ColorCounter.js) para evitar código ambíguo. Este componente possui retornos de chamada para ações `Increase` e `Decrease`.
 
-Now we can start to think where should we have to create the state variables? In screen or component?
+Agora podemos começar a pensar onde devemos criar as variáveis de estado? Em tela ou componente?
 
 ![](../assets/2022-10-23-23-35-41.png)
 
 ![](../assets/2022-10-23-23-36-13.png)
 
-Generally, we create state variables in the most parent component that needs to read or change a state value.
+Geralmente, criamos variáveis de estado no componente pai que precisa ler ou alterar um valor de estado.
 
 ![](../assets/2022-10-23-23-37-40.png)
 
-In this example, we are passing a callback function as a `prop` to change the color component state.
+Neste exemplo, estamos passando uma função de retorno de chamada como `prop` para alterar o estado do componente de cor.
 
 ![](../assets/2022-10-23-23-39-37.png)
 
-In [ColorMixScreen](./src/screens/ColorMixScreen.js) we passed the `onIncrease` and `onDedrease` callbacks to update the current color component. Also, we passed the color component in the `color` props just to show the color label to user.
+Em [ColorMixScreen](./src/screens/ColorMixScreen.js) passamos os retornos de chamada `onIncrease` e `onDedrease` para atualizar o componente de cor atual. Além disso, passamos o componente color nos adereços `color` apenas para mostrar o rótulo da cor ao usuário.
 
 ```js
 <ColorCounter
@@ -149,9 +151,9 @@ In [ColorMixScreen](./src/screens/ColorMixScreen.js) we passed the `onIncrease` 
 />
 ```
 
-The `setColor` function validates the color adjustment because the range of the each color component should be between `0` and `255`. When the new color component value is allowed, we update the color component state with the new value.
+A função `setColor` valida o ajuste de cor porque o intervalo de cada componente de cor deve estar entre `0` e `255`. Quando o novo valor do componente de cor é permitido, atualizamos o estado do componente de cor com o novo valor.
 
-## Using Reducer to manage state
+## Utilizando Reducer para gerenciar o estado
 
 Reducer is a hook that allow us to manage a state in a function. The [ColorMixReducerScreen](./src/screens/ColorMixReducerScreen.js) is a refactored version of the previous example.
 
@@ -210,11 +212,11 @@ const reducer = (state, action) => {
 />
 ```
 
-## Exercise
+## Exercício
 
 1. Refactor `CounterScreen` replacing `useState` to `useReducer` hook.
 
-## References
+## Referências
 - [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
 - [useState Hook](https://react.dev/reference/react/useState)
 - [useReducer Hook](https://react.dev/reference/react/useReducer)

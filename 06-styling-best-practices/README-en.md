@@ -2,7 +2,7 @@
 [![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](./README.md)
 [![en](https://img.shields.io/badge/lang-en-red.svg)](./README-en.md)
 
-- [Introdução](#introdução)
+- [Introduction](#introduction)
 - [Project Structure](#project-structure)
 - [Separated stylesheet from component design](#separeted-stylesheet-from-component-design)
 - [Global stylesheet](#global-stylesheet)
