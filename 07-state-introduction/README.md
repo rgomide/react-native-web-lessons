@@ -18,7 +18,9 @@ Nesta lição aprenderemos sobre estados. Os estados no React são usados para r
 
 Como pode ser visto na imagem abaixo, os estados são um sistema para rastrear dados que mudam com o tempo. Se os dados mudarem, nosso aplicativo será renderizado novamente.
 
-![](../assets/2022-10-23-22-09-14.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-09-14.png" width="700"/>
+</p>
 
 Neste projeto temos três projetos que utilizam variáveis de estados.
 
@@ -28,7 +30,9 @@ Este exemplo está relacionado às telas [CounterScreenWrong](./src/screens/Coun
 
 É um contador simples que pode ser aumentado ou diminuído pressionando os botões relacionados.
 
-![](../assets/2022-10-23-22-10-32.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-10-32.png" width="700"/>
+</p>
 
 O `CounterScreenWrong` implementa este recurso declarando a variável `counter` e atualizando este valor em eventos `onPress`.
 
@@ -46,23 +50,31 @@ Antes de começar a usar as variáveis de estado, precisamos pensar nas necessá
 2. Que tipo de dados são?
 3. Qual é o valor inicial (padrão) dos dados?
 
-![](../assets/2022-10-23-22-11-42.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-11-42.png" width="700"/>
+</p>
 
 Para a tela do contador, precisamos atualizar o valor da `current count`. Este tipo de dado pode ser um `number`. Finalmente, este valor é inicializado como `zero`.
 
 A imagem abaixo demonstra as três respostas para este problema.
 
-![](../assets/2022-10-23-22-12-39.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-12-39.png" width="700"/>
+</p>
 
 O próximo exemplo é uma tela que mostra um nome digitado em um componente `TextInput` e mostra esse valor em um elemento `Text`.
 
 Neste caso, precisamos continuar atualizando o valor do nome. Portanto a variável de estado é o `name`, este tipo é uma `string` e o valor inicial é uma string vazia `''`.
 
-![](../assets/2022-10-23-22-13-53.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-13-53.png" width="700"/>
+</p>
 
 O último exemplo é uma tela que lê uma coleção de postagens de blog de uma fonte de dados. Por se tratar de dados dinâmicos, precisamos atualizar o `blogPosts` como um tipo `array`. Também podemos inicializar como um array vazio `[]`.
 
-![](../assets/2022-10-23-22-14-56.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-14-56.png" width="700"/>
+</p>
 
 ### Algumas observações sobre estado
 
@@ -77,11 +89,15 @@ O último exemplo é uma tela que lê uma coleção de postagens de blog de uma 
 
 No [ColorScreen](./src/screens/ColorScreen.js) estamos criando cores aleatórias pressionando o botão `Add Color`.
 
-![](../assets/2022-10-23-22-49-16.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-49-16.png" width="700"/>
+</p>
 
 Aqui precisamos atualizar o valor `colors`. Portanto, usaremos um `array de strings` como variável de estado com um array vazio como valor padrão.
 
-![](../assets/2022-10-23-22-50-46.png)
+<p align="center">
+  <image src="../assets/2022-10-23-22-50-46.png" width="700"/>
+</p>
 
 Em [ColorScreen](./src/screens/ColorScreen.js) precisamos prestar atenção em algumas linhas de código.
 
@@ -117,29 +133,41 @@ O [ColorMixScreen](./src/screens/ColorMixScreen.js) é nosso terceiro exemplo qu
 
 Nesta tela estamos construindo nossa cor configurando a quantidade de `red`, `green` e `blue`.
 
-![](../assets/2022-10-23-23-22-46.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-22-46.png" width="700"/>
+</p>
 
 Respondendo às três questões principais, temos que atualizar os dados por cada componente de cor. Assim, teremos as variáveis de estado `red`, `green` e `blue`.
 
 Essas variáveis ​​são `number` e o valor inicial é `255`.
 
-![](../assets/2022-10-23-23-24-26.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-24-26.png" width="700"/>
+</p>
 
 Temos o componente [ColorCounter](./src/components/ColorCounter.js) para evitar código ambíguo. Este componente possui retornos de chamada para ações `Increase` e `Decrease`.
 
 Agora podemos começar a pensar onde devemos criar as variáveis de estado? Em tela ou componente?
 
-![](../assets/2022-10-23-23-35-41.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-35-41.png" width="700"/>
+</p>
 
-![](../assets/2022-10-23-23-36-13.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-36-13.png" width="700"/>
+</p>
 
 Geralmente, criamos variáveis de estado no componente pai que precisa ler ou alterar um valor de estado.
 
-![](../assets/2022-10-23-23-37-40.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-37-40.png" width="700"/>
+</p>
 
 Neste exemplo, estamos passando uma função de retorno de chamada como `prop` para alterar o estado do componente de cor.
 
-![](../assets/2022-10-23-23-39-37.png)
+<p align="center">
+  <image src="../assets/2022-10-23-23-39-37.png" width="700"/>
+</p>
 
 Em [ColorMixScreen](./src/screens/ColorMixScreen.js) passamos os retornos de chamada `onIncrease` e `onDedrease` para atualizar o componente de cor atual. Além disso, passamos o componente color nos adereços `color` apenas para mostrar o rótulo da cor ao usuário.
 
