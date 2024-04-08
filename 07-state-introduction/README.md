@@ -155,38 +155,43 @@ A função `setColor` valida o ajuste de cor porque o intervalo de cada componen
 
 ## Utilizando Reducer para gerenciar o estado
 
-Reducer is a hook that allow us to manage a state in a function. The [ColorMixReducerScreen](./src/screens/ColorMixReducerScreen.js) is a refactored version of the previous example.
+Redutor é um hook que nos permite gerenciar um estado em uma função. O [ColorMixReducerScreen](./src/screens/ColorMixReducerScreen.js) é uma versão refatorada do exemplo anterior.
 
-### Quick Thoughts
-1. App workgs right now - we could leave it as is! But we could make it slightly better...
-2. We have three separate pieces of state
-3. For this app, these three pieces of state are extremely related*
-4. There is a precise set of well-known ways in which we update these values*
+### Dicas
+1. O aplicativo funciona agora - poderíamos deixá-lo como está! Mas poderíamos melhorar um pouco...
+2. Temos três partes distintas do estado
+3. Para este aplicativo, essas três partes do estado estão extremamente relacionadas*
+4. Existe um conjunto preciso de maneiras bem conhecidas pelas quais atualizamos esses valores*
 
-`*`: This makes our state a great candidate for being managed by a `reducer`.
+`*`: Isso torna nosso estado um ótimo candidato para ser gerenciado por um `reducer`.
 
-### Reducer - function that manages changes to an object!?!?
-- Real fancy name
-- Function that gets called with two objects
-- Argument 1 - Object that has all of our state in it
-- Argument 2 - Object that describes the update we want to make
-- We look at ARgument 2 and use it to decide how to change Argument 1
-- Two technicalities
-    1. We never change Argument 1 directly.
-    2. We must always return a value to be used as Argument 1
+### Reducer - função que gerencia as alterações de um objeto!?!?
+- Nome muito chique
+- Função que é chamada com dois objetos
+- Argumento 1 - Objeto que contém todo o nosso estado
+- Argumento 2 - Objeto que descreve a atualização que queremos fazer
+- Observamos o Argumento 2 e o usamos para decidir como alterar o Argumento 1
+- Dois detalhes técnicos
+  1. Nunca alteramos o Argumento 1 diretamente.
+  2. Devemos sempre retornar um valor para ser usado como Argumento 1
 
-Refactoring `ColorMixScreen`:
-- Remove state references
-- Delete `setColor` function
-- Import `useReducer`
+Refatorando `ColorMixScreen`:
+- Remover referências de estado
+- Excluir função `setColor`
+- Importar `useReducer`
+
 ```js
 import React, { useReducer } from 'react'
 ```
-- Declare a new reducer
+
+- Declarar um novo `reducer`
+
 ```js
 const [state, dispatch] = useReducer(reducer, { red: 255, green: 255, blue: 255 })
 ```
-- Implement the `reducer` function
+
+- Implementar a função `reducer`
+
 ```js
 const reducer = (state, action) => {
   // state === { red: number, green: number, blue: number }
@@ -203,7 +208,9 @@ const reducer = (state, action) => {
   }
 }
 ```
-- Update `ColorCounter` increase/decrease actions
+
+- Atualizar ações de aumento/diminuição do `ColorCounter`
+
 ```js
 <ColorCounter
   onIncrease={() => dispatch({ type: 'red', payload: COLOR_INCREMENT })}
@@ -214,7 +221,7 @@ const reducer = (state, action) => {
 
 ## Exercício
 
-1. Refactor `CounterScreen` replacing `useState` to `useReducer` hook.
+1. Refatore `CounterScreen` substituindo `useState` pelo hook `useReducer`.
 
 ## Referências
 - [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
