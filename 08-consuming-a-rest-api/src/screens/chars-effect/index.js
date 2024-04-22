@@ -6,7 +6,7 @@ const CharsEffectScreen = (props) => {
   const [fetchResult, setFetchResult] = useState({ pageInfo: {}, characters: [] })
   const [nameSearch, setNameSearch] = useState('')
 
-  async function fetchData(name = '') {
+  const fetchData = async (name = '') => {
     try {
       const { data: { info, results } } = await getCharacter({ name: name })
       setFetchResult({ pageInfo: info, characters: results })
