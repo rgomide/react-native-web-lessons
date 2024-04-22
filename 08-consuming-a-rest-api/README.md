@@ -13,7 +13,9 @@ Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js
 
 Melhore o projeto de exemplo com funcionalidades adicionais de acordo com o projeto abaixo:
 
-![Exercício](../assets/exerciseMock.drawio.png)
+<p align="center">
+  <image src="../assets/exerciseMock.drawio.png"/>
+</p>
 
 ## Referências
 
