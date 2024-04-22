@@ -16,10 +16,6 @@ const CharsEffectScreen = (props) => {
   }
 
   useEffect(() => {
-    fetchData()
-  }, [])
-
-  useEffect(() => {
     fetchData(nameSearch)
   }, [nameSearch])
 
