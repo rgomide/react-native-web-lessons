@@ -7,6 +7,8 @@
 - `useEffect(() => {}, [])`: Executa a função apenas **apenas** quando o component é renderizado pela **primeira** vez
 - `useEffect(() => {}, [value])`: Executa a função **apenas** quando o component é renderizado pela **primeira** vez, **e** quando o `value` **é alterado**.
 
+## Axios
+
 Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo.
 
 ## Exercício
