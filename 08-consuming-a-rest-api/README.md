@@ -9,7 +9,7 @@
   - [Exemplos](#exemplos)
   - [Boas Práticas](#boas-práticas)
   - [Armadilhas a Serem Evitadas](#armadilhas-a-serem-evitadas)
-- [Axios](#axios)
+- [Requisições HTTP com a biblioteca Axios](#requisições-http-com-a-biblioteca-axios)
 - [Exercício](#exercício)
 - [Referências](#referências)
   - [Requisições HTTP](#requisições-http)
@@ -259,9 +259,9 @@ export default Exemplo3
    }, [memoizedData])
    ```
 
-## Axios
+## Requisições HTTP com a biblioteca Axios
 
-Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo de como realizar requisições HTTP a partir da biblioteca `axios`.
+Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo de como realizar requisições HTTP a partir da biblioteca [`axios`](https://axios-http.com/ptbr/docs/intro).
 
 ## Exercício
 
