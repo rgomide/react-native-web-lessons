@@ -51,7 +51,7 @@ useEffect(() => {
 
   return () => {
     // Código de limpeza aqui (opcional)
-  };
+  }
 }, [dependencias])
 ```
 - O primeiro argumento é uma função onde colocamos o código do efeito colateral.
@@ -72,16 +72,16 @@ Este exemplo mostra um `useEffect` que imprime uma mensagem no console toda vez 
 import React, { useEffect } from 'react'
 import { View, Text } from 'react-native'
 
-function Exemplo1() {
+const Exemplo1 = () => {
   useEffect(() => {
     console.log('O componente foi renderizado.')
-  });
+  })
 
   return (
     <View>
       <Text>Veja o console para uma mensagem.</Text>
     </View>
-  );
+  )
 }
 
 export default Exemplo1
@@ -95,7 +95,7 @@ Este exemplo demonstra como executar o efeito apenas quando uma dependência esp
 import React, { useState, useEffect } from 'react'
 import { View, Text, Button } from 'react-native'
 
-function Exemplo2() {
+const Exemplo2 = () => {
   const [contador, setContador] = useState(0)
 
   useEffect(() => {
@@ -107,7 +107,7 @@ function Exemplo2() {
       <Text>Contador: {contador}</Text>
       <Button title="Incrementar" onPress={() => setContador(contador + 1)} />
     </View>
-  );
+  )
 }
 
 export default Exemplo2
@@ -121,7 +121,7 @@ Este exemplo mostra como usar a função de limpeza para evitar efeitos colatera
 import React, { useState, useEffect } from 'react'
 import { View, Text } from 'react-native'
 
-function Exemplo3() {
+const Exemplo3 = () => {
   const [segundos, setSegundos] = useState(0)
 
   useEffect(() => {
@@ -137,7 +137,7 @@ function Exemplo3() {
     <View>
       <Text>Segundos: {segundos}</Text>
     </View>
-  );
+  )
 }
 
 export default Exemplo3
@@ -151,7 +151,7 @@ export default Exemplo3
    ```javascript
    useEffect(() => {
      // código que usa `data`
-   }, [data]);  // Inclua `data` nas dependências
+   }, [data])  // Inclua `data` nas dependências
    ```
 
 2. **Limpeza Adequada:**
@@ -161,13 +161,13 @@ export default Exemplo3
    useEffect(() => {
      const handler = () => {
        // código do manipulador de eventos
-     };
-     window.addEventListener('resize', handler);
+     }
+     window.addEventListener('resize', handler)
 
      return () => {
-       window.removeEventListener('resize', handler);
-     };
-   }, []);
+       window.removeEventListener('resize', handler)
+     }
+   }, [])
    ```
 
 3. **Dividir Efeitos:**
@@ -176,11 +176,11 @@ export default Exemplo3
    ```javascript
    useEffect(() => {
      // Código do efeito A
-   }, [dependenciaA]);
+   }, [dependenciaA])
 
    useEffect(() => {
      // Código do efeito B
-   }, [dependenciaB]);
+   }, [dependenciaB])
    ```
 
 4. **Manter o Código do Efeito Simples:**
@@ -199,12 +199,12 @@ export default Exemplo3
    ```javascript
    useEffect(() => {
      const fetchData = async () => {
-       const result = await fetch(url);
-       setData(await result.json());
-     };
+       const result = await fetch(url)
+       setData(await result.json())
+     }
 
-     fetchData();
-   }, [url]);  // Inclua `url` para garantir que fetchData seja chamado quando `url` mudar
+     fetchData()
+   }, [url])  // Inclua `url` para garantir que fetchData seja chamado quando `url` mudar
    ```
 
 2. **Loops Infinitos:**
@@ -222,11 +222,11 @@ export default Exemplo3
    ```javascript
    useEffect(() => {
      const interval = setInterval(() => {
-       console.log('Intervalo ativo');
-     }, 1000);
+       console.log('Intervalo ativo')
+     }, 1000)
 
-     return () => clearInterval(interval);  // Limpeza adequada do intervalo
-   }, []);
+     return () => clearInterval(interval)  // Limpeza adequada do intervalo
+   }, [])
    ```
 
 4. **Efeitos Sincronizados Desnecessariamente:**
@@ -235,28 +235,28 @@ export default Exemplo3
    ```javascript
    // Evite fazer isso
    useEffect(() => {
-     document.title = `Você clicou ${count} vezes`;
-   }, [count]);
+     document.title = `Você clicou ${count} vezes`
+   }, [count])
 
    // Prefira fazer isso
-   document.title = `Você clicou ${count} vezes`;
+   document.title = `Você clicou ${count} vezes`
    ```
 
 5. **Dependências Mutáveis:**
    
    Evite usar objetos ou arrays como dependências diretamente, pois cada renderização criará uma nova referência, fazendo o efeito ser executado repetidamente. Considere usar `useMemo` ou `useCallback` para memorizar valores ou funções complexas.
    ```javascript
-   const data = { name: 'John' };
+   const data = { name: 'John' }
 
    useEffect(() => {
      // Isso pode causar re-execução constante do efeito
-   }, [data]);
+   }, [data])
 
    // Prefira
-   const memoizedData = useMemo(() => ({ name: 'John' }), []);
+   const memoizedData = useMemo(() => ({ name: 'John' }), [])
    useEffect(() => {
      // Agora o efeito só será executado quando memoizedData mudar
-   }, [memoizedData]);
+   }, [memoizedData])
    ```
 
 ## Axios
