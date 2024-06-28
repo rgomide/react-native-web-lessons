@@ -261,7 +261,7 @@ export default Exemplo3
 
 ## Axios
 
-Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo.
+Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo de como realizar requisições HTTP a partir da biblioteca `axios`.
 
 ## Exercício
 
