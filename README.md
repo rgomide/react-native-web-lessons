@@ -18,7 +18,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 - [Layout com React Native](05-layout-with-react-native)
 - [Boas práticas para definição de estilos](06-styling-best-practices)
 - [Introdução a estado](07-state-introduction)
-- [Consumindo uma API REST](08-consuming-a-rest-api)
+- [Consumindo API REST e efeitos colaterais com `useEffect`](08-consuming-a-rest-api)
 - [Explorando os recursos do dispositivo](09-expo-device)
 - [Hook useContext](10-use-context-hook)
 - [AsyncStorage](11-async-storage)
