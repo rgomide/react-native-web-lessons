@@ -10,7 +10,7 @@
   - [Boas Práticas](#boas-práticas)
   - [Armadilhas a Serem Evitadas](#armadilhas-a-serem-evitadas)
 - [Requisições HTTP com a biblioteca Axios](#requisições-http-com-a-biblioteca-axios)
-- [Exercício](#exercício)
+- [Exercícios](#exercícios)
 - [Referências](#referências)
   - [Requisições HTTP](#requisições-http)
   - [useEffect](#useeffect)
@@ -261,9 +261,52 @@ export default Exemplo3
 
 ## Requisições HTTP com a biblioteca Axios
 
-Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) para um exemplo de como realizar requisições HTTP a partir da biblioteca [`axios`](https://axios-http.com/ptbr/docs/intro).
+Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) e o componente [MainCharsScreen](08-consuming-a-rest-api/src/screens/main-chars/index.js) para um exemplo de como realizar requisições HTTP com a biblioteca [`axios`](https://axios-http.com/ptbr/docs/intro).
 
-## Exercício
+## Exercícios
+
+### Exercício 1: Contador com Limpeza de Intervalo
+
+Criar um componente que incrementa um contador a cada segundo, utilizando useEffect para configurar e limpar o intervalo.
+
+**Instruções:**
+1. Crie um componente funcional.
+2. Inicialize um estado para o contador com o valor 0.
+3. Utilize `useEffect` para configurar um timer (consultar [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)) que incrementa o contador a cada segundo.
+4. Interrompa o timer (consultar [clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)) quando o componente for desmontado.
+
+### Exercício 2: Busca de Dados com API
+
+Criar um componente que busca dados de uma API ao montar e exibe os dados. Utilize `useEffect` para realizar a busca e gerenciar o estado.
+
+**Instruções:**
+1. Crie um componente funcional.
+2. Inicialize estados para armazenar os dados e possíveis erros.
+3. Utilize `useEffect` para buscar os dados de uma API (ex.: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)) quando o componente montar.
+4. Exiba os dados ou a mensagem de erro no componente.
+
+### Exercício 3: Exibição Condicional de Mensagem
+
+Criar um componente que exibe uma mensagem condicionalmente com base no estado, utilizando `useEffect` para alterar o título da página quando o estado mudar.
+
+**Instruções:**
+1. Crie um componente funcional.
+2. Inicialize um estado booleano.
+3. Utilize `useEffect` para alterar o título da página com base no valor do estado. Utilize [document.title](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) para a manipulação do título.
+4. Exiba uma mensagem condicionalmente no componente a partir de um elemento to tipo [Text](https://reactnative.dev/docs/text).
+
+
+### Exercício 4: Timer com Limite
+
+Criar um componente que exibe um contador regressivo a partir de um valor inicial, utilizando `useEffect` para configurar e limpar o intervalo, e parando quando o contador atingir zero.
+
+**Instruções:**
+1. Crie um componente funcional.
+2. Inicialize um estado com o valor inicial do contador a partir de uma prop chamada `valorInicial`.
+3. Utilize `useEffect` para configurar um intervalo que decremente o contador a cada segundo.
+4. Interrompa o timer quando o contador atingir zero.
+
+### Exercício 5: Guia de referência da série Rick And Morty
 
 Melhore o projeto de exemplo com funcionalidades adicionais de acordo com o projeto abaixo:
 
