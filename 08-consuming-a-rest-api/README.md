@@ -265,7 +265,19 @@ Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js
 
 ## Exercícios
 
-### Exercício 1: Contador com Limpeza de Intervalo
+### Exercício 1: Consumo de API em React Native
+
+Desenvolva um aplicativo em React Native que consuma dados de uma API pública e exiba as informações em uma lista.
+
+1. Requisitos:
+  - Crie um aplicativo React Native que utilize a biblioteca Axios para realizar uma requisição HTTP a uma API pública.
+  - Utilize o endpoint https://jsonplaceholder.typicode.com/posts para buscar uma lista de posts.
+  - Exiba os dados retornados em um componente FlatList.
+2.	Funcionalidades:
+  - Exibir o título e o corpo de cada post em um card dentro da lista.
+  - Tratar erros de requisição e exibir uma mensagem apropriada caso ocorra algum problema na comunicação com a API.
+
+### Exercício 2: Contador com Limpeza de Intervalo
 
 Criar um componente que incrementa um contador a cada segundo, utilizando useEffect para configurar e limpar o intervalo.
 
@@ -275,7 +287,7 @@ Criar um componente que incrementa um contador a cada segundo, utilizando useEff
 3. Utilize `useEffect` para configurar um timer (consultar [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)) que incrementa o contador a cada segundo.
 4. Interrompa o timer (consultar [clearInterval](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)) quando o componente for desmontado.
 
-### Exercício 2: Busca de Dados com API
+### Exercício 3: Busca de Dados com API
 
 Criar um componente que busca dados de uma API ao montar e exibe os dados. Utilize `useEffect` para realizar a busca e gerenciar o estado.
 
@@ -285,7 +297,7 @@ Criar um componente que busca dados de uma API ao montar e exibe os dados. Utili
 3. Utilize `useEffect` para buscar os dados de uma API (ex.: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)) quando o componente montar.
 4. Exiba os dados ou a mensagem de erro no componente.
 
-### Exercício 3: Exibição Condicional de Mensagem
+### Exercício 4: Exibição Condicional de Mensagem
 
 Criar um componente que exibe uma mensagem condicionalmente com base no estado, utilizando `useEffect` para alterar o título da página quando o estado mudar.
 
@@ -295,8 +307,7 @@ Criar um componente que exibe uma mensagem condicionalmente com base no estado, 
 3. Utilize `useEffect` para alterar o título da página com base no valor do estado. Utilize [document.title](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) para a manipulação do título.
 4. Exiba uma mensagem condicionalmente no componente a partir de um elemento to tipo [Text](https://reactnative.dev/docs/text).
 
-
-### Exercício 4: Timer com Limite
+### Exercício 5: Timer com Limite
 
 Criar um componente que exibe um contador regressivo a partir de um valor inicial, utilizando `useEffect` para configurar e limpar o intervalo, e parando quando o contador atingir zero.
 
@@ -306,7 +317,7 @@ Criar um componente que exibe um contador regressivo a partir de um valor inicia
 3. Utilize `useEffect` para configurar um intervalo que decremente o contador a cada segundo.
 4. Interrompa o timer quando o contador atingir zero.
 
-### Exercício 5: Guia de referência da série Rick And Morty
+### Exercício 6: Guia de referência da série Rick And Morty
 
 Melhore o projeto de exemplo com funcionalidades adicionais de acordo com o projeto abaixo:
 
