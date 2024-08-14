@@ -5,17 +5,17 @@ erDiagram
         string name
         string username
         string email
-        string address.street
-        string address.suite
-        string address.city
-        string address.zipcode
-        string address.geo.lat
-        string address.geo.lng
+        string address_street
+        string address_suite
+        string address_city
+        string address_zipcode
+        string address_geo_lat
+        string address_geo_lng
         string phone
         string website
-        string company.name
-        string company.catchPhrase
-        string company.bs
+        string company_name
+        string company_catchPhrase
+        string company_bs
     }
 
     POSTS {
@@ -59,4 +59,5 @@ erDiagram
     USERS ||--o{ TODOS: "has many"
     POSTS ||--o{ COMMENTS: "has many"
     ALBUMS ||--o{ PHOTOS: "has many"
-    ```
+
+ ```
