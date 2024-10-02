@@ -54,3 +54,5 @@ Utilize a flag `--openssl-legacy-provider` para inicializar os scripts em `packa
 - [Babel](https://babeljs.io)
 - [Stephen's Grider React Native repository](https://github.com/StephenGrider/rn-casts)
 - [Udemy: The Complete React Native + Hooks Course](https://www.udemy.com/course/the-complete-react-native-and-redux-course)
+- [Repositório "Can it be done in React Native?
+"](https://github.com/wcandillon/can-it-be-done-in-react-native.git)
