@@ -32,6 +32,13 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 4. Execute `npm run web`
 5. Divirta-se!
 
+## Criar um projeto expo em branco
+
+```bash
+npx create-expo-app --template blank
+
+```
+
 ## Erros mais comuns
 
 ### Error `ERR_0SSL_EVP_UNSUPPORTED`
