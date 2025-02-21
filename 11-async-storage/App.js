@@ -22,7 +22,7 @@ export default function App() {
   useEffect(() => {
     clear()
     return () => {
-      clear()
+      // clear() -> enable this to clear storage when load and close App
     }
   }, [])
 
