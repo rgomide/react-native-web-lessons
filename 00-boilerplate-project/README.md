@@ -20,11 +20,7 @@ npx create-expo-app --template blank
 ```bash
 npx expo install react-dom react-native-web @expo/metro-runtime
 ```
-3. Instale a dependência `@expo/webpack-config` para habilitar o livereload no navegador a partir do comando:
-```bash
-npm install @expo/webpack-config --force
-```
-4. Execute o projeto com o comando:
+3. Execute o projeto com o comando:
 ```bash
 npm run web
 ```
