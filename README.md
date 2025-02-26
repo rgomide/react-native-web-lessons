@@ -32,14 +32,15 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 4. Execute `npm run web`
 5. Divirta-se!
 
-## Criar um projeto expo em branco
+## Erros mais comuns
+
+### Permissão para executar comandos `npm` no terminal
+
+Se você receber uma mensagem de permissão para executar comandos `npm` no terminal, execute o seguinte comando:
 
 ```bash
-npx create-expo-app --template blank
-
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
-
-## Erros mais comuns
 
 ### Error `ERR_0SSL_EVP_UNSUPPORTED`
 Utilize a flag `--openssl-legacy-provider` para inicializar os scripts em `package.json`. Substitua o script `web` por:
