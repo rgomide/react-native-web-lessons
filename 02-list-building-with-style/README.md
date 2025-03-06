@@ -41,7 +41,7 @@ A segunda maneira é utilizando o prop `keyExtractor` do `FlatList`. Esse exempl
 
 ## Props importantes para o `FlatList`
 
-In [ListScreenStyled.js](./src/screens/ListScreenStyled.js) we are using some properties to change the look and feel of the `FlatList` component. The first property is `horizontal` that changes the redering direction. And the second property used was `showsHorizontalScrollIndicator`, which allows to hide the horizontal scroll bar.
+Em [ListScreenStyled.js](./src/screens/ListScreenStyled.js) estamos usando algumas propriedades para alterar a aparência e o comportamento do componente `FlatList`. A primeira propriedade é `horizontal`, que muda a direção de renderização. E a segunda propriedade utilizada foi `showsHorizontalScrollIndicator`, que permite ocultar a barra de rolagem horizontal.
 
 ## Exercício
 
