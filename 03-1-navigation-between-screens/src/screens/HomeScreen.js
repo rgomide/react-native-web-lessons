@@ -15,7 +15,10 @@ const HomeScreen = (props) => {
         }}
         title="Go to Components Demo" />
       <Pressable
-        style={styles.button}
+        style={({ pressed }) => [
+          styles.button,
+          pressed && styles.buttonPressed
+        ]}
         onPressIn={() => console.log('pressable pressed in')}
         onPressOut={() => console.log('pressable pressed out')}
         onLongPress={() => console.log('pressable long pressed')}
@@ -24,6 +27,7 @@ const HomeScreen = (props) => {
           navigation.navigate('List', { name: 'Denecley' })
         }}>
         <Text style={styles.buttonText}>Go to List Demo</Text>
+        <Text style={styles.buttonSubText}>This is my Pressable component</Text>
       </Pressable>
     </View>
   )
@@ -49,6 +53,18 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 16,
     fontWeight: 'bold',
+    marginBottom: 10
+  },
+  buttonSubText: {
+    color: 'white',
+    fontSize: 12,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  buttonPressed: {
+    backgroundColor: 'red',
+    borderColor: 'red',
+    opacity: 0.5
   }
 })
 
