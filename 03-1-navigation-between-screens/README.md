@@ -5,11 +5,11 @@
 - [Introdução](#introdução)
 - [Descrição do projeto](#descrição-do-projeto)
 - [Tipos de botão](#tipos-de-botão)
-- [Button em ação](#button-em-ação)
-- [Pressable em ação](#pressable-em-ação)
+  - [Button em ação](#button-em-ação)
+  - [Pressable em ação](#pressable-em-ação)
 - [Navegando com React Navigation](#navegando-com-react-navigation)
 - [Passagem de parâmetros durante a navegação](#passagem-de-parâmetros-durante-a-navegação)
-- [Exercício guiado](#exercício-guiado)
+- [Exercício](#exercício)
 - [Solução de problemas comuns](#solução-de-problemas-comuns)
 - [Glossário](#glossário)
 - [Referências](#referências)
@@ -22,7 +22,21 @@ Neste tópico aprenderemos como navegar entre telas em uma aplicação React Nat
 
 Neste projeto nós temos a tela principal chamada `Home Screen` no qual possui dois botões. Cada botão direcionará a navegação para telas diferentes conforme mostrado na Figura abaixo:
 
-<img src="../assets/2022-09-16-10-50-15.png" width="600"/>
+```
+┌─────────────────────────────────┐
+│               App               │
+├─────────────────────────────────┤
+│                                 │
+│  ┌─────────────────────────┐    │    ┌───────────────────────────┐
+│  │ Go to Components Demo   │────┼───►│ Navigate user to the      │
+│  └─────────────────────────┘    │    │ 'ComponentsScreen'        │
+│                                 │    └───────────────────────────┘
+│  ┌─────────────────────────┐    │    ┌───────────────────────────┐
+│  │ Go to List Demo         │────┼───►│ Navigate user to the      │
+│  └─────────────────────────┘    │    │ 'ListScreen'              │
+│                                 │    └───────────────────────────┘
+└─────────────────────────────────┘
+```
 
 O fluxo de navegação do aplicativo é o seguinte:
 
@@ -38,13 +52,33 @@ Home Screen
 
 No `React Native` nós podemos utilizar dois tipos de botões.
 
-<img src="../assets/2022-09-16-10-57-13.png" width="600"/>
+```
++-------------------------------------------------------+
+|           Botões com React Native                     |
++-------------------------------------------------------+
+
++-------------------+      +----------------------------------+
+|                   |      |                                  |
+|      Button       |----->| Componente muito simples para    |
+|                   |      | mostrar um botão e detectar      |
++-------------------+      | um pressionamento                |
+                           |                                  |
+                           +----------------------------------+
+
++-------------------+      +----------------------------------+
+|                   |      |                                  |
+|    Pressable      |----->| Componente moderno e flexível    |
+|                   |      | com mais estados de interação    |
++-------------------+      | e opções de personalização       |
+                           |                                  |
+                           +----------------------------------+
+```
 
 `Button` é um componente mais simples que permite que os desenvolvedores configure uma ação de um botão. Porém, o componente `Pressable` permite a configuração de uma área clicável dentro do componente.
 
 Nas próximas seções nós utilizaremos cada tipo de butão para compararmos a complexidade e o grau de customização de cada um deles.
 
-## `Button` em ação
+### `Button` em ação
 
 Nós utilizaremos o componente `Button` para representar o primeiro elemento da tela [Home](src/screens/HomeScreen.js).
 
@@ -63,7 +97,7 @@ Exemplo de uso do Button:
 />
 ```
 
-## Pressable em ação
+### `Pressable` em ação
 
 O componente `Pressable` é um componente que identifica ações de clique em elementos internos. Logo, esse componente não é uma tag de auto fechamento. Esse é o motivo no qual caracterizamos esse componente sendo de alto grau de customização. Nós podemos utilizar a nossa criatividade para criar componentes clicáveis.
 
@@ -81,7 +115,7 @@ Exemplo básico do Pressable:
 </Pressable>
 ```
 
-### Eventos de pressionamento
+#### Eventos de pressionamento
 
 O componente `Pressable` possui diversos eventos de pressionamento que permitem criar interações mais ricas:
 
@@ -141,7 +175,9 @@ npm install @react-navigation/native-stack
 
 De acordo com a imagem a seguir, nós precisamos criar um objeto `Stack Navigator` no qual enviamos `props` para as telas.
 
-<img src="../assets/2022-09-16-11-37-07.png" width="600"/>
+<p align="center">
+  <img src="../assets/2022-09-16-11-37-07.png" width="600"/>
+</p>
 
 Ele pode ser configurado no [App.js](App.js) dentro do elemento `<NavigationContainer>`. Primeiramente nós definimos o objeto `Stack` e dentro do elemento `<NavigationContainer>`, adicionamos as referências de cada tela a partir do elemento `<Stack.Screen>`.
 
@@ -223,7 +259,9 @@ Crie um novo projeto com 4 telas:
 
 A tela principal deve ser a `LoginScreen` e a image a seguir mostra a estrutura dos componentes com os detalhes de navegação:
 
-<img src="../assets/2022-09-16-13-51-52.png" width="600"/>
+<p align="center">
+  <img src="../assets/2022-09-16-13-51-52.png" width="600"/>
+</p>
 
 Pesquise sobre a definição de estilos para melhorarmos a experiência do usuário.
 
