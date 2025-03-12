@@ -234,5 +234,3 @@ Pesquise sobre a definição de estilos para melhorarmos a experiência do usuá
 - [Objeto options](https://reactnavigation.org/docs/native-stack-navigator/#options)
 - [Componente React Navigation](https://reactnavigation.org/docs/getting-started)
 - [Passagem de parâmetros para as rotas](https://reactnavigation.org/docs/params)
-- [Tutorial em vídeo sobre React Navigation](https://www.youtube.com/watch?v=nQVCkqvU1uE)
-- [Blog post: Melhores práticas com React Navigation](https://reactnavigation.org/docs/navigation-best-practices)
