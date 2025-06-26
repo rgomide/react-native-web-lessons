@@ -25,13 +25,20 @@ export default function App() {
         <Button
           title="Save"
           onPress={() => {
-            save('someKey', 'some value!')
+            const user = {
+              id: 1,
+              name: 'Denecley'
+            }
+
+            save('someKey', JSON.stringify(user))
           }} />
         <Button
           title="Load"
           onPress={async () => {
             const valueFromStorage = await load('someKey')
-            setValue(valueFromStorage)
+            const user = JSON.parse(valueFromStorage)
+
+            setValue(user.name)
           }} />
         <Button
           title="Clear"
