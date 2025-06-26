@@ -12,6 +12,12 @@ O AsyncStorage utiliza o armazenamento local dos dispositivos para salvar conte�
 
 Esta biblioteca utiliza o mesmo mecanismo.
 
+## Instalação
+
+```bash
+npm install @react-native-async-storage/async-storage
+```
+
 ## Uso
 
 Os valores são armazenados em pares `key -> value`. Basicamente, armazenamos e lemos dados com as funções `setItem` e `getItem`.
