@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -17,14 +17,6 @@ export default function App() {
   const load = async (key) => {
     return await AsyncStorage.getItem(key)
   }
-
-  // useEffect to clear storage when load and close App
-  useEffect(() => {
-    clear()
-    return () => {
-      // clear() -> enable this to clear storage when load and close App
-    }
-  }, [])
 
   return (
     <View style={styles.container}>
