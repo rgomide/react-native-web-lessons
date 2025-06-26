@@ -9,8 +9,8 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@react-native-async-storage/async-storage": "1.22.2",
     "@expo/metro-runtime": "~4.0.1",
+    "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-navigation/native": "7.0.14",
     "@react-navigation/native-stack": "7.2.0",
     "axios": "1.7.9",
@@ -23,8 +23,6 @@
     "react-native-safe-area-context": "5.2.0",
     "react-native-screens": "4.8.0",
     "react-native-web": "~0.19.13"
-  },
-  "devDependencies": {
   },
   "private": true
 }
