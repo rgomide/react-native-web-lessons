@@ -30,7 +30,7 @@ const EffectIntroductionScreen = ({ navigation }) => {
             setCounter(counter + 1)
           }}
           title="Increment Counter" />
-        <Text>{counter}</Text>
+        <Text style={styles.counterText}>{counter}</Text>
       </View>
     </View>
   )
@@ -43,6 +43,11 @@ const styles = StyleSheet.create({
   },
   buttonView: {
     marginVertical: 2
+  },
+  counterText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center'
   }
 })
 
