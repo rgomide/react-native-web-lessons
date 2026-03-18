@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator()
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Menu">
+      <Stack.Navigator initialRouteName="Menu" screenOptions={{headerShown: true, headerRight: true}}>
         <Stack.Screen name="Menu" component={MenuScreen} />
         <Stack.Screen name="EffectIntroduction" component={EffectIntroductionScreen} />
         <Stack.Screen name="MainChars" component={MainCharsScreen} />
