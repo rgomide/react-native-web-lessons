@@ -41,10 +41,10 @@ Criar uma API para gerenciar a tabela `produto`.
 
 A tabela `produto` tem os seguintes campos:
 
-- id (inteiro, chave primária, autoincremento)
-- titulo (varchar de tamanho máximo 255, obrigatório)
-- descricao (texto, não obrigatório)
-- valor (decimal, obrigatório)
+- `id` (inteiro, chave primária, autoincremento)
+- `titulo` (varchar de tamanho máximo 255, obrigatório)
+- `descricao` (texto, não obrigatório)
+- `valor` (decimal, obrigatório)
 
 Crie o arquivo `backend/sql/produto.sql` com o comando para criar a tabela `produto`. Além disso, adicione 10 registros na tabela produto a partir do arquivo `backend/sql/produtosData.sql`.
 
