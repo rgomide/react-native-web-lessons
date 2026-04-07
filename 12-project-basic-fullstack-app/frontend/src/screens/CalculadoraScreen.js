@@ -16,6 +16,7 @@ const CalculadoraScreen = () => {
       <Button title="Subtração" color="red" onPress={() => onCalcular('subtracao')} />
       <Button title="Multiplicação" color="orange" onPress={() => onCalcular('multiplicacao')} />
       <Button title="Divisão" color="blue" onPress={() => onCalcular('divisao')} />
+      <Button title="Operação Inválida" color="gray" onPress={() => onCalcular('operacao-invalida')} />
     </View>
   );
 };

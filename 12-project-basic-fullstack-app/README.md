@@ -32,38 +32,73 @@ npm install
 npm run web
 ```
 
-
 ## Atividade
 
-### Backend
+### Objetivo
 
-Criar uma API para gerenciar a tabela `produto`.
+Desenvolver uma aplicação fullstack para cadastro e listagem de produtos, com:
 
-A tabela `produto` tem os seguintes campos:
+- backend em Node.js + Express
+- frontend em React Native Web
 
-- `id` (inteiro, chave primária, autoincremento)
-- `titulo` (varchar de tamanho máximo 255, obrigatório)
-- `descricao` (texto, não obrigatório)
-- `valor` (decimal, obrigatório)
+### Requisitos do Backend
 
-Crie o arquivo `backend/sql/produto.sql` com o comando para criar a tabela `produto`. Além disso, adicione 10 registros na tabela produto a partir do arquivo `backend/sql/produtosData.sql`.
+1. Criar os scripts SQL:
 
-A API deve ter as seguintes rotas:
+- `backend/sql/produto.sql`: criação da tabela `produto`
+- `backend/sql/produtosData.sql`: inserção de 10 produtos
 
-- GET /produtos (retorna todos os produtos do banco de dados)
-- POST /produtos (cria um novo produto no banco de dados)
+2. Estrutura da tabela `produto`:
 
-### Frontend
+- `id` (SERIAL, chave primária)
+- `titulo` (VARCHAR(255), obrigatório)
+- `marca` (VARCHAR(255), obrigatório)
+- `descricao` (TEXT, opcional)
+- `valor` (DECIMAL, obrigatório)
 
-Crie um aplicativo em React Native que permite gerenciar os produtos.
+3. Implementar as rotas:
 
-O aplicativo deve ter as seguintes telas:
+- `GET /produtos`: retorna todos os produtos
+- `POST /produtos`: cria um novo produto
 
-- Tela de listagem de produtos
-- Tela de criação de produto
-- Sobre o aplicativo com as informações dos autores
+4. Regras mínimas de validação no `POST /produtos`:
 
-O aplicativo deve ter o layout bem definido, com cores e fontes consistentes.
+- `titulo` é obrigatório
+- `marca` é obrigatório
+- `valor` é obrigatório e deve ser numérico
+- `descricao` é opcional
+
+5. Critérios de resposta da API:
+
+- sucesso no `GET`: `200`
+- sucesso no `POST`: `201`
+- erro de validação: `400` com mensagem explicando o problema
+
+### Requisitos do Frontend
+
+Criar um aplicativo React Native Web com as seguintes telas:
+
+- Listagem de produtos
+- Cadastro de produto
+- Sobre (informações dos autores: nome e matrícula)
+
+Regras da interface:
+
+- na listagem, exibir ao menos `titulo`, `descricao` e `valor`
+- no cadastro, enviar dados para `POST /produtos`. Utilize o component `TextInput` para cada campo, estude a [documentação](https://reactnative.dev/docs/textinput) para referência
+- após cadastrar com sucesso, exibir mensagem de sucesso via `window.alert` e retornar para a tela inicial
+- exibir mensagem de erro quando a API retornar falha de validação via `window.alert`
+
+### Critérios de Aceite
+
+Para considerar a atividade concluída:
+
+- os integrantes do grupo devem ser capazes de configurar, executar e explicar os detalhes de implementação do backend e frontend
+- os scripts SQL criam e populam a tabela corretamente
+- o backend responde conforme rotas, validações e status esperados
+- o frontend consome a API e permite listar + cadastrar produtos
+- a tela Sobre contém dados dos autores
+- o layout segue uma estética livre, mas com consistência visual (cores, espaçamento e tipografia)
 
 Utilize o esquema do protótipo a seguir para criar o aplicativo:
 

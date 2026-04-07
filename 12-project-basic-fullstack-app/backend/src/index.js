@@ -28,7 +28,9 @@ app.get('/operacoes/:operacao/:valorA/:valorB', (req, res) => {
       resultado = valorA / valorB;
       break;
     default:
-      res.status(400).json({ error: 'Operação inválida' });
+      res
+        .status(400)
+        .json({ error: 'Operação inválida' });
       return;
   }
 
@@ -39,7 +41,9 @@ app.get('/operacoes/:operacao/:valorA/:valorB', (req, res) => {
     resultado,
   };
 
-  res.json(response);
+  res
+    .status(200)
+    .json(response);
 });
 
 // Inicia o servidor na porta 3000
