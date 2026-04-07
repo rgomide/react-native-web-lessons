@@ -7,38 +7,38 @@ app.use(express.json());
 // Middleware para permitir requisições de origens diferentes
 app.use(cors());
 
-app.get('/operacoes/:operacao/:valorA/:valorB', (req, res) => {
-  let { operacao, valorA, valorB } = req.params;
-  let resultado;
+app.get('/operations/:operation/:valueA/:valueB', (req, res) => {
+  let { operation, valueA, valueB } = req.params;
+  let result;
 
-  valorA = Number.parseInt(valorA);
-  valorB = Number.parseInt(valorB);
+  valueA = Number.parseInt(valueA);
+  valueB = Number.parseInt(valueB);
 
-  switch (operacao) {
-    case 'soma':
-      resultado = valorA + valorB;
+  switch (operation) {
+    case 'sum':
+      result = valueA + valueB;
       break;
-    case 'subtracao':
-      resultado = valorA - valorB;
+    case 'subtraction':
+      result = valueA - valueB;
       break;
-    case 'multiplicacao':
-      resultado = valorA * valorB;
+    case 'multiplication':
+      result = valueA * valueB;
       break;
-    case 'divisao':
-      resultado = valorA / valorB;
+    case 'division':
+      result = valueA / valueB;
       break;
     default:
       res
         .status(400)
-        .json({ error: 'Operação inválida' });
+        .json({ error: 'Invalid operation' });
       return;
   }
 
   const response = {
-    operacao,
-    valorA,
-    valorB,
-    resultado,
+    operation,
+    valueA,
+    valueB,
+    result,
   };
 
   res
@@ -48,5 +48,5 @@ app.get('/operacoes/:operacao/:valorA/:valorB', (req, res) => {
 
 // Inicia o servidor na porta 3000
 app.listen(3000, () => {
-  console.log('Servidor escutando na porta 3000');
+  console.log('Server listening on port 3000');
 });
