@@ -3,12 +3,17 @@ import { Text, View, StyleSheet, Button } from 'react-native'
 
 const CounterScreen = () => {
   const [counter, setCounter] = useState(0)
+
+  console.log('componente carregado')
+  console.log('novo valor de counter', counter)
+
   return (
     <View style={styles.viewStyle}>
       <View style={styles.buttonStyle}>
         <Button title="Increase" onPress={() => {
-          setCounter(counter + 1)
-          console.log(counter)
+          const novoValor = counter + 1
+          setCounter(novoValor)
+          console.log(novoValor)
         }} />
       </View>
       <View style={styles.buttonStyle}>

@@ -10,7 +10,7 @@ const ColorScreen = () => {
     <View style={styles.mainView}>
       <Button title='Add Color' onPress={() => {
         // UPDATING colors STATE WITH setColors FUNCTION CALL
-        setColors([...colors, randomRgb()])
+        setColors([randomRgb(), ...colors])
       }} />
       <FlatList
         data={colors}
