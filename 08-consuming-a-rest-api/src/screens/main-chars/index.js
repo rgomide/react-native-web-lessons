@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StyleSheet, Button, View, Image, Text, FlatList, TextInput } from 'react-native'
 import { getCharacter, getNextCharacterPage } from '../../component/api/rick-and-morty'
 
-const MainCharsScreen = (props) => {
+const MainCharsScreen = () => {
   const [characters, setCharacters] = useState([])
   const [pageInfo, setPageInfo] = useState({})
   const [nameSearch, setNameSearch] = useState('')
@@ -22,8 +22,8 @@ const MainCharsScreen = (props) => {
               name: nameSearch
             })
 
-            setPageInfo(chars.data.info)
-            setCharacters(chars.data.results)
+            setPageInfo(chars.info)
+            setCharacters(chars.results)
           } catch (error) {
             setPageInfo({})
             setCharacters([])
@@ -33,7 +33,7 @@ const MainCharsScreen = (props) => {
       <FlatList
         style={styles.marginVertical}
         data={characters}
-        keyExtractor={(item) => item.id}
+        keyExtractor={(item) => String(item.id)}
         renderItem={(element) => {
           const character = element.item
 
@@ -54,8 +54,8 @@ const MainCharsScreen = (props) => {
         onPress={async () => {
           const chars = await getNextCharacterPage(pageInfo.next)
 
-          setPageInfo(chars.data.info)
-          setCharacters([...characters, ...chars.data.results])
+          setPageInfo(chars.info)
+          setCharacters((current) => [...current, ...chars.results])
         }}
       />
     </View>
@@ -64,6 +64,7 @@ const MainCharsScreen = (props) => {
 
 const styles = StyleSheet.create({
   mainView: {
+    flex: 1,
     justifyContent: 'center',
     padding: 10,
     backgroundColor: 'white'

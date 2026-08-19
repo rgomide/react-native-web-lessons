@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, Button, Text } from 'react-native'
 
-const EffectIntroductionScreen = ({ navigation }) => {
+const EffectIntroductionScreen = () => {
 
   const [counter, setCounter] = useState(0)
 
@@ -27,7 +27,7 @@ const EffectIntroductionScreen = ({ navigation }) => {
         <Button
           onPress={() => {
             console.log('INCREMENT COUNTER CLICK')
-            setCounter(counter + 1)
+            setCounter((currentCounter) => currentCounter + 1)
           }}
           title="Increment Counter" />
         <Text style={styles.counterText}>{counter}</Text>
@@ -38,6 +38,7 @@ const EffectIntroductionScreen = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   mainView: {
+    flex: 1,
     justifyContent: 'center',
     padding: 10
   },

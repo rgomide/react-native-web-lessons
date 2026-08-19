@@ -9,7 +9,8 @@
   - [Exemplos](#exemplos)
   - [Boas Práticas](#boas-práticas)
   - [Armadilhas a Serem Evitadas](#armadilhas-a-serem-evitadas)
-- [Requisições HTTP com a biblioteca Axios](#requisições-http-com-a-biblioteca-axios)
+- [Telas de exemplo deste projeto](#telas-de-exemplo-deste-projeto)
+- [Requisições HTTP com a API `fetch`](#requisições-http-com-a-api-fetch)
 - [Exercícios](#exercícios)
 - [Referências](#referências)
   - [Requisições HTTP](#requisições-http)
@@ -20,23 +21,32 @@
 
 ### Introdução ao `useEffect`
 
-O `useEffect` é um hook do React que permite realizar efeitos colaterais em componentes funcionais. Efeitos colaterais são operações que afetam o mundo externo ou que dependem dele, como buscar dados de uma API, manipular o DOM diretamente, ou configurar e limpar timers.
+O `useEffect` é um hook do React que permite realizar efeitos colaterais em componentes funcionais. Efeitos colaterais são operações que afetam o mundo externo ou que dependem dele, como buscar dados de uma API, assinar eventos do sistema, ou configurar e limpar timers.
+
+> **Atenção:** boa parte do material sobre `useEffect` na internet foi escrita para React na web e fala em "manipular o DOM". No React Native **não existe DOM**: os componentes são traduzidos em *views* nativas. Sempre que um exemplo usar `document` ou `window`, ele só funciona no navegador (via `react-native-web`).
 
 #### Ciclo de Vida de um Componente React
 
 Para entender melhor o `useEffect`, é importante compreender o ciclo de vida de um componente React. Este ciclo inclui fases como renderização, atualização do estado e execução de efeitos colaterais.
 
 1. **Montagem (Mounting):**
-   - O componente é criado e inserido no DOM.
+   - O componente é criado e inserido na árvore de componentes (que o React Native traduz em *views* nativas).
    - `useEffect` é executado após a renderização inicial do componente.
 
 2. **Atualização (Updating):**
    - O componente pode ser atualizado devido a mudanças no estado ou nas propriedades.
    - `useEffect` pode ser re-executado se as dependências especificadas mudarem.
+   - **Antes de cada re-execução**, o React roda a função de limpeza (cleanup) do efeito anterior. Ou seja: cleanup **não** acontece só na desmontagem.
 
 3. **Desmontagem (Unmounting):**
-   - O componente é removido do DOM.
-   - O retorno da função passada para `useEffect` é executado para limpar qualquer efeito colateral (cleanup).
+   - O componente é removido da árvore de componentes.
+   - O retorno da função passada para `useEffect` é executado uma última vez para limpar qualquer efeito colateral (cleanup).
+
+Portanto, para um efeito com dependências, a sequência real é:
+
+```
+render -> efeito -> (dependência muda) -> cleanup -> efeito -> ... -> (desmontagem) -> cleanup
+```
 
 #### Quando o `useEffect` é Executado
 
@@ -59,8 +69,8 @@ useEffect(() => {
 
 ### O segundo parâmetro do useEffect
 - `useEffect(() => {})`: Execute a função **toda vez** que o componente for renderizado
-- `useEffect(() => {}, [])`: Executa a função apenas **apenas** quando o component é renderizado pela **primeira** vez
-- `useEffect(() => {}, [value])`: Executa a função **apenas** quando o component é renderizado pela **primeira** vez, **e** quando o `value` **é alterado**.
+- `useEffect(() => {}, [])`: Executa a função **apenas** quando o componente é renderizado pela **primeira** vez
+- `useEffect(() => {}, [value])`: Executa a função **apenas** quando o componente é renderizado pela **primeira** vez, **e** sempre que `value` **é alterado**.
 
 ### Exemplos
 
@@ -105,7 +115,7 @@ const Exemplo2 = () => {
   return (
     <View>
       <Text>Contador: {contador}</Text>
-      <Button title="Incrementar" onPress={() => setContador(contador + 1)} />
+      <Button title="Incrementar" onPress={() => setContador((atual) => atual + 1)} />
     </View>
   )
 }
@@ -156,16 +166,17 @@ export default Exemplo3
 
 2. **Limpeza Adequada:**
    
-   Sempre defina uma função de limpeza quando seu efeito configurar algo que precise ser limpo, como assinaturas de eventos, timers ou subscrições.
+   Sempre defina uma função de limpeza quando seu efeito configurar algo que precise ser limpo, como assinaturas de eventos, timers ou subscrições. No React Native usamos APIs como [`Dimensions`](https://reactnative.dev/docs/dimensions) e [`AppState`](https://reactnative.dev/docs/appstate), que devolvem um objeto com o método `remove()`.
    ```javascript
+   import { Dimensions } from 'react-native'
+
    useEffect(() => {
-     const handler = () => {
-       // código do manipulador de eventos
-     }
-     window.addEventListener('resize', handler)
+     const subscription = Dimensions.addEventListener('change', ({ window }) => {
+       console.log('Novo tamanho da tela:', window.width, window.height)
+     })
 
      return () => {
-       window.removeEventListener('resize', handler)
+       subscription.remove()
      }
    }, [])
    ```
@@ -212,7 +223,7 @@ export default Exemplo3
    Certifique-se de que seu efeito não cause um loop infinito de renderizações. Isso pode acontecer se você atualizar o estado dentro do efeito sem configurar as dependências corretamente.
    ```javascript
    useEffect(() => {
-     setCount(count + 1)  // Isso causará um loop infinito se `count` estiver nas dependências
+     setCount(count + 1)  // Isso causa um loop infinito, pois `count` é uma dependência
    }, [count])
    ```
 
@@ -229,20 +240,64 @@ export default Exemplo3
    }, [])
    ```
 
-4. **Efeitos Sincronizados Desnecessariamente:**
+4. **Usar `useEffect` para o que é apenas cálculo:**
    
-   Não use `useEffect` para efeitos síncronos simples que podem ser resolvidos diretamente na renderização. Use `useEffect` para efeitos colaterais que dependem de operações assíncronas ou de interações com o ambiente externo.
+   Não use `useEffect` para derivar um valor que pode ser calculado durante a renderização. Guardar esse valor em um estado só cria um render extra e uma fonte de verdade duplicada. Reserve o `useEffect` para sincronizar o componente com algo **externo** ao React (rede, timers, eventos do sistema, armazenamento).
    ```javascript
-   // Evite fazer isso
-   useEffect(() => {
-     document.title = `Você clicou ${count} vezes`
-   }, [count])
+   // Evite fazer isso: estado derivado sincronizado por efeito
+   const [nomeCompleto, setNomeCompleto] = useState('')
 
-   // Prefira fazer isso
-   document.title = `Você clicou ${count} vezes`
+   useEffect(() => {
+     setNomeCompleto(`${nome} ${sobrenome}`)
+   }, [nome, sobrenome])
+
+   // Prefira fazer isso: calcule durante a renderização
+   const nomeCompleto = `${nome} ${sobrenome}`
    ```
 
-5. **Dependências Mutáveis:**
+   O caminho inverso também é armadilha: **nunca** execute um efeito colateral direto no corpo do componente. O render precisa ser puro, e o corpo do componente pode rodar mais de uma vez para o mesmo resultado na tela.
+   ```javascript
+   const Componente = ({ titulo }) => {
+     // Evite: efeito colateral durante a renderização
+     Notificacoes.setBadge(titulo)
+
+     // Prefira: dentro de um useEffect
+     useEffect(() => {
+       Notificacoes.setBadge(titulo)
+     }, [titulo])
+   }
+   ```
+
+5. **Condições de Corrida (Race Conditions) em Requisições:**
+
+   Quando um efeito dispara uma requisição a cada mudança de dependência, as respostas podem chegar **fora de ordem**: uma busca antiga e lenta pode sobrescrever o resultado da busca mais recente. Use a função de limpeza para invalidar a requisição anterior.
+   ```javascript
+   // Evite: a resposta de uma busca antiga pode sobrescrever a mais nova
+   useEffect(() => {
+     buscarPersonagens(nome).then(setResultado)
+   }, [nome])
+
+   // Prefira: o cleanup marca a requisição anterior como obsoleta
+   useEffect(() => {
+     let ignore = false
+
+     const buscar = async () => {
+       const dados = await buscarPersonagens(nome)
+       if (!ignore) {
+         setResultado(dados)
+       }
+     }
+
+     buscar()
+
+     return () => {
+       ignore = true
+     }
+   }, [nome])
+   ```
+   Veja esse padrão aplicado na tela [chars-effect](./src/screens/chars-effect/index.js).
+
+6. **Dependências Mutáveis:**
    
    Evite usar objetos ou arrays como dependências diretamente, pois cada renderização criará uma nova referência, fazendo o efeito ser executado repetidamente. Considere usar `useMemo` ou `useCallback` para memorizar valores ou funções complexas.
    ```javascript
@@ -259,9 +314,63 @@ export default Exemplo3
    }, [memoizedData])
    ```
 
-## Requisições HTTP com a biblioteca Axios
+## Telas de exemplo deste projeto
 
-Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) e o componente [MainCharsScreen](08-consuming-a-rest-api/src/screens/main-chars/index.js) para um exemplo de como realizar requisições HTTP com a biblioteca [`axios`](https://axios-http.com/ptbr/docs/intro).
+- [EffectIntroductionScreen](./src/screens/effect-introduction/index.js): demonstração do ciclo de vida. Abra o console e clique em **Increment Counter** para ver a ordem em que o render, os efeitos e as funções de limpeza são executados:
+
+  ```
+  COMPONENT RENDERING
+  INSIDE useEffect WITH EMPTY ARRAY
+  INSIDE useEffect FOR counter STATE
+  INCREMENT COUNTER CLICK
+  COMPONENT RENDERING
+  CLEANUP FUNCTION FOR counter STATE
+  INSIDE useEffect FOR counter STATE
+  ```
+
+  Repare que o efeito com array vazio (`[]`) não roda de novo, e que o cleanup do efeito de `counter` acontece **antes** da nova execução do efeito.
+
+- [MainCharsScreen](./src/screens/main-chars/index.js): busca disparada manualmente, por um botão. Não usa `useEffect`.
+- [CharsEffectScreen](./src/screens/chars-effect/index.js): a mesma busca disparada por `useEffect` a cada alteração do campo de texto, com proteção contra condição de corrida.
+
+## Requisições HTTP com a API `fetch`
+
+A [`fetch`](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/fetch) é a API padrão de requisições HTTP e já vem embutida no React Native — não é preciso instalar nenhuma biblioteca. Ela devolve uma `Promise` que resolve para um objeto [`Response`](https://developer.mozilla.org/pt-BR/docs/Web/API/Response).
+
+```javascript
+const response = await fetch('https://rickandmortyapi.com/api/character/')
+const data = await response.json()
+```
+
+Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js) e o componente [MainCharsScreen](./src/screens/main-chars/index.js) para o exemplo completo usado neste projeto.
+
+### Três detalhes que costumam pegar quem vem do Axios
+
+1. **`fetch` não rejeita a Promise em erro HTTP.** Um retorno 404 ou 500 é considerado uma requisição bem-sucedida do ponto de vista da rede. O `catch` só é acionado em falha de conexão. Verifique você mesmo a propriedade [`response.ok`](https://developer.mozilla.org/pt-BR/docs/Web/API/Response/ok):
+   ```javascript
+   const response = await fetch(url)
+
+   if (!response.ok) {
+     throw new Error(`Requisição falhou com status ${response.status}`)
+   }
+   ```
+
+2. **O corpo não vem pronto.** É preciso chamar `await response.json()` (ou `.text()`) para ler o conteúdo. Não existe a propriedade `data` do Axios.
+
+3. **Não existe timeout.** Sem um limite, uma requisição pode ficar pendurada indefinidamente. Use um [`AbortController`](https://developer.mozilla.org/pt-BR/docs/Web/API/AbortController) com `setTimeout`:
+   ```javascript
+   const controller = new AbortController()
+   const timeoutId = setTimeout(() => controller.abort(), 5000)
+
+   try {
+     const response = await fetch(url, { signal: controller.signal })
+     return await response.json()
+   } finally {
+     clearTimeout(timeoutId)
+   }
+   ```
+
+O mesmo `AbortController` também serve para cancelar a requisição na função de limpeza de um `useEffect`, quando o componente é desmontado ou a busca muda.
 
 ## Exercícios
 
@@ -270,12 +379,13 @@ Verifique o arquivo [rick-and-morty](./src/component/api/rick-and-morty/index.js
 Desenvolva um aplicativo em React Native que consuma dados de uma API pública e exiba as informações em uma lista.
 
 1. Requisitos:
-  - Crie um aplicativo React Native que utilize a biblioteca Axios para realizar uma requisição HTTP a uma API pública.
+  - Crie um aplicativo React Native que utilize a API `fetch` para realizar uma requisição HTTP a uma API pública.
   - Utilize o endpoint https://jsonplaceholder.typicode.com/posts para buscar uma lista de posts.
   - Exiba os dados retornados em um componente FlatList.
 2.	Funcionalidades:
   - Exibir o título e o corpo de cada post em um card dentro da lista.
   - Tratar erros de requisição e exibir uma mensagem apropriada caso ocorra algum problema na comunicação com a API.
+  - Exibir um indicador de carregamento ([ActivityIndicator](https://reactnative.dev/docs/activityindicator)) enquanto a requisição estiver em andamento.
 
 ### Exercício 2: Contador com Limpeza de Intervalo
 
@@ -295,17 +405,23 @@ Criar um componente que busca dados de uma API ao montar e exibe os dados. Utili
 1. Crie um componente funcional.
 2. Inicialize estados para armazenar os dados e possíveis erros.
 3. Utilize `useEffect` para buscar os dados de uma API (ex.: [https://jsonplaceholder.typicode.com](https://jsonplaceholder.typicode.com)) quando o componente montar.
-4. Exiba os dados ou a mensagem de erro no componente.
+4. Proteja o efeito contra condição de corrida com uma função de limpeza (veja a armadilha 5).
+5. Exiba os dados ou a mensagem de erro no componente.
 
 ### Exercício 4: Exibição Condicional de Mensagem
 
-Criar um componente que exibe uma mensagem condicionalmente com base no estado, utilizando `useEffect` para alterar o título da página quando o estado mudar.
+Criar uma tela que exibe uma mensagem condicionalmente com base no estado, utilizando `useEffect` para alterar o título do cabeçalho da navegação quando o estado mudar.
 
 **Instruções:**
-1. Crie um componente funcional.
-2. Inicialize um estado booleano.
-3. Utilize `useEffect` para alterar o título da página com base no valor do estado. Utilize [document.title](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) para a manipulação do título.
-4. Exiba uma mensagem condicionalmente no componente a partir de um elemento to tipo [Text](https://reactnative.dev/docs/text).
+1. Crie uma tela funcional que receba a prop `navigation`.
+2. Inicialize um estado booleano e um botão que alterne esse estado.
+3. Utilize `useEffect` para alterar o título do cabeçalho com base no valor do estado. Use [`navigation.setOptions`](https://reactnavigation.org/docs/navigation-object/#setoptions) — em React Native não existe `document.title`.
+   ```javascript
+   useEffect(() => {
+     navigation.setOptions({ title: ativo ? 'Ativo' : 'Inativo' })
+   }, [navigation, ativo])
+   ```
+4. Exiba uma mensagem condicionalmente na tela a partir de um elemento do tipo [Text](https://reactnative.dev/docs/text).
 
 ### Exercício 5: Timer com Limite
 
@@ -331,11 +447,17 @@ Melhore o projeto de exemplo com funcionalidades adicionais de acordo com o proj
 - [Promise](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Função async](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function)
 - [Operador await](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await)
-- [Axios](https://axios-http.com/ptbr/docs/intro)
+- [fetch](https://developer.mozilla.org/pt-BR/docs/Web/API/Window/fetch)
+- [Response](https://developer.mozilla.org/pt-BR/docs/Web/API/Response)
+- [Response.ok](https://developer.mozilla.org/pt-BR/docs/Web/API/Response/ok)
+- [AbortController](https://developer.mozilla.org/pt-BR/docs/Web/API/AbortController)
+- [Networking no React Native](https://reactnative.dev/docs/network)
 
 ### useEffect
 - [useEffect](https://react.dev/reference/react/useEffect)
-- [Sincronizando com  Effects](https://react.dev/learn/synchronizing-with-effects)
+- [Sincronizando com Effects](https://react.dev/learn/synchronizing-with-effects)
+- [Ciclo de vida de Effects reativos](https://react.dev/learn/lifecycle-of-reactive-effects)
+- [Removendo dependências de Effects](https://react.dev/learn/removing-effect-dependencies)
 - [Você pode não precisar de um efeito](https://react.dev/learn/you-might-not-need-an-effect)
 
 ### API
