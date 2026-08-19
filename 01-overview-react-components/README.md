@@ -216,7 +216,7 @@ Crie um novo componente chamado `LessonComponent` que:
 ### Exercício 2 - Crie um componente que mostre um número aleatório entre 0 e 100
 
 Crie um novo componente chamado `RandomNumberComponent` que:
-- Tenha um elemento to tipo [Button](https://reactnative.dev/docs/0.76/button) com o texto `Gerar número aleatório`
+- Tenha um elemento to tipo [Button](https://reactnative.dev/docs/button) com o texto `Gerar número aleatório`
 - Quando o botão for pressionado, deverá ser exibido um alerta com um número aleatório entre 0 e 100
   - Utilize a função [alert()](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) para exibir o número aleatório
 - Manipule o arquivo `App.js` para mostrar o seu componente
@@ -224,6 +224,6 @@ Crie um novo componente chamado `RandomNumberComponent` que:
 ## Referência
 
 - [Introducing JSX](https://reactjs.org/docs/introducing-jsx.html)
-- [React Native Components](https://reactnative.dev/docs/0.76/components-and-apis)
+- [React Native Components](https://reactnative.dev/docs/components-and-apis)
 - [React Native Style](https://reactnative.dev/docs/style)
 - [React Native Layout with Flexbox](https://reactnative.dev/docs/flexbox)
