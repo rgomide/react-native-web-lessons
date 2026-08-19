@@ -1,19 +1,19 @@
-import { useContext } from "react";
-import { styles } from "../styles"
-import { ThemeContext } from "../screens/ThemeScreen";
-import { View, Text, Button } from "react-native";
+import { useContext } from "react"
+import { View, Text, Button } from "react-native"
+import { ThemeContext } from "../contexts/ThemeContext"
+import { themes } from "../styles"
 
-// Form component is above ThemeContext.Provider
+// Form is BELOW the provider declared in App.js, so it can read the context.
 const Form = () => {
-  const theme = useContext(ThemeContext)
-  const componentStyle = styles[theme]
-  
+  const { theme } = useContext(ThemeContext)
+  const { colors, styles } = themes[theme]
+
   return (
-    <View style={{ marginVertical: 5 }}>
-      <Text style={componentStyle.form.text}>This is my theme: {theme}</Text>
-      <Button color={componentStyle.buttonColor} title="Sign up" />
+    <View style={styles.formView}>
+      <Text style={styles.text}>This is my theme: {theme}</Text>
+      <Button color={colors.button} title="Sign up" />
     </View>
-  );
+  )
 }
 
 export default Form

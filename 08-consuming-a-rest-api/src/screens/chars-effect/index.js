@@ -2,21 +2,34 @@ import React, { useEffect, useState } from 'react'
 import { StyleSheet, Button, View, Image, Text, FlatList, TextInput } from 'react-native'
 import { getCharacter, getNextCharacterPage } from '../../component/api/rick-and-morty'
 
-const CharsEffectScreen = (props) => {
+const CharsEffectScreen = () => {
   const [fetchResult, setFetchResult] = useState({ pageInfo: {}, characters: [] })
   const [nameSearch, setNameSearch] = useState('')
 
-  const fetchData = async (name = '') => {
-    try {
-      const { data: { info, results } } = await getCharacter({ name: name })
-      setFetchResult({ pageInfo: info, characters: results })
-    } catch (error) {
-      setFetchResult({ pageInfo: {}, characters: [] })
-    }
-  }
-
   useEffect(() => {
-    fetchData(nameSearch)
+    // "ignore" avoids a race condition: if the user types again before the
+    // previous request finishes, the cleanup function marks the old request as
+    // outdated so its response can no longer overwrite the newest one.
+    let ignore = false
+
+    const fetchData = async () => {
+      try {
+        const { info, results } = await getCharacter({ name: nameSearch })
+        if (!ignore) {
+          setFetchResult({ pageInfo: info, characters: results })
+        }
+      } catch (error) {
+        if (!ignore) {
+          setFetchResult({ pageInfo: {}, characters: [] })
+        }
+      }
+    }
+
+    fetchData()
+
+    return () => {
+      ignore = true
+    }
   }, [nameSearch])
 
   return (
@@ -29,7 +42,7 @@ const CharsEffectScreen = (props) => {
       <FlatList
         style={styles.marginVertical}
         data={fetchResult.characters}
-        keyExtractor={({ id }) => id}
+        keyExtractor={({ id }) => String(id)}
         renderItem={({ item: { name, status, image } }) => {
           return (
             <View style={styles.characterContainer}>
@@ -46,9 +59,11 @@ const CharsEffectScreen = (props) => {
         title="Load More..."
         disabled={!fetchResult.pageInfo.next}
         onPress={async () => {
-          const currentResults = fetchResult.characters
-          const { data: { info, results } } = await getNextCharacterPage(fetchResult.pageInfo.next)
-          setFetchResult({ pageInfo: info, characters: [...currentResults, ...results] })
+          const { info, results } = await getNextCharacterPage(fetchResult.pageInfo.next)
+          setFetchResult((current) => ({
+            pageInfo: info,
+            characters: [...current.characters, ...results]
+          }))
         }}
       />
     </View>
@@ -57,6 +72,7 @@ const CharsEffectScreen = (props) => {
 
 const styles = StyleSheet.create({
   mainView: {
+    flex: 1,
     justifyContent: 'center',
     padding: 10,
     backgroundColor: 'white'
