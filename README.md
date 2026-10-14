@@ -22,6 +22,7 @@ Os projetos contidos neste repositório foram baseados no curso `The Complete Re
 - [Explorando os recursos do dispositivo](09-expo-device)
 - [Hook useContext](10-use-context-hook)
 - [AsyncStorage](11-async-storage)
+- [Exemplo de projeto completo - Lista de tarefas](13-final-project-sample/)
 
 ## Como executar os projetos
 

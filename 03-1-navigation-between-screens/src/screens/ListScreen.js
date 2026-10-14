@@ -4,6 +4,7 @@ import { Text, StyleSheet, FlatList } from 'react-native'
 
 const ListScreen = (props) => {
   console.log(props.route.params)
+  const usuario = props.route.params
   // CREATE AN ARRAY OF OBJECTS
   const friends = [
     { name: 'Friend #1' },

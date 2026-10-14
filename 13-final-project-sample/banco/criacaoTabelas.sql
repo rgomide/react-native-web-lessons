@@ -1,0 +1,28 @@
+-- Aplicativo: Tarefas e Anotacoes
+-- Banco: PostgreSQL
+
+CREATE TABLE usuario (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  email VARCHAR(150) NOT NULL UNIQUE,
+  senha VARCHAR(255) NOT NULL,
+  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE tarefa (
+  id SERIAL PRIMARY KEY,
+  id_usuario INTEGER NOT NULL,
+  titulo VARCHAR(120) NOT NULL,
+  descricao TEXT,
+  concluida BOOLEAN NOT NULL DEFAULT FALSE,
+  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_usuario) REFERENCES usuario (id) ON DELETE CASCADE
+);
+
+CREATE TABLE anotacao (
+  id SERIAL PRIMARY KEY,
+  id_tarefa INTEGER NOT NULL,
+  texto TEXT NOT NULL,
+  data_cadastro TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (id_tarefa) REFERENCES tarefa (id) ON DELETE CASCADE
+);
