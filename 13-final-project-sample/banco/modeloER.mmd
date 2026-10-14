@@ -1,0 +1,27 @@
+erDiagram
+  USUARIO ||--o{ TAREFA : cadastra
+  TAREFA ||--o{ ANOTACAO : possui
+
+  USUARIO {
+    int id PK
+    varchar nome
+    varchar email
+    varchar senha
+    timestamp data_cadastro
+  }
+
+  TAREFA {
+    int id PK
+    int id_usuario FK
+    varchar titulo
+    text descricao
+    boolean concluida
+    timestamp data_cadastro
+  }
+
+  ANOTACAO {
+    int id PK
+    int id_tarefa FK
+    text texto
+    timestamp data_cadastro
+  }

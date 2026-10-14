@@ -1,0 +1,37 @@
+TAREFAS E ANOTACOES - APLICATIVO
+================================
+
+1) BANCO DE DADOS (PostgreSQL)
+   Crie um banco vazio chamado tarefas_anotacoes e execute, nesta ordem:
+     banco/criacaoTabelas.sql
+     banco/insercaoDados.sql
+
+2) BACKEND (terminal 1)
+   cd backend
+   cp .env.example .env        (ajuste usuario/senha do banco e gere o JWT_SECRET)
+   node -e "console.log(require('crypto').randomBytes(64).toString('hex'))"
+   npm install
+   npm run dev                 (API em http://localhost:3000)
+
+3) APLICATIVO (terminal 2)
+   cd mobile
+   npm install
+   npm run web                 (abre no navegador em http://localhost:8081)
+
+   Dica: use as ferramentas do desenvolvedor do navegador (F12) para
+   simular a tela de um celular e acompanhar as requisicoes na aba Rede.
+
+USUARIO DE TESTE (existe no insercaoDados.sql)
+   e-mail: ana.souza@email.com
+   senha:  senha123
+   (todos os usuarios de teste usam a senha senha123)
+
+BIBLIOTECAS DE TERCEIROS
+   @expo/vector-icons
+       Icones (caixa de selecao, lixeira, sair, adicionar...).
+   react-native-toast-message
+       Mensagens rapidas de sucesso/erro ("Tarefa salva", "Conta criada!").
+   @react-native-async-storage/async-storage
+       Guarda o token JWT para manter o usuario logado (subprojeto 11).
+   @react-navigation/native e @react-navigation/native-stack
+       Navegacao em pilha entre as telas (ja presentes no 00-boilerplate).
